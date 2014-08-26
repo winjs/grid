@@ -1,7 +1,7 @@
 ﻿@font-face {
     font-family: 'wf_segoe-ui_light';
-    src: url('//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.eot');
-    src: local("Segoe UI Light"),local("Segoe WP Light"),url('//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.eot?#iefix') format('embedded-opentype'),url('//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.woff') format('woff'),url('//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.ttf') format('truetype'),url('//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.svg#web') format('svg');
+    src: url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.eot");
+    src: local("Segoe UI Light"), local("Segoe WP Light"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.eot?#iefix") format("embedded-opentype"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.woff") format("woff"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.ttf") format("truetype"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.svg#web") format("svg");
     font-weight: 600;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'wf_segoe-ui_normal';
-    src: url('//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.eot');
-    src: local("Segoe UI"),local("Segoe"),local("Segoe WP"),url('//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.eot?#iefix') format('embedded-opentype'),url('//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.woff') format('woff'),url('//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.ttf') format('truetype'),url('//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.svg#web') format('svg');
+    src: url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.eot");
+    src: local("Segoe UI"), local("Segoe"), local("Segoe WP"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.eot?#iefix") format("embedded-opentype"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.woff") format("woff"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.ttf") format("truetype"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.svg#web") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -21,6 +21,7 @@ body {
 
 p, a {
     font-family: wf_segoe-ui_normal;
+    font-size: -webkit-calc(16px + .25vw);
     font-size: calc(16px + .25vw);
 }
 
@@ -31,21 +32,25 @@ a {
 
 h1 {
     font-size: 40px;
+    font-size: -webkit-calc(40px + 1vw);
     font-size: calc(40px + 1vw);
 }
 
 h2 {
     font-size: 30px;
+    font-size: -webkit-calc(30px + .75vw);
     font-size: calc(30px + .75vw);
 }
 
 h3 {
     font-size: 25px;
+    font-size: -webkit-calc(25px + .5vw);
     font-size: calc(25px + .5vw);
 }
 
 h4 {
     font-size: 20px;
+    font-size: -webkit-calc(20px + .25vw);
     font-size: calc(20px + .25vw);
 }
 
@@ -117,9 +122,22 @@ img {
     color: #333;
 }
 
+.white {
+    background-color: #fff;
+    color: #333;
+}
+
+p.small {
+    font-size: 13px;
+}
+
+.justify {
+    text-align: justify;
+}
+
 .colNum {
     font-size: 1.5em;
-    color: rgba(255,255,255,.8);
+    color: rgba(255, 255, 255, 0.8);
     padding-right: 1rem;
     text-align: right;
 }
@@ -145,12 +163,12 @@ img {
     .gridlines .bar {
         position: relative;
         float: left;
-        width: 5.3125%;
+        width: 4.375%;
         height: 100vh;
-        margin-right: 1%;
+        margin-right: 2%;
         top: -1.5vh;
         bottom: 0;
-        background-color: rgba(255,0,0,.25);
+        background-color: rgba(255, 0, 0, 0.25);
     }
 
         .gridlines .bar:last-of-type {
@@ -166,12 +184,13 @@ img {
     overflow: hidden;
 }
 
-
 .row {
     padding: 0.2em 0;
+    padding: -webkit-calc(0.2em + 1.5vh) 0;
     padding: calc(0.2em + 1.5vh) 0;
-    margin: 0.2em -0.5%;
-    margin: calc(0.2em + 1.5vh) -0.5%;
+    margin: 0.2em -1%;
+    margin: -webkit-calc(0.2em + 1.5vh) -1%;
+    margin: calc(0.2em + 1.5vh) -1%;
     margin-bottom: 0;
 }
 
@@ -187,10 +206,11 @@ img {
 
 [class*='col-'] {
     float: left;
-    padding: 0 0.5%;
+    padding: 0 1%;
     width: 100%;
     position: relative;
     margin: 0.2em 0;
+    margin: -webkit-calc(0.2em + 1.5vh) 0;
     margin: calc(0.2em + 1.5vh) 0;
     margin-top: 0;
 }
@@ -243,7 +263,10 @@ img {
     width: 100%;
 }
 
-@media screen and (min-width : 320px) {
+/*******************
+BEGIN MEDIA QUERIES
+*******************/
+@media screen and (min-width: 320px) {
     .col-1-16 {
         width: 25%;
     }
@@ -253,7 +276,7 @@ img {
     }
 }
 
-@media screen and (min-width : 540px) {
+@media screen and (min-width: 540px) {
     .col-1-2, .col-1-4, .col-1-6 {
         width: 50%;
     }
@@ -287,7 +310,7 @@ img {
     }
 }
 
-@media screen and (min-width : 768px) {
+@media screen and (min-width: 768px) {
     .col-1-4, .col-3-4 + .col-1-4 {
         width: 25%;
     }
@@ -365,8 +388,7 @@ img {
     }
 }
 
-@media screen and (min-width : 992px) {
-
+@media screen and (min-width: 992px) {
     .col-4-6 + .col-2-6 {
         width: 33.33%;
     }
@@ -384,6 +406,10 @@ img {
     }
 
     .col-1-6 {
+        width: 16.66%;
+    }
+
+    .col-3-6 + .col-1-6 {
         width: 16.66%;
     }
 
@@ -436,7 +462,7 @@ img {
     }
 }
 
-@media screen and (min-width : 1200px) {
+@media screen and (min-width: 1200px) {
     .col-1-16 {
         width: 6.25%;
     }
