@@ -185,12 +185,12 @@ p.small {
 }
 
 .row {
-    padding: 0.2em 0;
-    padding: -webkit-calc(0.2em + 1.5vh) 0;
-    padding: calc(0.2em + 1.5vh) 0;
-    margin: 0.2em -1%;
-    margin: -webkit-calc(0.2em + 1.5vh) -1%;
-    margin: calc(0.2em + 1.5vh) -1%;
+    padding: 0.3em 0 0;
+    padding: -webkit-calc(0.3em + 1.5vh) 0 0;
+    padding: calc(0.3em + 1.5vh) 0 0;
+    margin: 0.3em -1%;
+    margin: -webkit-calc(0.3em + 1.5vh) -1%;
+    margin: calc(0.3em + 1.5vh) -1%;
     margin-bottom: 0;
 }
 
@@ -209,9 +209,9 @@ p.small {
     padding: 0 1%;
     width: 100%;
     position: relative;
-    margin: 0.2em 0;
-    margin: -webkit-calc(0.2em + 1.5vh) 0;
-    margin: calc(0.2em + 1.5vh) 0;
+    margin: 0.3em 0;
+    margin: -webkit-calc(0.3em + 1.5vh) 0;
+    margin: calc(0.3em + 1.5vh) 0;
     margin-top: 0;
 }
 
