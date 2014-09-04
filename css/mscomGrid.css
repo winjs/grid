@@ -60,6 +60,9 @@
 .row {
     margin: 0 -1%;
     margin-bottom: 0;
+    padding: 1em 0;
+    padding: -webkit-calc(1em + 0.5vh) 0;
+    padding: calc(1em + 0.5vh) 0;
 }
 
     .row:after, [class*='col-']:after {
@@ -73,10 +76,7 @@
     padding: 0 1%;
     width: 100%;
     position: relative;
-    margin: 0.3em 0;
-    margin: -webkit-calc(0.3em + 1.5vh) 0;
-    margin: calc(0.3em + 1.5vh) 0;
-    margin-top: 0;
+    margin: 0;
 }
 
 [class*='col-'].fixed-col-margin {
