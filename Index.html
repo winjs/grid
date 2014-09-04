@@ -13,12 +13,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mscomalize.css">
     <link rel="stylesheet" href="css/mscomGrid.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
-    <div class="gridlines outside">
+    <header>
+        <input type="button" value="Full grid" class="fullGridToggle" />
+        <input type="button" value="Margin grid" class="marginGridToggle" />
+        <input type="button" value="Toggle gridlines" class="gridlinesToggle" />
+    </header>
+    <section class="gridlines outside">
         <div class="gridlines inside">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -37,8 +42,8 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-    </div>
-    <section class="grid">
+    </section>
+    <section class="grid lines">
         <section class="row light-gray centered">
             <div class="col-1-1">
                 <div class="colNum green">1/1</div>
@@ -769,27 +774,30 @@
                 <div class="colNum red">1/16</div>
             </div>
         </section>
+
+        <section class="row">
+            <div class="col-1-4 justify">
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            </div>
+            <div class="col-1-4 justify">
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            </div>
+            <div class="col-1-4 justify">
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            </div>
+            <div class="col-1-4 justify">
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            </div>
+        </section>
+
+        <section class="row">
+            <img src="http://static.pexels.com/wp-content/uploads/2014/09/dawn-dust-landscape-2698-825x550.jpg" />
+        </section>
     </section>
 
-    <section class="grid">
-        <div class="row">
-            <div class="col-1-4 justify">
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-            </div>
-            <div class="col-1-4 justify">
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-            </div>
-            <div class="col-1-4 justify">
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-            </div>
-            <div class="col-1-4 justify">
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-            </div>
-        </div>
-    </section>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/gridlines.js"></script>
 </body>
 </html>
