@@ -1,141 +1,4 @@
-﻿@font-face {
-    font-family: 'wf_segoe-ui_light';
-    src: url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.eot");
-    src: local("Segoe UI Light"), local("Segoe WP Light"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.eot?#iefix") format("embedded-opentype"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.woff") format("woff"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.ttf") format("truetype"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.svg#web") format("svg");
-    font-weight: 600;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-}
-
-@font-face {
-    font-family: 'wf_segoe-ui_normal';
-    src: url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.eot");
-    src: local("Segoe UI"), local("Segoe"), local("Segoe WP"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.eot?#iefix") format("embedded-opentype"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.woff") format("woff"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.ttf") format("truetype"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.svg#web") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-    font-family: wf_segoe-ui_light;
-}
-
-p, a {
-    font-family: wf_segoe-ui_normal;
-    font-size: -webkit-calc(16px + .25vw);
-    font-size: calc(16px + .25vw);
-}
-
-a {
-    color: #00bcf2;
-    text-decoration: none;
-}
-
-h1 {
-    font-size: 40px;
-    font-size: -webkit-calc(40px + 1vw);
-    font-size: calc(40px + 1vw);
-}
-
-h2 {
-    font-size: 30px;
-    font-size: -webkit-calc(30px + .75vw);
-    font-size: calc(30px + .75vw);
-}
-
-h3 {
-    font-size: 25px;
-    font-size: -webkit-calc(25px + .5vw);
-    font-size: calc(25px + .5vw);
-}
-
-h4 {
-    font-size: 20px;
-    font-size: -webkit-calc(20px + .25vw);
-    font-size: calc(20px + .25vw);
-}
-
-h1, h2, h3, h4 {
-    line-height: 1.1em;
-    margin: 0;
-}
-
-img {
-    width: 100%;
-}
-
-*, *:after, *:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.centered {
-    text-align: center;
-}
-
-.caps {
-    text-transform: uppercase;
-}
-
-.cyan {
-    background-color: #00bcf2;
-    color: #fff;
-}
-
-.green {
-    background-color: #008a00;
-    color: #fff;
-}
-
-.pink {
-    background-color: #ea005a;
-    color: #fff;
-}
-
-.purple {
-    background-color: #68217a;
-    color: #fff;
-}
-
-.orange {
-    background-color: #dc3c00;
-    color: #fff;
-}
-
-.teal {
-    background-color: #008272;
-    color: #fff;
-}
-
-.blue {
-    background-color: #1570a6;
-    color: #fff;
-}
-
-.red {
-    background-color: #ba141a;
-    color: #fff;
-}
-
-.light-gray {
-    background-color: #d2d2d2;
-    color: #333;
-}
-
-.white {
-    background-color: #fff;
-    color: #333;
-}
-
-p.small {
-    font-size: 13px;
-}
-
-.justify {
-    text-align: justify;
-}
-
-.colNum {
+﻿.colNum {
     font-size: 1.5em;
     color: rgba(255, 255, 255, 0.8);
     padding-right: 1rem;
@@ -158,6 +21,12 @@ p.small {
         width: 90%;
         margin: 0 auto;
         max-width: 1600px;
+        padding: 0 1%;
+    }
+
+        .gridlines.full.inside {
+        width: 100%;
+        max-width: none;
     }
 
     .gridlines .bar {
@@ -166,7 +35,6 @@ p.small {
         width: 4.375%;
         height: 100vh;
         margin-right: 2%;
-        top: -1.5vh;
         bottom: 0;
         background-color: rgba(255, 0, 0, 0.25);
     }
@@ -181,13 +49,17 @@ p.small {
     width: 90%;
     margin: 0 auto;
     max-width: 1600px;
-    overflow: hidden;
+    padding: 0.3em 1% 0 1%;
+    padding: -webkit-calc(0.3em + 1.5vh) 1% 0 1%;
+    padding: calc(0.3em + 1.5vh) 1% 0 1%;
+}
+
+.grid.full {
+    width:100%;
+    max-width: none;
 }
 
 .row {
-    padding: 0.3em 0 0;
-    padding: -webkit-calc(0.3em + 1.5vh) 0 0;
-    padding: calc(0.3em + 1.5vh) 0 0;
     margin: 0.3em -1%;
     margin: -webkit-calc(0.3em + 1.5vh) -1%;
     margin: calc(0.3em + 1.5vh) -1%;
