@@ -49,13 +49,7 @@
     width: 90%;
     margin: 0 auto;
     max-width: 1600px;
-<<<<<<< HEAD
-    padding: 0.3em 1% 0 1%;
-    padding: -webkit-calc(0.3em + 1.5vh) 1% 0 1%;
-    padding: calc(0.3em + 1.5vh) 1% 0 1%;
-=======
     padding: 0 1% 0 1%;
->>>>>>> origin/development
 }
 
 .grid.full {
@@ -64,13 +58,7 @@
 }
 
 .row {
-<<<<<<< HEAD
-    margin: 0.3em -1%;
-    margin: -webkit-calc(0.3em + 1.5vh) -1%;
-    margin: calc(0.3em + 1.5vh) -1%;
-=======
     margin: 0 -1%;
->>>>>>> origin/development
     margin-bottom: 0;
 }
 
