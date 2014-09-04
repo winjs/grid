@@ -1,0 +1,16 @@
+/*CSS that is just for demo site purposes*/
+.mediaQTable {
+    font-size: 1.2em;
+    overflow: auto;
+    border: 1px solid #000;
+}
+
+.mediaQTable thead tr th {
+    font-weight: bold;
+    background-color: #eee;
+}
+.mediaQTable td {
+    text-align: center;
+    padding: 0 5vw;
+    border: 1px solid #000;
+}
