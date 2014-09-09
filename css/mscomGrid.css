@@ -1,46 +1,8 @@
-﻿.colNum {
-    font-size: 1.5em;
-    color: rgba(255, 255, 255, 0.8);
-    padding-right: 1rem;
-    text-align: right;
+﻿html {
+  box-sizing: border-box;
 }
-
-/*Clickable gridline styles*/
-.gridlines {
-    display: none;
-}
-
-.gridlines.outside {
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-}
-
-.gridlines.inside {
-    position: relative;
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1600px;
-    padding: 0 1%;
-}
-
-.gridlines.full.inside {
-    width: 100%;
-    max-width: none;
-}
-
-.gridlines .bar {
-    position: relative;
-    float: left;
-    width: 4.375%;
-    height: 100vh;
-    margin-right: 2%;
-    bottom: 0;
-    background-color: rgba(255, 0, 0, 0.25);
-}
-
-.gridlines .bar:last-of-type {
-    margin-right: 0;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 .grid {
