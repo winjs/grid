@@ -17,3 +17,7 @@ $('.marginGridToggle').on("click", function () {
 		$('.inside').removeClass('full');
 	};
 });
+
+$('.headersToggle').on("click", function () {
+    $('.fullGridDemo h1, .fullGridDemo h2, .fullGridDemo h3, .fullGridDemo h4').toggle();
+});
