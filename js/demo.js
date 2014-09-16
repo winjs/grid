@@ -21,3 +21,15 @@ $('.marginGridToggle').on("click", function () {
 $('.headersToggle').on("click", function () {
     $('.fullGridDemo h1, .fullGridDemo h2, .fullGridDemo h3, .fullGridDemo h4').toggle();
 });
+
+$('.gridBackgroundToggle').on("click", function () {
+    $('.fullGridDemo .row').toggleClass('light-gray');
+    $('.extras .row').toggleClass('light-gray');
+});
+
+$(document).ready(function () {
+		$('.colNum').each(function() {
+			var cn = $(this).parent().attr('class')
+			$(this).text(cn);
+		});
+});
