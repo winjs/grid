@@ -1,6 +1,7 @@
 @import 'mscomalize';
 
 $max-grid-width: 1600px;
+$fixed-col-margin: 3px;
 $vp1: 320px;
 $vp2: 540px;
 $vp3: 768px;
@@ -49,8 +50,8 @@ $vp5: 1400px;
     padding: calc(1em + 0.5vh) 1vw;
 
     &.fixed-hcol-margin {
-        padding-left: 3px;
-        padding-right: 3px;
+        padding-left: $fixed-col-margin;
+        padding-right: $fixed-col-margin;
     }
 }
 
