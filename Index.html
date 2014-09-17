@@ -20,6 +20,7 @@
     <header>
         <input type="button" value="Full grid" class="fullGridToggle" />
         <input type="button" value="Margin grid" class="marginGridToggle" />
+        <input type="button" value="Fixed margin grid" class="fixedGridToggle" />
         <input type="button" value="Toggle gridlines" class="gridlinesToggle" />
         <input type="button" value="Toggle headers" class="headersToggle" />
         <input type="button" value="Toggle grid background" class="gridBackgroundToggle" />
@@ -71,13 +72,13 @@
         </section>
 
         <section class="row  ">
-            <div class="col-1-2 nobreak">
+            <div class="col-1-2 nb">
                 <div class="colNum pink">1/2</div>
                 <h2 class="text-center">
                     Header two (No break)
                 </h2>
             </div>
-            <div class="col-1-2 nobreak">
+            <div class="col-1-2 nb">
                 <div class="colNum pink">2/2</div>
                 <h2 class="text-center">
                     Header two (No break)
@@ -101,11 +102,11 @@
         </section>
 
         <section class="row  ">
-            <div class="col-1-3 nobreak">
+            <div class="col-1-3 nb">
                 <div class="colNum purple">1/3</div>
                 <h3 class="text-center">Header three (no break)</h3>
             </div>
-            <div class="col-2-3 nobreak">
+            <div class="col-2-3 nb">
                 <div class="colNum purple">3/3</div>
                 <h3 class="text-center">Header three (no break)</h3>
             </div>
@@ -131,19 +132,19 @@
         </section>
 
         <section class="row  ">
-            <div class="col-1-4 nobreak">
+            <div class="col-1-4 nb">
                 <div class="colNum cyan">1/4</div>
                 <h4 class="text-center">Header four</h4>
             </div>
-            <div class="col-1-4 nobreak">
+            <div class="col-1-4 nb">
                 <div class="colNum cyan">2/4</div>
                 <h4 class="text-center">Header four</h4>
             </div>
-            <div class="col-1-4 nobreak">
+            <div class="col-1-4 nb">
                 <div class="colNum cyan">3/4</div>
                 <h4 class="text-center">Header four</h4>
             </div>
-            <div class="col-1-4 nobreak">
+            <div class="col-1-4 nb">
                 <div class="colNum cyan">4/4</div>
                 <h4 class="text-center">Header four</h4>
             </div>
@@ -886,26 +887,40 @@
         </section>
 
         <h4>
-            Fixed margin (3px) and contained in single column
+            Fixed margin grid (4px/configurable)
         </h4>
-        <section class="row  ">
-            <div class="col-1-1 no-padding-vertical">
-                <div class="col-1-4 fixed-hcol-margin">
-                    <div class="colNum cyan">1/4</div>
-                </div>
-                <div class="col-1-4 fixed-hcol-margin">
-                    <div class="colNum cyan">2/4</div>
-                </div>
-                <div class="col-1-4 fixed-hcol-margin">
-                    <div class="colNum cyan">3/4</div>
-                </div>
-                <div class="col-1-4 fixed-hcol-margin">
-                    <div class="colNum cyan">4/4</div>
-                </div>
+    </section>
+    <section class="grid fixed extras">
+        <section class="row">
+            <div class="col-1-4">
+                <div class="colNum cyan">1/4</div>
+            </div>
+            <div class="col-1-4">
+                <div class="colNum cyan">2/4</div>
+            </div>
+            <div class="col-1-4">
+                <div class="colNum cyan">3/4</div>
+            </div>
+            <div class="col-1-4">
+                <div class="colNum cyan">4/4</div>
             </div>
         </section>
-
-        
+        <section class="row">
+            <div class="col-1-4">
+                <div class="colNum cyan">1/4</div>
+            </div>
+            <div class="col-1-4">
+                <div class="colNum cyan">2/4</div>
+            </div>
+            <div class="col-1-4">
+                <div class="colNum cyan">3/4</div>
+            </div>
+            <div class="col-1-4">
+                <div class="colNum cyan">4/4</div>
+            </div>
+        </section>
+    </section>
+    <section class="grid extras">
         <section class="row">
             <div class="col-1-4 justify">
                 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>

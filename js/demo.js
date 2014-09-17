@@ -1,5 +1,5 @@
 $('.gridlinesToggle').on("click", function () {
-    $('.gridlines').toggle();
+	$('.gridlines').toggle();
 });
 
 $('.fullGridToggle').on("click", function () {
@@ -18,18 +18,23 @@ $('.marginGridToggle').on("click", function () {
 	};
 });
 
+$('.fixedGridToggle').on("click", function() {
+	var $grid = $('.grid');
+	$grid.toggleClass('fixed');
+});
+
 $('.headersToggle').on("click", function () {
-    $('.fullGridDemo h1, .fullGridDemo h2, .fullGridDemo h3, .fullGridDemo h4').toggle();
+	$('.fullGridDemo h1, .fullGridDemo h2, .fullGridDemo h3, .fullGridDemo h4').toggle();
 });
 
 $('.gridBackgroundToggle').on("click", function () {
-    $('.fullGridDemo .row').toggleClass('light-gray');
-    $('.extras .row').toggleClass('light-gray');
+	$('.fullGridDemo .row').toggleClass('light-gray');
+	$('.extras .row').toggleClass('light-gray');
 });
 
 $(document).ready(function () {
-		$('.colNum').each(function() {
-			var cn = $(this).parent().attr('class')
-			$(this).text(cn);
-		});
+	$('.colNum').each(function() {
+		var cn = $(this).parent().attr('class')
+		$(this).text(cn);
+	});
 });

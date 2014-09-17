@@ -1,7 +1,7 @@
 @import 'mscomalize';
 
 $max-grid-width: 1600px;
-$fixed-col-margin: 3px;
+$fixed-col-margin: 2px; //4px fixed margin, gets doubled
 $vp1: 320px;
 $vp2: 540px;
 $vp3: 768px;
@@ -21,6 +21,11 @@ $vp5: 1400px;
     &.full {
         width:100%;
         max-width: none;
+    }
+
+    &.fixed .row > [class*='col-'] {
+        padding-left: $fixed-col-margin;
+        padding-right: $fixed-col-margin;
     }
 
     .row {
@@ -48,86 +53,49 @@ $vp5: 1400px;
     padding: 1em 1%;
     padding: -webkit-calc(1em + 0.5vh) 1vw;
     padding: calc(1em + 0.5vh) 1vw;
-
-    &.fixed-hcol-margin {
-        padding-left: $fixed-col-margin;
-        padding-right: $fixed-col-margin;
-    }
 }
 
-.col-1-3.nobreak {
+.col-1-3.nb {
     width: 33.3333%;
 }
 
-.col-2-3.nobreak {
+.col-2-3.nb {
     width: 66.6666%;
 }
 
-.col-1-2.nobreak, .col-1-8 {
+.col-1-2.nb, .col-2-4.nb, .col-1-8, .col-1-12, .col-1-16 {
     width: 50%;
 }
 
-.col-1-4.nobreak {
+.col-1-4.nb {
     width: 25%;
 }
 
-.col-2-4.nobreak {
-    width: 50%;
-}
-
-.col-3-4.nobreak {
+.col-3-4.nb {
     width: 75%;
 }
 
-.col-1-5.nobreak {
+.col-1-5.nb {
     width: 20%;
 }
 
-.col-1-6.nobreak {
+.col-1-6.nb {
     width: 16.66%;
 }
 
-.col-1-8.nobreak {
+.col-1-8.nb {
     width: 12.5%;
 }
 
-.col-1-12.nobreak {
+.col-1-12.nb {
     width: 8.33%;
 }
 
-.col-1-16.nobreak {
+.col-1-16.nb {
     width: 6.25%;
 }
 
-.col-2-8 {
-    width: 100%;
-}
-
-.col-1-12 {
-    width: 50%;
-}
-
-.col-2-12 {
-    width: 100%;
-}
-
-.col-4-12 {
-    width: 100%;
-}
-
-.col-1-16 {
-    width: 50%;
-}
-
-.col-2-16 {
-    width: 100%;
-}
-
-.col-4-16 {
-    width: 100%;
-}
-
-.col-8-16 {
+.col-2-8, .col-2-12, .col-4-12, .col-2-16, .col-4-16, .col-8-16 {
     width: 100%;
 }
 
@@ -145,7 +113,7 @@ BEGIN MEDIA QUERIES
 }
 
 @media screen and (min-width: $vp2) {
-    .col-1-4, .col-1-6 {
+    .col-1-4, .col-1-6, .col-1-8, .col-2-12  {
         width: 50%;
     }
 
@@ -153,40 +121,24 @@ BEGIN MEDIA QUERIES
         width: 33.33%;
     }
 
-    .col-3-6 + .col-1-6 {
-        width: 100%;
-    }
-
     .col-2-3 {
         width: 66.66%;
-    }
-
-    .col-1-8 {
-        width: 50%;
     }
 
     .col-1-12 {
         width: 25%;
     }
 
-    .col-2-12 {
-        width: 50%;
-    }
-
-    .col-2-4, .col-2-6, .col-4-8 {
-        width: 100%;
-    }
-
-    .col-3-4 + .col-1-4, .preceding-col-1-4 {
+    .col-3-6 + .col-1-6, .col-2-4, .col-2-6, .col-4-8, .col-3-4 + .col-1-4, .preceding-col-1-4 {
         width: 100%;
     }
 }
 
 @media screen and (min-width: $vp3) {
-    .col-1-2 {
+    .col-1-2, .col-2-4, .col-4-6 ~ .col-1-6, .preceding-col-1-6, .col-2-8, .col-6-8 ~ .col-1-8, .preceding-col-1-8, .col-4-16 {
         width: 50%;
     }
-    .col-1-4, .col-3-4 + .col-1-4, .preceding-col-1-4 {
+    .col-1-4, .col-3-4 + .col-1-4, .preceding-col-1-4, .col-1-8, .col-2-16 {
         width: 25%;
     }
 
@@ -206,23 +158,16 @@ BEGIN MEDIA QUERIES
         width: 80%;
     }
 
-    .col-1-6 {
+    .col-1-6, .col-3-6 + .col-1-6  {
         width: 33.33%;
-    }
-
-    .col-3-6 + .col-1-6 {
-        width: 33.33%;
-    }
-
-    .col-2-4 {
-        width: 50%;
     }
 
     .col-3-4 {
         width: 75%;
     }
 
-    .col-4-4 {
+    .col-4-4, .col-3-6, .col-4-6, .col-4-6 + .col-2-6, .preceding-col-2-6, .col-4-8,
+    .col-6-8, .col-6-8 + .col-2-8, .preceding-col-2-8, .col-8-16  {
         width: 100%;
     }
 
@@ -230,85 +175,29 @@ BEGIN MEDIA QUERIES
         width: 66.66%;
     }
 
-    .col-3-6 {
-        width: 100%;
-    }
-
-    .col-4-6, .col-4-6 + .col-2-6, .preceding-col-2-6 {
-        width: 100%;
-    }
-
-    .col-4-6 ~ .col-1-6, .preceding-col-1-6 {
-        width: 50%;
-    }
-
-    .col-1-8 {
-        width: 25%;
-    }
-
-    .col-2-8 {
-        width: 50%;
-    }
-
-    .col-4-8 {
-        width: 100%;
-    }
-
-    .col-6-8, .col-6-8 + .col-2-8, .preceding-col-2-8 {
-        width: 100%;
-    }
-
-    .col-6-8 ~ .col-1-8, .preceding-col-1-8 {
-        width: 50%;
-    }
-
     .col-1-16 {
         width: 12.5%;
-    }
-
-    .col-2-16 {
-        width: 25%;
-    }
-
-    .col-4-16 {
-        width: 50%;
-    }
-
-    .col-8-16 {
-        width: 100%;
     }
 }
 
 @media screen and (min-width: $vp4) {
-    .col-4-6 + .col-2-6, .preceding-col-2-6 {
+    .col-4-6 + .col-2-6, .preceding-col-2-6, .col-2-6, .col-4-12 {
         width: 33.33%;
     }
 
-    .col-4-6 ~ .col-1-6, .preceding-col-1-6 {
+    .col-4-6 ~ .col-1-6, .preceding-col-1-6, .col-1-6, .col-3-6 + .col-1-6, .col-2-12 {
         width: 16.66%;
     }
 
-    .col-6-8 + .col-2-8, .preceding-col-2-8 {
+    .col-6-8 + .col-2-8, .preceding-col-2-8, .col-2-8, .col-2-16 {
         width: 25%;
     }
 
-    .col-6-8 ~ .col-1-8, .preceding-col-1-8 {
+    .col-6-8 ~ .col-1-8, .preceding-col-1-8, .col-1-8, .col-1-16 {
         width: 12.5%;
     }
 
-    .col-1-6 {
-        width: 16.66%;
-    }
-
-    .col-3-6 + .col-1-6 {
-        width: 16.66%;
-    }
-
-    .col-2-6 {
-        width: 33.33%;
-    }
-
-    .col-3-6 {
+    .col-3-6, .col-4-8, .col-4-16 {
         width: 50%;
     }
 
@@ -316,40 +205,16 @@ BEGIN MEDIA QUERIES
         width: 66.66%;
     }
 
-    .col-6-6 {
+    .col-6-6, .col-8-16 {
         width: 100%;
-    }
-
-    .col-1-8, .col-1-16 {
-        width: 12.5%;
-    }
-
-    .col-2-8, .col-2-16 {
-        width: 25%;
-    }
-
-    .col-4-8, .col-4-16 {
-        width: 50%;
     }
 
     .col-6-8 {
         width: 75%;
     }
 
-    .col-8-16 {
-        width: 100%;
-    }
-
     .col-1-12 {
         width: 8.33%;
-    }
-
-    .col-2-12 {
-        width: 16.66%;
-    }
-
-    .col-4-12 {
-        width: 33.33%;
     }
 }
 
@@ -374,8 +239,8 @@ BEGIN MEDIA QUERIES
 /*Reducing padding to a reasonable size for "extremely" large displays*/
 @media screen and (min-width: 2000px) {
     [class*='col-'] {
-        padding: 1em 1%;
-        padding: -webkit-calc(1em + 0.5vh) 1%;
-        padding: calc(1em + 0.5vh) 1%;
+        padding: 1em 0.5%;
+        padding: -webkit-calc(1em + 0.5vh) 0.5vw;
+        padding: calc(1em + 0.5vh) 0.5vw;
     }
 }
