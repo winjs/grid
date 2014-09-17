@@ -25,6 +25,9 @@ input[type="button"]:hover, input[type="button"]:focus {
   padding-right: 1rem;
   text-align: right; }
 
+.fixed .colNum {
+  width: 100%; }
+
 /*Clickable gridline styles*/
 .gridlines {
   display: none; }
