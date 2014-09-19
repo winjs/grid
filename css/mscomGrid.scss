@@ -256,9 +256,17 @@ BEGIN MEDIA QUERIES
 
 // Reducing padding to a reasonable size for "extremely" large displays
 @media screen and (min-width: 2000px) {
-    [class*='col-'] {
-        padding: 1em 1em;
-        padding: -webkit-calc(1em + 0.5vh) 0.5vw;
-        padding: calc(1em + 0.5vh) 0.5vw;
+    .grid {
+        padding: 0 1em;
+        padding: 0 0.5vw;
+        .row{
+            margin: 0 -1em;
+            margin: 0 -0.5vw;
+            & > [class*='col-'] {
+                padding: 1em 1em;
+                padding: -webkit-calc(1em + 0.5vh) 0.5vw;
+                padding: calc(1em + 0.5vh) 0.5vw;
+            }
+        }
     }
 }
