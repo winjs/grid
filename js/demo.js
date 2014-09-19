@@ -6,7 +6,7 @@ $('.fullGridToggle').on("click", function () {
 	var $grid = $('.grid');
 	if(!$grid.hasClass('full')){
 		$('.grid').addClass('full');
-		$('.inside').addClass('full');
+		$('.gridlines').children('row').addClass('full');
 	};
 });
 
@@ -20,7 +20,18 @@ $('.marginGridToggle').on("click", function () {
 
 $('.fixedGridToggle').on("click", function() {
 	var $grid = $('.grid');
+	if($grid.hasClass('zero-margin')) {
+		$grid.removeClass('zero-margin');
+	}
 	$grid.toggleClass('fixed');
+});
+
+$('.zeroMarginToggle').on("click", function() {
+	var $grid = $('.grid');
+	if($grid.hasClass('fixed')) {
+		$grid.removeClass('fixed');
+	}
+	$grid.toggleClass('zero-margin');
 });
 
 $('.headersToggle').on("click", function () {
