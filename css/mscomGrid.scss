@@ -7,22 +7,32 @@
     width: 90%;
     margin: 0 auto;
     max-width: $max-grid-width;
-    padding: 0 1em 0 1em;
-    padding: 0 1vw 0 1vw;
+    padding: 0 1em;
+    padding: 0 1vw;
 
     &.full {
         width:100%;
         max-width: none;
     }
-
-    &.fixed .row > [class*='col-'] {
-        padding-left: $fixed-col-margin;
-        padding-right: $fixed-col-margin;
+    &.fixed{
+        padding: 0 $fixed-col-margin;
+        .row{
+            margin: 0 -$fixed-col-margin;
+            & > [class*='col-'] {
+                padding-left: $fixed-col-margin;
+                padding-right: $fixed-col-margin;
+            }
+        }
     }
 
-    &.zero-margin .row > [class*='col-'] {
-        padding-left: 0;
-        padding-right: 0;
+    &.zero-margin{
+        .row {
+            margin: 0;
+            & > [class*='col-'] {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
     }
 
     .row {
