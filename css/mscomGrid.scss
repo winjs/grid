@@ -1,13 +1,5 @@
 @import 'mscomalize';
-
-$max-grid-width: 1600px;
-$fixed-col-margin: 2px; //4px fixed margin, gets doubled
-$vp1: 320px;
-$vp2: 540px;
-$vp3: 768px;
-$vp4: 992px;
-$vp5: 1400px;
-
+@import 'offsets';
 
 .grid {
     display: block;
@@ -15,23 +7,44 @@ $vp5: 1400px;
     width: 90%;
     margin: 0 auto;
     max-width: $max-grid-width;
-    padding: 0 1% 0 1%;
-    padding: 0 1vw 0 1vw;
+    padding: 0 1em;
+    padding: 0 1vw;
 
     &.full {
         width:100%;
         max-width: none;
     }
+    &.fixed{
+        padding: 0 $fixed-col-margin;
+        .row{
+            margin: 0 -$fixed-col-margin;
+            & > [class*='col-'] {
+                padding-left: $fixed-col-margin;
+                padding-right: $fixed-col-margin;
+            }
+        }
+    }
 
-    &.fixed .row > [class*='col-'] {
-        padding-left: $fixed-col-margin;
-        padding-right: $fixed-col-margin;
+    &.zero-margin{
+        .row {
+            margin: 0;
+            & > [class*='col-'] {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
     }
 
     .row {
-        margin: 0 -1%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -1em;
         margin: 0 -1vw;
         margin-bottom: 0;
+        &.content-flush {
+            margin: 0 -2em;
+            margin: 0 -2vw;
+        }
     }
 
     .row:after, [class*='col-']:after {
@@ -39,18 +52,15 @@ $vp5: 1400px;
         display: table;
         clear: both;
     }
-
-    &.no-padding-horizontal .row {
-        margin: 0;
-    }
 }
 
 [class*='col-'] {
+    align-items: stretch;
     float: left;
     width: 100%;
     position: relative;
     margin: 0;
-    padding: 1em 1%;
+    padding: 1em 1em;
     padding: -webkit-calc(1em + 0.5vh) 1vw;
     padding: calc(1em + 0.5vh) 1vw;
 }
@@ -67,7 +77,7 @@ $vp5: 1400px;
     width: 50%;
 }
 
-.col-1-4.nb {
+.col-1-4.nb, .col-1-24 {
     width: 25%;
 }
 
@@ -178,6 +188,10 @@ BEGIN MEDIA QUERIES
     .col-1-16 {
         width: 12.5%;
     }
+
+    .col-1-24 {
+        width: 8.33%
+    }
 }
 
 @media screen and (min-width: $vp4) {
@@ -216,6 +230,10 @@ BEGIN MEDIA QUERIES
     .col-1-12 {
         width: 8.33%;
     }
+
+    .col-1-24 {
+        width: 4.1666%
+    }
 }
 
 @media screen and (min-width: $vp5) {
@@ -236,11 +254,19 @@ BEGIN MEDIA QUERIES
     }
 }
 
-/*Reducing padding to a reasonable size for "extremely" large displays*/
+// Reducing padding to a reasonable size for "extremely" large displays
 @media screen and (min-width: 2000px) {
-    [class*='col-'] {
-        padding: 1em 0.5%;
-        padding: -webkit-calc(1em + 0.5vh) 0.5vw;
-        padding: calc(1em + 0.5vh) 0.5vw;
+    .grid {
+        padding: 0 1em;
+        padding: 0 0.5vw;
+        .row{
+            margin: 0 -1em;
+            margin: 0 -0.5vw;
+            & > [class*='col-'] {
+                padding: 1em 1em;
+                padding: -webkit-calc(1em + 0.5vh) 0.5vw;
+                padding: calc(1em + 0.5vh) 0.5vw;
+            }
+        }
     }
 }

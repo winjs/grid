@@ -20,34 +20,93 @@
     <header>
         <input type="button" value="Full grid" class="fullGridToggle" />
         <input type="button" value="Margin grid" class="marginGridToggle" />
-        <input type="button" value="Fixed margin grid" class="fixedGridToggle" />
+        <input type="button" value="Toggle fixed margin" class="fixedGridToggle" />
+        <input type="button" value="Toggle zero margin" class="zeroMarginToggle" />
         <input type="button" value="Toggle gridlines" class="gridlinesToggle" />
         <input type="button" value="Toggle headers" class="headersToggle" />
         <input type="button" value="Toggle grid background" class="gridBackgroundToggle" />
         <a href="HPDemo.html">Homepage demo</a>
     </header>
     <section class="gridlines outside">
-        <div class="gridlines inside">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+        <section class="grid">
+            <div class="row">
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+                <div class="col-1-24">
+                    <div class="grid-bar-color"></div>
+                </div>
+            </div>
+        </section>
     </section>
     <section class="grid fullGridDemo">
-        <section class="row  ">
+        <section class="row">
             <div class="col-1-1">
                 <div class="colNum green">1/1</div>
                 <h1 class="text-center">
@@ -56,7 +115,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-1-2">
                 <div class="colNum pink">1/2</div>
                 <h2 class="text-center">
@@ -71,7 +130,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-1-2 nb">
                 <div class="colNum pink">1/2</div>
                 <h2 class="text-center">
@@ -86,7 +145,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-1-3">
                 <div class="colNum purple">1/3</div>
                 <h3 class="text-center">Header three</h3>
@@ -101,7 +160,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-1-3 nb">
                 <div class="colNum purple">1/3</div>
                 <h3 class="text-center">Header three (no break)</h3>
@@ -112,7 +171,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-1-4 ">
                 <div class="colNum cyan">1/4</div>
                 <h4 class="text-center">Header four</h4>
@@ -131,7 +190,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-1-4 nb">
                 <div class="colNum cyan">1/4</div>
                 <h4 class="text-center">Header four</h4>
@@ -150,7 +209,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-2-4 ">
                 <div class="colNum cyan">2/4</div>
                 <h4 class="text-center">Header four</h4>
@@ -165,7 +224,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-3-4 ">
                 <div class="colNum cyan">3/4</div>
                 <h4 class="text-center">Header four</h4>
@@ -176,7 +235,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-1-5 ">
                 <div class="colNum purple">1/5</div>
             </div>
@@ -194,7 +253,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-2-5 ">
                 <div class="colNum purple">2/5</div>
             </div>
@@ -209,7 +268,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-1-5 ">
                 <div class="colNum purple">1/5</div>
             </div>
@@ -221,7 +280,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-4-5 ">
                 <div class="colNum purple">4/5</div>
             </div>
@@ -230,7 +289,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-1-6 ">
                 <div class="colNum orange">1/6</div>
             </div>
@@ -251,7 +310,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-2-6 ">
                 <div class="colNum orange">2/6</div>
             </div>
@@ -269,7 +328,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-3-6 ">
                 <div class="colNum orange">3/6</div>
             </div>
@@ -284,7 +343,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-4-6 ">
                 <div class="colNum orange">4/6</div>
             </div>
@@ -296,7 +355,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-1-8 ">
                 <div class="colNum teal">1/8</div>
             </div>
@@ -323,7 +382,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-2-8 ">
                 <div class="colNum teal">2/8</div>
             </div>
@@ -347,7 +406,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-4-8 ">
                 <div class="colNum teal">4/8</div>
             </div>
@@ -365,7 +424,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-6-8 ">
                 <div class="colNum teal">6/8</div>
             </div>
@@ -377,7 +436,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-6-8 ">
                 <div class="colNum teal">6/8</div>
             </div>
@@ -386,7 +445,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-1-12 ">
                 <div class="colNum blue">1/12</div>
             </div>
@@ -424,7 +483,7 @@
                 <div class="colNum blue">12/12</div>
             </div>
         </section>
-        <section class="row  ">
+        <section class="row">
             <div class="col-2-12 ">
                 <div class="colNum blue">1/12</div>
             </div>
@@ -460,7 +519,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-4-12 ">
                 <div class="colNum blue">1/12</div>
             </div>
@@ -490,7 +549,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-1-12 ">
                 <div class="colNum blue">3/12</div>
             </div>
@@ -526,7 +585,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
 
             <div class="col-1-12 ">
                 <div class="colNum blue">5/12</div>
@@ -557,7 +616,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-1-16">
                 <div class="colNum red">1/16</div>
             </div>
@@ -608,7 +667,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-2-16">
                 <div class="colNum red">1/16</div>
             </div>
@@ -656,7 +715,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-4-16">
                 <div class="colNum red">1/16</div>
             </div>
@@ -698,7 +757,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
             <div class="col-8-16">
                 <div class="colNum red">1/16</div>
             </div>
@@ -728,7 +787,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
 
             <div class="col-1-16">
                 <div class="colNum red">3/16</div>
@@ -777,7 +836,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
 
             <div class="col-1-16">
                 <div class="colNum red">5/16</div>
@@ -820,7 +879,7 @@
             </div>
         </section>
 
-        <section class="row  ">
+        <section class="row">
 
             <div class="col-1-16">
                 <div class="colNum red">9/16</div>
@@ -848,79 +907,244 @@
             </div>
             <div class="col-8-16">
                 <div class="colNum red">1/16</div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-1-24">
+                <div class="colNum green"></div>
             </div>
         </section>
     </section>
     <section class="grid extras">
         <h1>
+            Nesting
+        </h1>
+        <section class="row">
+            <div class="col-1-4">
+                <div class="colNum cyan"></div>
+            </div>
+            <div class="col-1-4">
+                <div class="cyan">
+                    <section class="row">
+                        <div class="col-1-6">
+                            <div class="colNum orange"></div>
+                        </div>
+                        <div class="col-1-6">
+                            <div class="colNum orange"></div>
+                        </div>
+                        <div class="col-1-6">
+                            <div class="colNum orange"></div>
+                        </div>
+                        <div class="col-1-6">
+                            <div class="colNum orange"></div>
+                        </div>
+                        <div class="col-1-6">
+                            <div class="colNum orange"></div>
+                        </div>
+                        <div class="col-1-6">
+                            <div class="colNum orange"></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="col-1-4">
+                <div class="colNum cyan"></div>
+            </div>
+            <div class="col-1-4">
+                <div class="cyan">
+                    <section class="row">
+                        <div class="col-1-4">
+                            <div class="colNum green"></div>
+                        </div>
+                        <div class="col-1-4">
+                            <div class="colNum green"></div>
+                        </div>
+                        <div class="col-1-4">
+                            <div class="colNum green"></div>
+                        </div>
+                        <div class="col-1-4">
+                            <div class="colNum green"></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-1-2">
+                <div class="pink">
+                    <section class="row">
+                        <div class="col-1-4">
+                            <div class="colNum cyan"></div>
+                        </div>
+                        <div class="col-1-4">
+                            <div class="cyan">
+                                <section class="row">
+                                    <div class="col-1-3">
+                                        <div class="colNum purple"></div>
+                                    </div>
+                                    <div class="col-1-3">
+                                        <div class="colNum purple"></div>
+                                    </div>
+                                    <div class="col-1-3">
+                                        <div class="colNum purple"></div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="col-1-4">
+                            <div class="colNum cyan"></div>
+                        </div>
+                        <div class="col-1-4">
+                            <div class="cyan">
+                                <section class="row">
+                                    <div class="col-1-2">
+                                        <div class="colNum pink"></div>
+                                    </div>
+                                    <div class="col-1-2">
+                                        <div class="colNum pink"></div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="col-1-2">
+                <div class="pink">
+                    <section class="row">
+                        <div class="col-1-8">
+                            <div class="colNum teal"></div>
+                        </div>
+                        <div class="col-1-8">
+                            <div class="colNum teal"></div>
+                        </div>
+                        <div class="col-1-8">
+                            <div class="colNum teal"></div>
+                        </div>
+                        <div class="col-1-8">
+                            <div class="colNum teal"></div>
+                        </div>
+                        <div class="col-1-8">
+                            <div class="colNum teal"></div>
+                        </div>
+                        <div class="col-1-8">
+                            <div class="colNum teal"></div>
+                        </div>
+                        <div class="col-1-8">
+                            <div class="colNum teal"></div>
+                        </div>
+                        <div class="col-1-8">
+                            <div class="colNum teal"></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <h1>
+            Offsets
+        </h1>
+        <section class="row">
+            <div class="col-1-4">
+                <div class="colNum cyan"></div>
+            </div>
+            <div class="col-1-4 m-col-4-offset-2">
+                <div class="colNum cyan"></div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-1-6">
+                <div class="colNum orange"></div>
+            </div>
+            <div class="col-1-6 l-col-6-offset-2">
+                <div class="colNum orange"></div>
+            </div>
+            <div class="col-1-6 l-col-6-offset-1">
+                <div class="colNum orange"></div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-1-8 xl-col-8-offset-1">
+                <div class="colNum teal"></div>
+            </div>
+            <div class="col-1-8 xl-col-8-offset-2">
+                <div class="colNum teal"></div>
+            </div>
+            <div class="col-1-8 xl-col-8-offset-2">
+                <div class="colNum teal"></div>
+            </div>
+        </section>
+        <h1>
             Other examples of possible behaviors
         </h1>
-        <h4>
-            No margin and not contained in single column
-        </h4>
-        <section class="row  ">
-            <div class="col-1-3 no-padding-horizontal">
-                <div class="colNum purple">1/3</div>
-            </div>
-            <div class="col-1-3 no-padding-horizontal">
-                <div class="colNum purple">2/3</div>
-            </div>
-            <div class="col-1-3 no-padding-horizontal">
-                <div class="colNum purple">3/3</div>
-            </div>
-        </section>
-        <h4>
-            No margin and contained in single column
-        </h4>
-        <section class="row  ">
-            <div class="col-1-1 no-padding-vertical">
-                <div class="col-1-3 no-padding-horizontal">
-                    <div class="colNum purple">1/3</div>
-                </div>
-                <div class="col-1-3 no-padding-horizontal">
-                    <div class="colNum purple">2/3</div>
-                </div>
-                <div class="col-1-3 no-padding-horizontal">
-                    <div class="colNum purple">3/3</div>
-                </div>
-            </div>
-        </section>
-
-        <h4>
-            Fixed margin grid (4px/configurable)
-        </h4>
-    </section>
-    <section class="grid fixed extras">
-        <section class="row">
-            <div class="col-1-4">
-                <div class="colNum cyan">1/4</div>
-            </div>
-            <div class="col-1-4">
-                <div class="colNum cyan">2/4</div>
-            </div>
-            <div class="col-1-4">
-                <div class="colNum cyan">3/4</div>
-            </div>
-            <div class="col-1-4">
-                <div class="colNum cyan">4/4</div>
-            </div>
-        </section>
-        <section class="row">
-            <div class="col-1-4">
-                <div class="colNum cyan">1/4</div>
-            </div>
-            <div class="col-1-4">
-                <div class="colNum cyan">2/4</div>
-            </div>
-            <div class="col-1-4">
-                <div class="colNum cyan">3/4</div>
-            </div>
-            <div class="col-1-4">
-                <div class="colNum cyan">4/4</div>
-            </div>
-        </section>
-    </section>
-    <section class="grid extras">
         <section class="row">
             <div class="col-1-4 justify">
                 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>

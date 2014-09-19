@@ -16,13 +16,13 @@
 }
 
 input[type="button"] {
-    border: 0;
-    padding: 1rem;
-    background-color: #F65314;
+	border: 0;
+	padding: 1rem;
+	background-color: #F65314;
 }
 
 input[type="button"]:hover, input[type="button"]:focus {
-    background-color: #7CBB00;
+	background-color: #7CBB00;
 }
 
 .colNum {
@@ -30,9 +30,11 @@ input[type="button"]:hover, input[type="button"]:focus {
 	color: rgba(255, 255, 255, 0.8);
 	padding-right: 1rem;
 	text-align: right;
+	width: 100%;
+	display: inline-block;
 }
 
-.fixed .colNum {
+.fixed .colNum, .zero-margin .colNum {
 	width: 100%;
 }
 
@@ -42,36 +44,40 @@ input[type="button"]:hover, input[type="button"]:focus {
 
 	&.outside {
 		position: fixed;
-		top: 4em;
+		top: 3em;
 		width: 100%;
 		z-index: 1;
 	}
 
-	&.inside {
-		position: relative;
-		width: 90%;
-		margin: 0 auto;
-		max-width: 1600px;
-		padding: 0 1%;
+	& > .grid > .row {
+		height: 100vh;
 	}
 
-	&.full.inside {
+	& > .full.row {
 		width: 100%;
 		max-width: none;
+	}
+
+	.row .col-1-24 {
+		height: 100%;
 	}
 
 	.bar {
 		position: relative;
 		float: left;
-		width: 4.375%;
+		width: 4.16%;
 		height: 100vh;
-		margin-right: 2%;
+		padding-right: 1vw;
+		padding-left: 1vw;
 		bottom: 0;
-		background-color: rgba(255, 0, 0, 0.25);
 	}
 
 	.bar:last-of-type {
 		margin-right: 0;
+	}
+	.grid-bar-color{
+		background-color: rgba(255, 0, 0, 0.25);
+		height: 100%;
 	}
 }
 

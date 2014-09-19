@@ -1,0 +1,227 @@
+@import 'config';
+
+@media screen and (min-width: $vp1) {
+    .row {
+        .xs-col-8-offset-1, .xs-col-12-offset-1, .xs-col-16-offset-2 {
+            margin-left: 50%;
+        }
+        .xs-col-16-offset-1 {
+            margin-left: 25%;
+        }
+        .xs-col-16-offset-3 {
+            margin-left: 75%;
+        }
+    }
+}
+
+@media screen and (min-width: $vp2) {
+    .row {
+        .s-col-3-offset-1 {
+            margin-left: 33.33%;
+        }
+        .s-col-3-offset-2 {
+            margin-left: 66.66%;
+        }
+        .s-col-12-offset-1, .s-col-16-offset-1 {
+            margin-left: 25%;
+        }
+        .s-col-4-offset-1, .s-col-6-offset-1, .s-col-8-offset-1, .s-col-12-offset-2, .s-col-16-offset-2 {
+            margin-left: 50%;
+        }
+        .s-col-12-offset-3, .s-col-16-offset-3 {
+            margin-left: 75%;
+        }
+    }
+}
+
+@media screen and (min-width: $vp3) {
+    .row {
+        .m-col-16-offset-1 {
+            margin-left: 12.5%;
+        }
+        .m-col-5-offset-1 {
+            margin-left: 20%;
+        }
+        .m-col-4-offset-1, .m-col-8-offset-1, .m-col-12-offset-1, .m-col-16-offset-2 {
+            margin-left: 25%;
+        }
+        .m-col-3-offset-1, .m-col-6-offset-1 {
+            margin-left: 33.33%;
+        }
+        .m-col-16-offset-3{
+            margin-left: 37.5%;
+        }
+        .m-col-5-offset-2 {
+            margin-left: 40%;
+        }
+        .m-col-2-offset-1, .m-col-4-offset-2, .m-col-8-offset-2, .m-col-12-offset-2, .m-col-16-offset-4 {
+            margin-left: 50%;
+        }
+        .m-col-5-offset-3 {
+            margin-left: 60%;
+        }
+        .m-col-16-offset-5 {
+            margin-left: 62.5%;
+        }
+        .m-col-3-offset-2, .m-col-6-offset-2 {
+            margin-left: 66.66%;
+        }
+        .m-col-4-offset-3, .m-col-8-offset-3, .m-col-12-offset-3, .m-col-16-offset-6 {
+            margin-left: 75%;
+        }
+        .m-col-5-offset-4 {
+            margin-left: 80%;
+        }
+        .m-col-16-offset-7 {
+            margin-left: 87.5%;
+        }
+    }
+}
+
+@media screen and (min-width: $vp4) {
+    .row {
+        .l-col-12-offset-1 {
+            margin-left: 8.33%;
+        }
+        .l-col-8-offset-1, .l-col-16-offset-1 {
+            margin-left: 12.5%;
+        }
+        .l-col-6-offset-1, .l-col-12-offset-2{
+            margin-left: 16.66%
+        }
+        .l-col-5-offset-1 {
+            margin-left: 20%;
+        }
+        .l-col-4-offset-1, .l-col-8-offset-2, .l-col-12-offset-3, .l-col-16-offset-2 {
+            margin-left: 25%;
+        }
+        .l-col-3-offset-1, .l-col-6-offset-2, .l-col-12-offset-4 {
+            margin-left: 33.33%;
+        }
+        .l-col-8-offset-3, .l-col-16-offset-3 {
+            margin-left: 37.5%;
+        }
+        .l-col-5-offset-2 {
+            margin-left: 40%;
+        }
+        .l-col-12-offset-5{
+            margin-left: 41.66%;
+        }
+        .l-col-2-offset-1, .l-col-4-offset-2, .l-col-6-offset-3, .l-col-8-offset-4, .l-col-12-offset-6, .l-col-16-offset-4 {
+            margin-left: 50%;
+        }
+        .l-col-12-offset-7 {
+            margin-left: 58.33%;
+        }
+        .l-col-5-offset-3 {
+            margin-left: 60%;
+        }
+        .l-col-8-offset-5, .l-col-16-offset-5 {
+            margin-left: 62.5%;
+        }
+        .l-col-3-offset-2, .l-col-6-offset-4, .l-col-12-offset-8 {
+            margin-left: 66.66%;
+        }
+        .l-col-4-offset-3, .l-col-8-offset-6, .l-col-12-offset-9, .l-col-16-offset-6 {
+            margin-left: 75%;
+        }
+        .l-col-5-offset-4 {
+            margin-left: 80%;
+        }
+        .l-col-6-offset-5, .l-col-12-offset-10 {
+            margin-left: 83.33%;
+        }
+        .l-col-8-offset-7, .l-col-16-offset-7 {
+            margin-left: 87.5%;
+        }
+        .l-col-12-offset-11 {
+            margin-left: 91.66%;
+        }
+    }
+}
+
+@media screen and (min-width: $vp5) {
+    .row {
+        .xl-col-16-offset-1 {
+            margin-left: 6.25%;
+        }
+        .xl-col-12-offset-1 {
+            margin-left: 8.33%;
+        }
+        .xl-col-8-offset-1, .xl-col-16-offset-2 {
+            margin-left: 12.5%;
+        }
+        .xl-col-6-offset-1, .xl-col-12-offset-2{
+            margin-left: 16.66%
+        }
+        .xl-col-16-offset-3{
+            margin-left: 18.75%;
+        }
+        .xl-col-5-offset-1 {
+            margin-left: 20%;
+        }
+        .xl-col-4-offset-1, .xl-col-8-offset-2, .xl-col-12-offset-3, .xl-col-16-offset-4 {
+            margin-left: 25%;
+        }
+        .xl-col-16-offset-5{
+            margin-left: 31.25%;
+        }
+        .xl-col-3-offset-1, .xl-col-6-offset-2, .xl-col-12-offset-4 {
+            margin-left: 33.33%;
+        }
+        .xl-col-8-offset-3, .xl-col-16-offset-6 {
+            margin-left: 37.5%;
+        }
+        .xl-col-5-offset-2 {
+            margin-left: 40%;
+        }
+        .xl-col-12-offset-5{
+            margin-left: 41.66%;
+        }
+        .xl-col-16-offset-7{
+            margin-left: 43.75%;
+        }
+        .xl-col-2-offset-1, .xl-col-4-offset-2, .xl-col-6-offset-3, .xl-col-8-offset-4, .xl-col-12-offset-6, .xl-col-16-offset-8 {
+            margin-left: 50%;
+        }
+        .xl-col-16-offset-9 {
+            margin-left: 56.25%;
+        }
+        .xl-col-12-offset-7 {
+            margin-left: 58.33%;
+        }
+        .xl-col-5-offset-3 {
+            margin-left: 60%;
+        }
+        .xl-col-8-offset-5, .xl-col-16-offset-10 {
+            margin-left: 62.5%;
+        }
+        .xl-col-3-offset-2, .xl-col-6-offset-4, .xl-col-12-offset-8 {
+            margin-left: 66.66%;
+        }
+        .xl-col-16-offset-11{
+            margin-left: 68.75%;
+        }
+        .xl-col-4-offset-3, .xl-col-8-offset-6, .xl-col-12-offset-9, .xl-col-16-offset-12 {
+            margin-left: 75%;
+        }
+        .xl-col-5-offset-4 {
+            margin-left: 80%;
+        }
+        .xl-col-16-offset-13 {
+            margin-left: 81.25%;
+        }
+        .xl-col-6-offset-5, .xl-col-12-offset-10 {
+            margin-left: 83.33%;
+        }
+        .xl-col-8-offset-7, .xl-col-16-offset-14 {
+            margin-left: 87.5%;
+        }
+        .xl-col-12-offset-11 {
+            margin-left: 91.66%;
+        }
+        .xl-col-16-offset-15 {
+            margin-left: 93.75%;
+        }
+    }
+}
