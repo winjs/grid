@@ -1,15 +1,19 @@
-@import 'config';
+@import "config";
 
 @media screen and (min-width: $vp1) {
     .row {
-        .xs-col-8-offset-1, .xs-col-12-offset-1, .xs-col-16-offset-2 {
-            margin-left: 50%;
+        .xs-col-8-offset-1,
+        .xs-col-12-offset-1,
+        .xs-col-16-offset-2 {
+            margin-left: percentage(1 / 2);
         }
+
         .xs-col-16-offset-1 {
-            margin-left: 25%;
+            margin-left: percentage(1 / 4);
         }
+
         .xs-col-16-offset-3 {
-            margin-left: 75%;
+            margin-left: percentage(3 / 2);
         }
     }
 }
@@ -17,19 +21,28 @@
 @media screen and (min-width: $vp2) {
     .row {
         .s-col-3-offset-1 {
-            margin-left: 33.33%;
+            margin-left: percentage(1 / 3);
         }
+
         .s-col-3-offset-2 {
-            margin-left: 66.66%;
+            margin-left: percentage(2 / 3);
         }
-        .s-col-12-offset-1, .s-col-16-offset-1 {
-            margin-left: 25%;
+
+        .s-col-12-offset-1,
+        .s-col-16-offset-1 {
+            margin-left: percentage(1 / 4);
         }
-        .s-col-4-offset-1, .s-col-6-offset-1, .s-col-8-offset-1, .s-col-12-offset-2, .s-col-16-offset-2 {
-            margin-left: 50%;
+
+        .s-col-4-offset-1,
+        .s-col-6-offset-1,
+        .s-col-8-offset-1,
+        .s-col-12-offset-2,
+        .s-col-16-offset-2 {
+            margin-left: percentage(1 / 2);
         }
-        .s-col-12-offset-3, .s-col-16-offset-3 {
-            margin-left: 75%;
+        .s-col-12-offset-3,
+        .s-col-16-offset-3 {
+            margin-left: percentage(3 / 4);
         }
     }
 }
@@ -37,43 +50,67 @@
 @media screen and (min-width: $vp3) {
     .row {
         .m-col-16-offset-1 {
-            margin-left: 12.5%;
+            margin-left: percentage(1 / 8);
         }
+
         .m-col-5-offset-1 {
-            margin-left: 20%;
+            margin-left: percentage(1 / 5);
         }
-        .m-col-4-offset-1, .m-col-8-offset-1, .m-col-12-offset-1, .m-col-16-offset-2 {
-            margin-left: 25%;
+
+        .m-col-4-offset-1,
+        .m-col-8-offset-1,
+        .m-col-12-offset-1,
+        .m-col-16-offset-2 {
+            margin-left: percentage(1 / 4);
         }
-        .m-col-3-offset-1, .m-col-6-offset-1 {
-            margin-left: 33.33%;
+
+        .m-col-3-offset-1,
+        .m-col-6-offset-1 {
+            margin-left: percentage(1 / 3);
         }
-        .m-col-16-offset-3{
-            margin-left: 37.5%;
+
+        .m-col-16-offset-3 {
+            margin-left: percentage(3 / 8);
         }
+
         .m-col-5-offset-2 {
-            margin-left: 40%;
+            margin-left: percentage(2 / 5);
         }
-        .m-col-2-offset-1, .m-col-4-offset-2, .m-col-8-offset-2, .m-col-12-offset-2, .m-col-16-offset-4 {
-            margin-left: 50%;
+
+        .m-col-2-offset-1,
+        .m-col-4-offset-2,
+        .m-col-8-offset-2,
+        .m-col-12-offset-2,
+        .m-col-16-offset-4 {
+            margin-left: percentage(1 / 2);
         }
+
         .m-col-5-offset-3 {
-            margin-left: 60%;
+            margin-left: percentage(3 / 5);
         }
+
         .m-col-16-offset-5 {
-            margin-left: 62.5%;
+            margin-left: percentage(5 / 8);
         }
-        .m-col-3-offset-2, .m-col-6-offset-2 {
-            margin-left: 66.66%;
+
+        .m-col-3-offset-2,
+        .m-col-6-offset-2 {
+            margin-left: percentage(2 / 3);
         }
-        .m-col-4-offset-3, .m-col-8-offset-3, .m-col-12-offset-3, .m-col-16-offset-6 {
-            margin-left: 75%;
+
+        .m-col-4-offset-3,
+        .m-col-8-offset-3,
+        .m-col-12-offset-3,
+        .m-col-16-offset-6 {
+            margin-left: percentage(3 / 4);
         }
+
         .m-col-5-offset-4 {
-            margin-left: 80%;
+            margin-left: percentage(4 / 5);
         }
+
         .m-col-16-offset-7 {
-            margin-left: 87.5%;
+            margin-left: percentage(7 / 8);
         }
     }
 }
@@ -81,61 +118,100 @@
 @media screen and (min-width: $vp4) {
     .row {
         .l-col-12-offset-1 {
-            margin-left: 8.33%;
+            margin-left: percentage(1 / 12);
         }
-        .l-col-8-offset-1, .l-col-16-offset-1 {
-            margin-left: 12.5%;
+
+        .l-col-8-offset-1,
+        .l-col-16-offset-1 {
+            margin-left: percentage(1 / 8);
         }
-        .l-col-6-offset-1, .l-col-12-offset-2{
-            margin-left: 16.66%
+
+        .l-col-6-offset-1,
+        .l-col-12-offset-2 {
+            margin-left: percentage(1 / 6);
         }
+
         .l-col-5-offset-1 {
-            margin-left: 20%;
+            margin-left: percentage(1 / 5);
         }
-        .l-col-4-offset-1, .l-col-8-offset-2, .l-col-12-offset-3, .l-col-16-offset-2 {
-            margin-left: 25%;
+
+        .l-col-4-offset-1,
+        .l-col-8-offset-2,
+        .l-col-12-offset-3,
+        .l-col-16-offset-2 {
+            margin-left: percentage(1 / 4);
         }
-        .l-col-3-offset-1, .l-col-6-offset-2, .l-col-12-offset-4 {
-            margin-left: 33.33%;
+
+        .l-col-3-offset-1,
+        .l-col-6-offset-2,
+        .l-col-12-offset-4 {
+            margin-left: percentage(1 / 3);
         }
-        .l-col-8-offset-3, .l-col-16-offset-3 {
-            margin-left: 37.5%;
+
+        .l-col-8-offset-3,
+        .l-col-16-offset-3 {
+            margin-left: percentage(3 / 8);
         }
+
         .l-col-5-offset-2 {
-            margin-left: 40%;
+            margin-left: percentage(2 / 5);
         }
-        .l-col-12-offset-5{
-            margin-left: 41.66%;
+
+        .l-col-12-offset-5 {
+            margin-left: percentage(5 / 12);
         }
-        .l-col-2-offset-1, .l-col-4-offset-2, .l-col-6-offset-3, .l-col-8-offset-4, .l-col-12-offset-6, .l-col-16-offset-4 {
-            margin-left: 50%;
+
+        .l-col-2-offset-1,
+        .l-col-4-offset-2,
+        .l-col-6-offset-3,
+        .l-col-8-offset-4,
+        .l-col-12-offset-6,
+        .l-col-16-offset-4 {
+            margin-left: percentage(1 / 2);
         }
+
         .l-col-12-offset-7 {
-            margin-left: 58.33%;
+            margin-left: percentage(7 / 12);
         }
+
         .l-col-5-offset-3 {
-            margin-left: 60%;
+            margin-left: percentage(3 / 5);
         }
-        .l-col-8-offset-5, .l-col-16-offset-5 {
-            margin-left: 62.5%;
+
+        .l-col-8-offset-5,
+        .l-col-16-offset-5 {
+            margin-left: percentage(5 / 8);
         }
-        .l-col-3-offset-2, .l-col-6-offset-4, .l-col-12-offset-8 {
-            margin-left: 66.66%;
+
+        .l-col-3-offset-2,
+        .l-col-6-offset-4,
+        .l-col-12-offset-8 {
+            margin-left: percentage(2 / 3);
         }
-        .l-col-4-offset-3, .l-col-8-offset-6, .l-col-12-offset-9, .l-col-16-offset-6 {
-            margin-left: 75%;
+
+        .l-col-4-offset-3,
+        .l-col-8-offset-6,
+        .l-col-12-offset-9,
+        .l-col-16-offset-6 {
+            margin-left: percentage(3 / 4);
         }
+
         .l-col-5-offset-4 {
-            margin-left: 80%;
+            margin-left: percentage(4 / 5);
         }
-        .l-col-6-offset-5, .l-col-12-offset-10 {
-            margin-left: 83.33%;
+
+        .l-col-6-offset-5,
+        .l-col-12-offset-10 {
+            margin-left: percentage(5 / 6);
         }
-        .l-col-8-offset-7, .l-col-16-offset-7 {
-            margin-left: 87.5%;
+
+        .l-col-8-offset-7,
+        .l-col-16-offset-7 {
+            margin-left: percentage(7 / 8);
         }
+
         .l-col-12-offset-11 {
-            margin-left: 91.66%;
+            margin-left: percentage(11 / 12);
         }
     }
 }
@@ -143,85 +219,132 @@
 @media screen and (min-width: $vp5) {
     .row {
         .xl-col-16-offset-1 {
-            margin-left: 6.25%;
+            margin-left: percentage(1 / 16);
         }
+
         .xl-col-12-offset-1 {
-            margin-left: 8.33%;
+            margin-left: percentage(1 / 12);
         }
-        .xl-col-8-offset-1, .xl-col-16-offset-2 {
-            margin-left: 12.5%;
+
+        .xl-col-8-offset-1,
+        .xl-col-16-offset-2 {
+            margin-left: percentage(1 / 8);
         }
-        .xl-col-6-offset-1, .xl-col-12-offset-2{
-            margin-left: 16.66%
+
+        .xl-col-6-offset-1,
+        .xl-col-12-offset-2 {
+            margin-left: percentage(1 / 6);
         }
-        .xl-col-16-offset-3{
-            margin-left: 18.75%;
+
+        .xl-col-16-offset-3 {
+            margin-left: percentage(3 / 16);
         }
+
         .xl-col-5-offset-1 {
-            margin-left: 20%;
+            margin-left: percentage(1 / 5);
         }
-        .xl-col-4-offset-1, .xl-col-8-offset-2, .xl-col-12-offset-3, .xl-col-16-offset-4 {
-            margin-left: 25%;
+
+        .xl-col-4-offset-1,
+        .xl-col-8-offset-2,
+        .xl-col-12-offset-3,
+        .xl-col-16-offset-4 {
+            margin-left: percentage(1 / 4);
         }
-        .xl-col-16-offset-5{
-            margin-left: 31.25%;
+
+        .xl-col-16-offset-5 {
+            margin-left: percentage(5 / 16);
         }
-        .xl-col-3-offset-1, .xl-col-6-offset-2, .xl-col-12-offset-4 {
-            margin-left: 33.33%;
+
+        .xl-col-3-offset-1,
+        .xl-col-6-offset-2,
+        .xl-col-12-offset-4 {
+            margin-left: percentage(1 / 3);
         }
-        .xl-col-8-offset-3, .xl-col-16-offset-6 {
-            margin-left: 37.5%;
+
+        .xl-col-8-offset-3,
+        .xl-col-16-offset-6 {
+            margin-left: percentage(3 / 8);
         }
+
         .xl-col-5-offset-2 {
-            margin-left: 40%;
+            margin-left: percentage(2 / 5);
         }
-        .xl-col-12-offset-5{
-            margin-left: 41.66%;
+
+        .xl-col-12-offset-5 {
+            margin-left: percentage(5 / 12);
         }
-        .xl-col-16-offset-7{
-            margin-left: 43.75%;
+
+        .xl-col-16-offset-7 {
+            margin-left: percentage(7 / 16);
         }
-        .xl-col-2-offset-1, .xl-col-4-offset-2, .xl-col-6-offset-3, .xl-col-8-offset-4, .xl-col-12-offset-6, .xl-col-16-offset-8 {
-            margin-left: 50%;
+
+        .xl-col-2-offset-1,
+        .xl-col-4-offset-2,
+        .xl-col-6-offset-3,
+        .xl-col-8-offset-4,
+        .xl-col-12-offset-6,
+        .xl-col-16-offset-8 {
+            margin-left: percentage(1 / 2);
         }
+
         .xl-col-16-offset-9 {
-            margin-left: 56.25%;
+            margin-left: percentage(9 / 16);
         }
+
         .xl-col-12-offset-7 {
-            margin-left: 58.33%;
+            margin-left: percentage(7 / 12);
         }
+
         .xl-col-5-offset-3 {
-            margin-left: 60%;
+            margin-left: percentage(3 / 5);
         }
-        .xl-col-8-offset-5, .xl-col-16-offset-10 {
-            margin-left: 62.5%;
+
+        .xl-col-8-offset-5,
+        .xl-col-16-offset-10 {
+            margin-left: percentage(5 / 8);
         }
-        .xl-col-3-offset-2, .xl-col-6-offset-4, .xl-col-12-offset-8 {
-            margin-left: 66.66%;
+
+        .xl-col-3-offset-2,
+        .xl-col-6-offset-4,
+        .xl-col-12-offset-8 {
+            margin-left: percentage(2 / 3);
         }
-        .xl-col-16-offset-11{
-            margin-left: 68.75%;
+
+        .xl-col-16-offset-11 {
+            margin-left: percentage(11 / 16);
         }
-        .xl-col-4-offset-3, .xl-col-8-offset-6, .xl-col-12-offset-9, .xl-col-16-offset-12 {
-            margin-left: 75%;
+
+        .xl-col-4-offset-3,
+        .xl-col-8-offset-6,
+        .xl-col-12-offset-9,
+        .xl-col-16-offset-12 {
+            margin-left: percentage(3 / 4);
         }
+
         .xl-col-5-offset-4 {
-            margin-left: 80%;
+            margin-left: percentage(4 / 5);
         }
+
         .xl-col-16-offset-13 {
-            margin-left: 81.25%;
+            margin-left: percentage(13 / 16);
         }
-        .xl-col-6-offset-5, .xl-col-12-offset-10 {
-            margin-left: 83.33%;
+
+        .xl-col-6-offset-5,
+        .xl-col-12-offset-10 {
+            margin-left: percentage(5 / 6);
         }
-        .xl-col-8-offset-7, .xl-col-16-offset-14 {
-            margin-left: 87.5%;
+
+        .xl-col-8-offset-7,
+        .xl-col-16-offset-14 {
+            margin-left: percentage(7 / 8);
         }
+
         .xl-col-12-offset-11 {
-            margin-left: 91.66%;
+            margin-left: percentage(11 / 12);
         }
+
         .xl-col-16-offset-15 {
-            margin-left: 93.75%;
+            margin-left: percentage(15 / 16);
         }
     }
 }

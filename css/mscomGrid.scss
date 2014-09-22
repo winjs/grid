@@ -1,5 +1,5 @@
-@import 'mscomalize';
-@import 'offsets';
+@import "mscomalize";
+@import "offsets";
 
 .grid {
     display: block;
@@ -14,21 +14,25 @@
         width:100%;
         max-width: none;
     }
-    &.fixed{
+
+    &.fixed {
         padding: 0 $fixed-col-margin;
-        .row{
+
+        .row {
             margin: 0 -$fixed-col-margin;
-            & > [class*='col-'] {
+
+            & > [class*="col-"] {
                 padding-left: $fixed-col-margin;
                 padding-right: $fixed-col-margin;
             }
         }
     }
 
-    &.zero-margin{
+    &.zero-margin {
         .row {
             margin: 0;
-            & > [class*='col-'] {
+
+            & > [class*="col-"] {
                 padding-left: 0;
                 padding-right: 0;
             }
@@ -41,20 +45,22 @@
         margin: 0 -1em;
         margin: 0 -1vw;
         margin-bottom: 0;
+
         &.content-flush {
             margin: 0 -2em;
             margin: 0 -2vw;
         }
     }
 
-    .row:after, [class*='col-']:after {
+    .row:after,
+    [class*="col-"]:after {
         content: "";
         display: table;
         clear: both;
     }
 }
 
-[class*='col-'] {
+[class*="col-"] {
     align-items: stretch;
     float: left;
     width: 100%;
@@ -66,47 +72,57 @@
 }
 
 .col-1-3.nb {
-    width: 33.3333%;
+    width: percentage(1 / 3);
 }
 
 .col-2-3.nb {
-    width: 66.6666%;
+    width: percentage(2 / 3);
 }
 
-.col-1-2.nb, .col-2-4.nb, .col-1-8, .col-1-12, .col-1-16 {
-    width: 50%;
+.col-1-2.nb,
+.col-2-4.nb,
+.col-1-8,
+.col-1-12,
+.col-1-16 {
+    width: percentage(1 / 2);
 }
 
-.col-1-4.nb, .col-1-24 {
-    width: 25%;
+.col-1-4.nb,
+.col-1-24 {
+    width: percentage(1 / 4);
 }
 
 .col-3-4.nb {
-    width: 75%;
+    width: percentage(3 / 4);
 }
 
 .col-1-5.nb {
-    width: 20%;
+    width: percentage(1 / 5);
 }
 
 .col-1-6.nb {
-    width: 16.66%;
+    width: percentage(1 / 6);
 }
 
 .col-1-8.nb {
-    width: 12.5%;
+    width: percentage(1 / 8);
 }
 
 .col-1-12.nb {
-    width: 8.33%;
+    width: percentage(1 / 12);
 }
 
 .col-1-16.nb {
-    width: 6.25%;
+    width: percentage(1 / 16);
 }
 
-.col-2-8, .col-2-12, .col-4-12, .col-2-16, .col-4-16, .col-8-16 {
-    width: 100%;
+.col-2-8,
+.col-2-12,
+.col-4-12,
+.col-2-16,
+.col-4-16,
+.col-8-16 {
+    width: percentage(1);
 }
 
 /*******************
@@ -114,143 +130,188 @@ BEGIN MEDIA QUERIES
 *******************/
 @media screen and (min-width: $vp1) {
     .col-1-16 {
-        width: 25%;
+        width: percentage(1 / 4);
     }
 
     .col-2-16 {
-        width: 50%;
+        width: percentage(1 / 2);
     }
 }
 
 @media screen and (min-width: $vp2) {
-    .col-1-4, .col-1-6, .col-1-8, .col-2-12  {
-        width: 50%;
+    .col-1-4,
+    .col-1-6,
+    .col-1-8,
+    .col-2-12  {
+        width: percentage(1 / 2);
     }
 
     .col-1-3 {
-        width: 33.33%;
+        width: percentage(1 / 3);
     }
 
     .col-2-3 {
-        width: 66.66%;
+        width: percentage(2 / 3);
     }
 
     .col-1-12 {
-        width: 25%;
+        width: percentage(1 / 4);
     }
 
-    .col-3-6 + .col-1-6, .col-2-4, .col-2-6, .col-4-8, .col-3-4 + .col-1-4, .preceding-col-1-4 {
-        width: 100%;
+    .col-3-6 + .col-1-6,
+    .col-2-4,
+    .col-2-6,
+    .col-4-8,
+    .col-3-4 + .col-1-4,
+    .preceding-col-1-4 {
+        width: percentage(1);
     }
 }
 
 @media screen and (min-width: $vp3) {
-    .col-1-2, .col-2-4, .col-4-6 ~ .col-1-6, .preceding-col-1-6, .col-2-8, .col-6-8 ~ .col-1-8, .preceding-col-1-8, .col-4-16 {
-        width: 50%;
+    .col-1-2,
+    .col-2-4,
+    .col-4-6 ~ .col-1-6,
+    .preceding-col-1-6,
+    .col-2-8,
+    .col-6-8 ~ .col-1-8,
+    .preceding-col-1-8,
+    .col-4-16 {
+        width: percentage(1 / 2);
     }
-    .col-1-4, .col-3-4 + .col-1-4, .preceding-col-1-4, .col-1-8, .col-2-16 {
-        width: 25%;
+
+    .col-1-4,
+    .col-3-4 + .col-1-4,
+    .preceding-col-1-4,
+    .col-1-8,
+    .col-2-16 {
+        width: percentage(1 / 4);
     }
 
     .col-1-5 {
-        width: 20%;
+        width: percentage(1 / 5);
     }
 
     .col-2-5 {
-        width: 40%;
+        width: percentage(2 / 5);
     }
 
     .col-3-5 {
-        width: 60%;
+        width: percentage(3 / 5);
     }
 
     .col-4-5 {
-        width: 80%;
+        width: percentage(4 / 5);
     }
 
-    .col-1-6, .col-3-6 + .col-1-6  {
-        width: 33.33%;
+    .col-1-6,
+    .col-3-6 + .col-1-6  {
+        width: percentage(1 / 3);
     }
 
     .col-3-4 {
-        width: 75%;
+        width: percentage(3 / 4);
     }
 
-    .col-4-4, .col-3-6, .col-4-6, .col-4-6 + .col-2-6, .preceding-col-2-6, .col-4-8,
-    .col-6-8, .col-6-8 + .col-2-8, .preceding-col-2-8, .col-8-16  {
-        width: 100%;
+    .col-4-4,
+    .col-3-6,
+    .col-4-6,
+    .col-4-6 + .col-2-6,
+    .preceding-col-2-6,
+    .col-4-8,
+    .col-6-8,
+    .col-6-8 + .col-2-8,
+    .preceding-col-2-8,
+    .col-8-16  {
+        width: percentage(1);
     }
 
     .col-2-6 {
-        width: 66.66%;
+        width: percentage(2 / 3);
     }
 
     .col-1-16 {
-        width: 12.5%;
+        width: percentage(1 / 8);
     }
 
     .col-1-24 {
-        width: 8.33%
+        width: percentage(1 / 12);
     }
 }
 
 @media screen and (min-width: $vp4) {
-    .col-4-6 + .col-2-6, .preceding-col-2-6, .col-2-6, .col-4-12 {
-        width: 33.33%;
+    .col-4-6 + .col-2-6,
+    .preceding-col-2-6,
+    .col-2-6,
+    .col-4-12 {
+        width: percentage(1 / 3);
     }
 
-    .col-4-6 ~ .col-1-6, .preceding-col-1-6, .col-1-6, .col-3-6 + .col-1-6, .col-2-12 {
-        width: 16.66%;
+    .col-4-6 ~ .col-1-6,
+    .preceding-col-1-6,
+    .col-1-6,
+    .col-3-6 + .col-1-6,
+    .col-2-12 {
+        width: percentage(1 / 6);
     }
 
-    .col-6-8 + .col-2-8, .preceding-col-2-8, .col-2-8, .col-2-16 {
-        width: 25%;
+    .col-6-8 + .col-2-8, 
+    .preceding-col-2-8,
+    .col-2-8,
+    .col-2-16 {
+        width: percentage(1 / 4);
     }
 
-    .col-6-8 ~ .col-1-8, .preceding-col-1-8, .col-1-8, .col-1-16 {
-        width: 12.5%;
+    .col-6-8 ~ .col-1-8,
+    .preceding-col-1-8,
+    .col-1-8,
+    .col-1-16 {
+        width: percentage(1 / 8);
     }
 
-    .col-3-6, .col-4-8, .col-4-16 {
-        width: 50%;
+    .col-3-6,
+    .col-4-8,
+    .col-4-16 {
+        width: percentage(1 / 2);
     }
 
     .col-4-6 {
-        width: 66.66%;
+        width: percentage(2 / 3);
     }
 
-    .col-6-6, .col-8-16 {
-        width: 100%;
+    .col-6-6,
+    .col-8-16 {
+        width: percentage(3 / 3);
     }
 
     .col-6-8 {
-        width: 75%;
+        width: percentage(3 / 4);
     }
 
     .col-1-12 {
-        width: 8.33%;
+        width: percentage(1 / 12);
     }
 
     .col-1-24 {
-        width: 4.1666%
+        width: percentage(1 / 24);
     }
 }
 
 @media screen and (min-width: $vp5) {
     .col-1-16 {
-        width: 6.25%;
+        width: percentage(1 / 16);
     }
 
     .col-2-16 {
-        width: 12.5%;
+        width: percentage(1 / 8);
     }
 
     .col-4-16 {
-        width: 25%;
+        width: percentage(1 / 4);
     }
 
     .col-8-16 {
-        width: 50%;
+        width: percentage(1 / 2);
     }
 }
 
@@ -259,10 +320,12 @@ BEGIN MEDIA QUERIES
     .grid {
         padding: 0 1em;
         padding: 0 0.5vw;
-        .row{
+        
+        .row {
             margin: 0 -1em;
             margin: 0 -0.5vw;
-            & > [class*='col-'] {
+
+            & > [class*="col-"] {
                 padding: 1em 1em;
                 padding: -webkit-calc(1em + 0.5vh) 0.5vw;
                 padding: calc(1em + 0.5vh) 0.5vw;
