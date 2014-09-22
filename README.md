@@ -1,7 +1,9 @@
 # Microsoft.com Grid Framework
 
-We need to document this ish.
+Microsoft.com CSS grid explorations.
 
-## To do:
+## Compile Sass files
 
-* Complete readme.
+```bash
+sass --watch --sourcemap --style compressed css:css
+```
