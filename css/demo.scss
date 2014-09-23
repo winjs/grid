@@ -17,6 +17,7 @@
 
 input[type="button"] {
 	border: 0;
+	padding: 1em;
 	padding: 1rem;
 	background-color: #F65314;
 }
@@ -28,6 +29,7 @@ input[type="button"]:hover, input[type="button"]:focus {
 .colNum {
 	font-size: 1.5em;
 	color: rgba(255, 255, 255, 0.8);
+	padding-right: 1em;
 	padding-right: 1rem;
 	text-align: right;
 	width: 100%;
@@ -136,6 +138,10 @@ input[type="button"]:hover, input[type="button"]:focus {
 
 .hp-footer {
 	background-color: #eee;
+}
+
+.spec-tables h1 {
+	width: 100%;
 }
 
 @media screen and (min-width: 540px) {
