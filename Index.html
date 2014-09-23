@@ -236,6 +236,17 @@
         </section>
 
         <section class="row">
+            <div class="col-1-4 ">
+                <div class="colNum cyan">3/4</div>
+                <h4 class="text-center">Header four</h4>
+            </div>
+            <div class="col-3-4 ">
+                <div class="colNum cyan">4/4</div>
+                <h4 class="text-center">Header four</h4>
+            </div>
+        </section>
+
+        <section class="row">
             <div class="col-1-5 ">
                 <div class="colNum purple">1/5</div>
             </div>
@@ -356,6 +367,27 @@
         </section>
 
         <section class="row">
+            <div class="col-1-6 ">
+                <div class="colNum orange">4/6</div>
+            </div>
+            <div class="col-1-6 ">
+                <div class="colNum orange">5/6</div>
+            </div>
+            <div class="col-4-6 ">
+                <div class="colNum orange">6/6</div>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-2-6 ">
+                <div class="colNum orange">4/6</div>
+            </div>
+            <div class="col-4-6 ">
+                <div class="colNum orange">6/6</div>
+            </div>
+        </section>
+
+        <section class="row">
             <div class="col-1-8 ">
                 <div class="colNum teal">1/8</div>
             </div>
@@ -441,6 +473,27 @@
                 <div class="colNum teal">6/8</div>
             </div>
             <div class="col-2-8 ">
+                <div class="colNum teal">8/8</div>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-1-8 ">
+                <div class="colNum teal">6/8</div>
+            </div>
+            <div class="col-1-8 ">
+                <div class="colNum teal">7/8</div>
+            </div>
+            <div class="col-6-8 ">
+                <div class="colNum teal">8/8</div>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-2-8 ">
+                <div class="colNum teal">6/8</div>
+            </div>
+            <div class="col-6-8 ">
                 <div class="colNum teal">8/8</div>
             </div>
         </section>
@@ -983,6 +1036,61 @@
                 <div class="colNum green"></div>
             </div>
         </section>
+        <section class="row">
+            <div class="col-6-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-6-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-12-24">
+                <div class="colNum green"></div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-6-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-12-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-6-24">
+                <div class="colNum green"></div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-12-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-6-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-6-24">
+                <div class="colNum green"></div>
+            </div>
+        </section>
+        <h1>
+            Manual column spanning (currently only supported on 24 col)
+        </h1>
+        <section class="row">
+            <div class="xs-col-3-24 m-col-7-24 xl-col-6-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="xs-col-3-24 m-col-8-24 xl-col-6-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="xs-col-6-24 s-col-12-24 m-col-9-24 xl-col-12-24">
+                <div class="colNum green"></div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="s-col-6-24 m-col-13-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="s-col-6-24 m-col-11-24">
+                <div class="colNum green"></div>
+            </div>
+        </section>
     </section>
     <section class="grid extras">
         <h1>
@@ -1241,7 +1349,7 @@
     <section class="grid spec-tables">
         <section class="row">
             <h1>Media queries and column breakdown chart</h1>
-            <table class="mediaQTable">
+            <table class="demoTable">
                 <thead>
                     <tr>
                         <th>Columns</th>
@@ -1335,55 +1443,83 @@
                         <td>8</td>
                         <td>16</td>
                     </tr>
+                    <tr>
+                        <th>24</th>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>12</td>
+                        <td>24</td>
+                        <td>24</td>
+                        <td>24</td>
+                    </tr>
                 </tbody>
             </table>
-            <h1>Column spanning currently supported</h1>
-                <table class="mediaQTable">
-                    <thead>
-                        <tr>
-                            <th>Columns</th>
-                            <th>Spans</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>1</th>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <th>2</th>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <th>3</th>
-                            <td>1, 2</td>
-                        </tr>
-                        <tr>
-                            <th>4</th>
-                            <td>1, 2, 3</td>
-                        </tr>
-                        <tr>
-                            <th>5</th>
-                            <td>1, 2, 3, 4</td>
-                        </tr>
-                        <tr>
-                            <th>6</th>
-                            <td>1, 2, 3, 4</td>
-                        </tr>
-                        <tr>
-                            <th>8</th>
-                            <td>1, 2, 4, 6</td>
-                        </tr>
-                        <tr>
-                            <th>12</th>
-                            <td>1, 2, 4</td>
-                        </tr>
-                        <tr>
-                            <th>16</th>
-                            <td>1, 2, 4, 8</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <h1>Column spanning "automagically" supported</h1>
+            <table class="demoTable">
+                <thead>
+                    <tr>
+                        <th>Columns</th>
+                        <th>Spans</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>1, 2</td>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <td>1, 2, 3</td>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <td>1, 2, 3, 4</td>
+                    </tr>
+                    <tr>
+                        <th>6</th>
+                        <td>1, 2, 3, 4</td>
+                    </tr>
+                    <tr>
+                        <th>8</th>
+                        <td>1, 2, 4, 6</td>
+                    </tr>
+                    <tr>
+                        <th>12</th>
+                        <td>1, 2, 4</td>
+                    </tr>
+                    <tr>
+                        <th>16</th>
+                        <td>1, 2, 4, 8</td>
+                    </tr>
+                    <tr>
+                        <th>24</th>
+                        <td>1, 6, 12</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1>Column spanning manually supported</h1>
+            <table class="demoTable">
+                <thead>
+                    <tr>
+                        <th>Columns</th>
+                        <th>Spans</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>24</th>
+                        <td>All</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </section>
 
