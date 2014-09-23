@@ -125,6 +125,13 @@
     width: percentage(1);
 }
 
+// Centered columns
+[class*="col-"].centered {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*******************
 BEGIN MEDIA QUERIES
 *******************/
