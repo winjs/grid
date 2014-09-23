@@ -5,6 +5,7 @@ var mscomGrid = (function() {
 		$('.col-4-6').prev('.col-1-6').addClass('preceding-col-1-6');
 		$('.col-6-8').prev('.col-2-8').addClass('preceding-col-2-8');
 		$('.col-6-8').prev('.col-1-8').addClass('preceding-col-1-8');
+		$('.col-12-24').prev('.col-6-24').addClass('preceding-col-6-24');
 	};
 
 	var obj = {
