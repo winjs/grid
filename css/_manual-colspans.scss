@@ -1,0 +1,377 @@
+@import "config";
+
+@media screen and (min-width: $vp1) {
+    .row {
+        .xs-col-2-24,
+        .xs-col-8-24 {
+            width: percentage(8 / 24);
+        }
+
+        .xs-col-3-24,
+        .xs-col-12-24 {
+            width: percentage(12 / 24);
+        }
+
+        .xs-col-4-24,
+        .xs-col-16-24 {
+            width: percentage(16 / 24);
+        }
+
+        .xs-col-5-24,
+        .xs-col-20-24 {
+            width: percentage(20 / 24);
+        }
+
+        .xs-col-6-24,
+        .xs-col-24-24 {
+            width: percentage(1);
+        }
+    }
+}
+
+@media screen and (min-width: $vp2) {
+    .row {
+        .s-col-2-24,
+        .s-col-4-24 {
+            width: percentage(4 / 24);
+        }
+
+        .s-col-3-24,
+        .s-col-6-24 {
+            width: percentage(6 / 24);
+        }
+
+        .s-col-4-24,
+        .s-col-8-24 {
+            width: percentage(8 / 24);
+        }
+
+        .s-col-5-24,
+        .s-col-10-24 {
+            width: percentage(10 / 24);
+        }
+
+        .s-col-6-24,
+        .s-col-12-24 {
+            width: percentage(12 / 24);
+        }
+
+        .s-col-7-24,
+        .s-col-14-24 {
+            width: percentage(14 / 24);
+        }
+
+        .s-col-8-24,
+        .s-col-16-24 {
+            width: percentage(16 / 24);
+        }
+
+        .s-col-9-24,
+        .s-col-18-24 {
+            width: percentage(18 / 24);
+        }
+
+        .s-col-10-24,
+        .s-col-20-24 {
+            width: percentage(20 / 24);
+        }
+
+        .s-col-11-24,
+        .s-col-22-24 {
+            width: percentage(22/24);
+        }
+
+        .s-col-12-24,
+        .s-col-24-24 {
+            width: percentage(1);
+        }
+    }
+}
+
+@media screen and (min-width: $vp3) {
+    .row {
+        .m-col-2-24 {
+            width: percentage(2 / 24);
+        }
+
+        .m-col-3-24 {
+            width: percentage(3 / 24);
+        }
+
+        .m-col-4-24 {
+            width: percentage(4 / 24);
+        }
+
+        .m-col-5-24 {
+            width: percentage(5 / 24);
+        }
+
+        .m-col-6-24 {
+            width: percentage(6 / 24);
+        }
+
+        .m-col-7-24 {
+            width: percentage(7 / 24);
+        }
+
+        .m-col-8-24 {
+            width: percentage(8 / 24);
+        }
+
+        .m-col-9-24 {
+            width: percentage(9 / 24);
+        }
+
+        .m-col-10-24 {
+            width: percentage(10 / 24);
+        }
+
+        .m-col-11-24 {
+            width: percentage(11 / 24);
+        }
+
+        .m-col-12-24 {
+            width: percentage(12 / 24);
+        }
+
+        .m-col-13-24 {
+            width: percentage(13 / 24);
+        }
+
+        .m-col-14-24 {
+            width: percentage(14 / 24);
+        }
+
+        .m-col-15-24 {
+            width: percentage(15 / 24);
+        }
+
+        .m-col-16-24 {
+            width: percentage(16 / 24);
+        }
+
+        .m-col-17-24 {
+            width: percentage(17 / 24);
+        }
+
+        .m-col-18-24 {
+            width: percentage(18 / 24);
+        }
+
+        .m-col-19-24 {
+            width: percentage(19 / 24);
+        }
+
+        .m-col-20-24 {
+            width: percentage(20 / 24);
+        }
+
+        .m-col-21-24 {
+            width: percentage(21 / 24);
+        }
+
+        .m-col-22-24 {
+            width: percentage(22 / 24);
+        }
+
+        .m-col-23-24 {
+            width: percentage(23 / 24);
+        }
+
+        .m-col-24-24 {
+            width: percentage(1);
+        }
+    }
+}
+
+@media screen and (min-width: $vp4) {
+    .row {
+        .l-col-2-24 {
+            width: percentage(2 / 24);
+        }
+
+        .l-col-3-24 {
+            width: percentage(3 / 24);
+        }
+
+        .l-col-4-24 {
+            width: percentage(4 / 24);
+        }
+
+        .l-col-5-24 {
+            width: percentage(5 / 24);
+        }
+
+        .l-col-6-24 {
+            width: percentage(6 / 24);
+        }
+
+        .l-col-7-24 {
+            width: percentage(7 / 24);
+        }
+
+        .l-col-8-24 {
+            width: percentage(8 / 24);
+        }
+
+        .l-col-9-24 {
+            width: percentage(9 / 24);
+        }
+
+        .l-col-10-24 {
+            width: percentage(10 / 24);
+        }
+
+        .l-col-11-24 {
+            width: percentage(11 / 24);
+        }
+
+        .l-col-12-24 {
+            width: percentage(12 / 24);
+        }
+
+        .l-col-13-24 {
+            width: percentage(13 / 24);
+        }
+
+        .l-col-14-24 {
+            width: percentage(14 / 24);
+        }
+
+        .l-col-15-24 {
+            width: percentage(15 / 24);
+        }
+
+        .l-col-16-24 {
+            width: percentage(16 / 24);
+        }
+
+        .l-col-17-24 {
+            width: percentage(17 / 24);
+        }
+
+        .l-col-18-24 {
+            width: percentage(18 / 24);
+        }
+
+        .l-col-19-24 {
+            width: percentage(19 / 24);
+        }
+
+        .l-col-20-24 {
+            width: percentage(20 / 24);
+        }
+
+        .l-col-21-24 {
+            width: percentage(21 / 24);
+        }
+
+        .l-col-22-24 {
+            width: percentage(22 / 24);
+        }
+
+        .l-col-23-24 {
+            width: percentage(23 / 24);
+        }
+
+        .l-col-24-24 {
+            width: percentage(1);
+        }
+    }
+}
+
+@media screen and (min-width: $vp5) {
+    .row {
+        .xl-col-2-24 {
+            width: percentage(2 / 24);
+        }
+
+        .xl-col-3-24 {
+            width: percentage(3 / 24);
+        }
+
+        .xl-col-4-24 {
+            width: percentage(4 / 24);
+        }
+
+        .xl-col-5-24 {
+            width: percentage(5 / 24);
+        }
+
+        .xl-col-6-24 {
+            width: percentage(6 / 24);
+        }
+
+        .xl-col-7-24 {
+            width: percentage(7 / 24);
+        }
+
+        .xl-col-8-24 {
+            width: percentage(8 / 24);
+        }
+
+        .xl-col-9-24 {
+            width: percentage(9 / 24);
+        }
+
+        .xl-col-10-24 {
+            width: percentage(10 / 24);
+        }
+
+        .xl-col-11-24 {
+            width: percentage(11 / 24);
+        }
+
+        .xl-col-12-24 {
+            width: percentage(12 / 24);
+        }
+
+        .xl-col-13-24 {
+            width: percentage(13 / 24);
+        }
+
+        .xl-col-14-24 {
+            width: percentage(14 / 24);
+        }
+
+        .xl-col-15-24 {
+            width: percentage(15 / 24);
+        }
+
+        .xl-col-16-24 {
+            width: percentage(16 / 24);
+        }
+
+        .xl-col-17-24 {
+            width: percentage(17 / 24);
+        }
+
+        .xl-col-18-24 {
+            width: percentage(18 / 24);
+        }
+
+        .xl-col-19-24 {
+            width: percentage(19 / 24);
+        }
+
+        .xl-col-20-24 {
+            width: percentage(20 / 24);
+        }
+
+        .xl-col-21-24 {
+            width: percentage(21 / 24);
+        }
+
+        .xl-col-22-24 {
+            width: percentage(22 / 24);
+        }
+
+        .xl-col-23-24 {
+            width: percentage(23 / 24);
+        }
+
+        .xl-col-24-24 {
+            width: percentage(1);
+        }
+    }
+}

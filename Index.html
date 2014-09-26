@@ -12,8 +12,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="css/picchu/picchu.css">
     <link rel="stylesheet" href="css/mscomGrid.css">
-    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/demo/demo.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
@@ -236,6 +237,17 @@
         </section>
 
         <section class="row">
+            <div class="col-1-4 ">
+                <div class="colNum cyan">3/4</div>
+                <h4 class="text-center">Header four</h4>
+            </div>
+            <div class="col-3-4 ">
+                <div class="colNum cyan">4/4</div>
+                <h4 class="text-center">Header four</h4>
+            </div>
+        </section>
+
+        <section class="row">
             <div class="col-1-5 ">
                 <div class="colNum purple">1/5</div>
             </div>
@@ -356,6 +368,27 @@
         </section>
 
         <section class="row">
+            <div class="col-1-6 ">
+                <div class="colNum orange">4/6</div>
+            </div>
+            <div class="col-1-6 ">
+                <div class="colNum orange">5/6</div>
+            </div>
+            <div class="col-4-6 ">
+                <div class="colNum orange">6/6</div>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-2-6 ">
+                <div class="colNum orange">4/6</div>
+            </div>
+            <div class="col-4-6 ">
+                <div class="colNum orange">6/6</div>
+            </div>
+        </section>
+
+        <section class="row">
             <div class="col-1-8 ">
                 <div class="colNum teal">1/8</div>
             </div>
@@ -441,6 +474,27 @@
                 <div class="colNum teal">6/8</div>
             </div>
             <div class="col-2-8 ">
+                <div class="colNum teal">8/8</div>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-1-8 ">
+                <div class="colNum teal">6/8</div>
+            </div>
+            <div class="col-1-8 ">
+                <div class="colNum teal">7/8</div>
+            </div>
+            <div class="col-6-8 ">
+                <div class="colNum teal">8/8</div>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-2-8 ">
+                <div class="colNum teal">6/8</div>
+            </div>
+            <div class="col-6-8 ">
                 <div class="colNum teal">8/8</div>
             </div>
         </section>
@@ -983,6 +1037,61 @@
                 <div class="colNum green"></div>
             </div>
         </section>
+        <section class="row">
+            <div class="col-6-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-6-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-12-24">
+                <div class="colNum green"></div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-6-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-12-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-6-24">
+                <div class="colNum green"></div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-12-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-6-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="col-6-24">
+                <div class="colNum green"></div>
+            </div>
+        </section>
+        <h1>
+            Manual column spanning (currently only supported on 24 col)
+        </h1>
+        <section class="row">
+            <div class="xs-col-3-24 m-col-7-24 xl-col-6-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="xs-col-3-24 m-col-8-24 xl-col-6-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="xs-col-6-24 s-col-12-24 m-col-9-24 xl-col-12-24">
+                <div class="colNum green"></div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="s-col-6-24 m-col-13-24">
+                <div class="colNum green"></div>
+            </div>
+            <div class="s-col-6-24 m-col-11-24">
+                <div class="colNum green"></div>
+            </div>
+        </section>
     </section>
     <section class="grid extras">
         <h1>
@@ -1142,6 +1251,26 @@
                 <div class="colNum teal"></div>
             </div>
         </section>
+
+        <h1>
+            Centered columns
+        </h1>
+        <section class="row">
+            <div class="col-1-4 centered">
+                <div class="colNum cyan"></div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-1-3 centered">
+                <div class="colNum purple"></div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-1-2 centered">
+                <div class="colNum pink"></div>
+            </div>
+        </section>
+
         <h1>
             Other examples of possible behaviors
         </h1>
@@ -1218,10 +1347,10 @@
         </section>
     </section>
 
-    <section class="grid">
+    <section class="grid spec-tables">
         <section class="row">
             <h1>Media queries and column breakdown chart</h1>
-            <table class="mediaQTable">
+            <table class="demoTable">
                 <thead>
                     <tr>
                         <th>Columns</th>
@@ -1315,10 +1444,19 @@
                         <td>8</td>
                         <td>16</td>
                     </tr>
+                    <tr>
+                        <th>24</th>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>12</td>
+                        <td>24</td>
+                        <td>24</td>
+                        <td>24</td>
+                    </tr>
                 </tbody>
             </table>
-            <h1>Column spanning currently supported</h1>
-            <table class="mediaQTable">
+            <h1>Column spanning "automagically" supported</h1>
+            <table class="demoTable">
                 <thead>
                     <tr>
                         <th>Columns</th>
@@ -1361,6 +1499,25 @@
                     <tr>
                         <th>16</th>
                         <td>1, 2, 4, 8</td>
+                    </tr>
+                    <tr>
+                        <th>24</th>
+                        <td>1, 6, 12</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1>Column spanning manually supported</h1>
+            <table class="demoTable">
+                <thead>
+                    <tr>
+                        <th>Columns</th>
+                        <th>Spans</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>24</th>
+                        <td>All</td>
                     </tr>
                 </tbody>
             </table>
