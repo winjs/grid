@@ -1,0 +1,324 @@
+/*! picchu.css v0.1 | Microsoftdotcom team | Github - url coming once ready to make public */
+
+//------------------------------------
+//              #IMPORTS
+//------------------------------------
+@import 'normalize';
+
+
+
+
+
+//------------------------------------
+//              #FONTS
+//------------------------------------
+
+@font-face {
+    font-family: 'wf_segoe-ui_light';
+    src: url("http://i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.eot");
+    src: local("Segoe UI Light"), local("Segoe WP Light"), url("http://i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.eot?#iefix") format("embedded-opentype"), url("http://i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.woff") format("woff"), url("http://i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.ttf") format("truetype"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/light/latest.svg#web") format("svg");
+    font-weight: 600;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: 'wf_segoe-ui_normal';
+    src: url("http//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.eot");
+    src: local("Segoe UI"), local("Segoe"), local("Segoe WP"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.eot?#iefix") format("embedded-opentype"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.woff") format("woff"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.ttf") format("truetype"), url("//i.s-microsoft.com/fonts/segoe-ui/west-european/normal/latest.svg#web") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'wf_segoe-ui_semibold';
+    src: url('//i.s-microsoft.com/fonts/segoe-ui/west-european/Semibold/latest.eot');
+    src: local("Segoe UI Semibold"), local("Segoe Semibold"), local("Segoe WP Semibold"), url('//i.s-microsoft.com/fonts/segoe-ui/west-european/Semibold/latest.eot?#iefix') format('embedded-opentype'), url('//i.s-microsoft.com/fonts/segoe-ui/west-european/Semibold/latest.woff') format('woff'), url('//i.s-microsoft.com/fonts/segoe-ui/west-european/Semibold/latest.ttf') format('truetype'), url('//i.s-microsoft.com/fonts/segoe-ui/west-european/Semibold/latest.svg#web') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+@font-face{
+    font-family:'wf_segoe-ui_semilight';
+    src:url("//i.s-microsoft.com/fonts/segoe-ui/west-european/semilight/latest.eot");
+    src:url("//i.s-microsoft.com/fonts/segoe-ui/west-european/semilight/latest.eot?#iefix") format("embedded-opentype"),
+    url("//i.s-microsoft.com/fonts/segoe-ui/west-european/semilight/latest.woff") format("woff"),
+    url("//i.s-microsoft.com/fonts/segoe-ui/west-european/semilight/latest.ttf") format("truetype"),
+    url("//i.s-microsoft.com/fonts/segoe-ui/west-european/semilight/latest.svg#web") format("svg");
+    font-weight:normal;
+    font-style:normal
+}
+@font-face {
+    font-family:'wf_icons_normal';
+    src:url('//i.s-microsoft.com/fonts/icons/homepage/normal/2.eot');
+    src:url('//i.s-microsoft.com/fonts/icons/homepage/normal/2.eot?#iefix') format('embedded-opentype'),
+    url('//i.s-microsoft.com/fonts/icons/homepage/normal/2.woff') format('woff'),
+    url('//i.s-microsoft.com/fonts/icons/homepage/normal/2.ttf') format('truetype'),
+    url('//i.s-microsoft.com/fonts/icons/homepage/normal/2.svg#web') format('svg');
+    font-weight:normal;
+    font-style:normal
+}
+@font-face {
+    font-family:'mshp_iconsregular';
+    src:url("//i.s-microsoft.com/fonts/icons/homepage/normal/latest.eot");
+    src:url("//i.s-microsoft.com/fonts/icons/homepage/normal/latest.eot?#iefix") format("embedded-opentype"),
+    url("//i.s-microsoft.com/fonts/icons/homepage/normal/latest.woff") format("woff"),
+    url("//i.s-microsoft.com/fonts/icons/homepage/normal/latest.ttf") format("truetype"),
+    url("//i.s-microsoft.com/fonts/icons/homepage/normal/latest.svg#web") format("svg");
+    font-weight:normal;
+    font-style:normal
+}
+
+$light: wf_segoe-ui_light;
+$semibold: wf_segoe-ui_semibold;
+$normal: wf_segoe-ui_normal;
+$semilight: wf_segoe-ui_semilight;
+
+$font-stack: 'wf_segoe-ui_light', 'wf_segoe-ui_normal', sans-serif;
+
+
+
+
+
+//------------------------------------
+//              #GLOBALS
+//------------------------------------
+html {
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    font-family: wf_segoe-ui_light;
+}
+
+p, a, input {
+    font-family: wf_segoe-ui_normal;
+    font-size: -webkit-calc(16px + .25vw);
+    font-size: calc(16px + .25vw);
+}
+
+a {
+    color: #00bcf2;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2em;
+    font-size: -webkit-calc(2em + 1vw);
+    font-size: calc(2em + 1vw);
+}
+
+h2 {
+    font-size: 1.5em;
+    font-size: -webkit-calc(1.5em + .75vw);
+    font-size: calc(1.5em + .75vw);
+}
+
+h3 {
+    font-size: 1.17em;
+    font-size: -webkit-calc(1.17em + .5vw);
+    font-size: calc(1.17em + .5vw);
+}
+
+h4 {
+    font-size: 1em;
+    font-size: -webkit-calc(1em + .25vw);
+    font-size: calc(1em + .25vw);
+}
+
+h5 {
+    font-size: 0.83em;
+    font-size: -webkit-calc(0.83em + .25vw);
+    font-size: calc(0.83em + .25vw);
+}
+
+h6 {
+    font-size: 0.67em;
+    font-size: -webkit-calc(0.67em + .25vw);
+    font-size: calc(0.67em + .25vw);
+}
+
+p.small {
+    font-size: 13px;
+}
+
+img {
+    width: 100%;
+}
+
+
+
+
+
+//------------------------------------
+//              #COLORS
+//------------------------------------
+
+.cyan {
+    background-color: #00bcf2;
+    color: #fff;
+}
+
+.green {
+    background-color: #008a00;
+    color: #fff;
+}
+
+.pink {
+    background-color: #ea005a;
+    color: #fff;
+}
+
+.purple {
+    background-color: #68217a;
+    color: #fff;
+}
+
+.orange {
+    background-color: #dc3c00;
+    color: #fff;
+}
+
+.teal {
+    background-color: #008272;
+    color: #fff;
+}
+
+.blue {
+    background-color: #1570a6;
+    color: #fff;
+}
+
+.red {
+    background-color: #ba141a;
+    color: #fff;
+}
+
+.light-gray {
+    background-color: #d2d2d2;
+    color: #333;
+}
+
+.white {
+    background-color: #fff;
+    color: #333;
+}
+
+
+
+
+
+//------------------------------------
+//              #HELPERS
+//------------------------------------
+
+.text-center, .tac {
+    text-align: center;
+}
+
+.text-left, .tal {
+    text-align: left;
+}
+
+.text-right, .tar {
+    text-align: right;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-margin-top {
+    margin-top: 0 !important;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+.no-margin-left {
+    margin-left: 0 !important;
+}
+
+.no-margin-right {
+    margin-right: 0 !important;
+}
+
+.no-margin-horizontal {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.no-margin-vertical {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
+.no-padding-bottom {
+    padding-bottom: 0 !important;
+}
+
+.no-padding-left {
+    padding-left: 0 !important;
+}
+
+.no-padding-right {
+    padding-right: 0 !important;
+}
+
+.no-padding-horizontal {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.no-padding-vertical {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.hidden {
+    display: none !important;
+} 
+
+.overflow-hidden, .ofh {
+    overflow: hidden;
+}
+
+.float-right, .fr {
+    float: right;
+}
+
+.float-left, .fl {
+    float: left;
+}
+
+.float-none, .fn {
+    float: none;
+}
+
+.no-max-width {
+    max-width: none !important;
+}
+
+.full-width {
+    width: 100%;
+}
