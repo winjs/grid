@@ -655,6 +655,12 @@
     width: 95.83333%; }
   .row .xl-col-24-24 {
     width: 100%; } }
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 .grid {
   display: block;
   position: relative;
@@ -753,9 +759,6 @@
 .col-8-16 {
   width: 100%; }
 
-/*******************
-BEGIN MEDIA QUERIES
-*******************/
 @media screen and (min-width: 320px) {
   .col-1-16 {
     width: 25%; }
