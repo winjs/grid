@@ -1,0 +1,34 @@
+$columns: 2;
+$vp3columns: 2;
+$vp4columns: 2;
+$vp5columns: 2;
+
+@media screen and (min-width: $vp3) {
+    .row {
+        @for $i from 1 to $vp3columns {
+            .m-col-#{$columns}-offset-#{$i} {
+                margin-left: percentage($i / $vp3columns);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $vp4) {
+    .row {
+        @for $i from 1 to $vp4columns {
+            .l-col-#{$columns}-offset-#{$i} {
+                margin-left: percentage($i / $vp4columns);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $vp5) {
+    .row {
+        @for $i from 1 to $vp5columns {
+            .xl-col-#{$columns}-offset-#{$i} {
+                margin-left: percentage($i / $vp5columns);
+            }
+        }
+    }
+}
