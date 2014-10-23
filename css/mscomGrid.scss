@@ -28,10 +28,13 @@ html {
     display: block;
     position: relative;
     width: 90%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     max-width: $max-grid-width;
-    padding: 0 1em;
-    padding: 0 1vw;
+    padding-left: 1em;
+    padding-left: 1vw;
+    padding-right: 1em;
+    padding-right: 1vw;
 
     &.full {
         width:100%;
@@ -39,10 +42,12 @@ html {
     }
 
     &.fixed {
-        padding: 0 $fixed-col-margin;
+        padding-left: $fixed-col-margin;
+        padding-right: $fixed-col-margin;
 
         .row {
-            margin: 0 -$fixed-col-margin;
+            margin-left: $fixed-col-margin;
+            margin-right: $fixed-col-margin;
 
             & > [class*="col-"] {
                 padding-left: $fixed-col-margin;
@@ -53,7 +58,8 @@ html {
 
     &.zero-margin {
         .row {
-            margin: 0;
+            margin-left: 0;
+            margin-right: 0;
 
             & > [class*="col-"] {
                 padding-left: 0;
@@ -65,13 +71,16 @@ html {
     .row {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -1em;
-        margin: 0 -1vw;
-        margin-bottom: 0;
+        margin-left: -1em;
+        margin-right: -1em;
+        margin-left: -1vw;
+        margin-right: -1vw;
 
         &.content-flush {
-            margin: 0 -2em;
-            margin: 0 -2vw;
+            margin-left: -2em;
+            margin-right: -2em;
+            margin-left: -2vw;
+            margin-right: -2vw;
         }
     }
 
@@ -89,9 +98,10 @@ html {
     width: 100%;
     position: relative;
     margin: 0;
-    padding: 1em 1em;
-    padding: -webkit-calc(1em + 0.5vh) 1vw;
-    padding: calc(1em + 0.5vh) 1vw;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-left: 1vw;
+    padding-right: 1vw;
     &.centered {
         float: none;
         margin-left: auto;
