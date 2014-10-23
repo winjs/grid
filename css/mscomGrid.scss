@@ -114,6 +114,21 @@ html {
 
 
 //------------------------------------
+//          #VERTICAL SPACING OFFER
+//------------------------------------
+.mscom-vertical {
+    [class*="col-"] {
+        padding: 1em 1em;
+        padding: -webkit-calc(1em + 0.5vh) 1vw;
+        padding: calc(1em + 0.5vh) 1vw;
+    }
+}
+
+
+
+
+
+//------------------------------------
 //          #MOBILE FIRST SIZES
 //------------------------------------
 .col-1-3.nb {
