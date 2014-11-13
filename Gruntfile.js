@@ -29,8 +29,11 @@ module.exports = function (grunt) {
         // Watch for changes
         watch: {
             sass: {
-                files: 'css/*.scss',
+                files: ['css/*.scss', 'css/demo/*.scss'],
                 tasks: ['sass']
+            },
+            html: {
+                files: '*.html'
             }
         },
 

@@ -10,12 +10,9 @@
 
 
 //Not assuming use of picchu or other library for box-sizing border-box
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+.grid, .row, [class*="col-"] { 
+    box-sizing: border-box; 
+} 
 
 
 
