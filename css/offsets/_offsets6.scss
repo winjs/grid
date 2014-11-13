@@ -8,7 +8,7 @@ $vp5columns: 6;
     .row {
         @for $i from 1 to $vp2columns {
             .s-col-#{$columns}-offset-#{$i} {
-                margin-left: percentage($i / $vp2columns);
+                margin-#{$left}: percentage($i / $vp2columns);
             }
         }
     }
@@ -18,7 +18,7 @@ $vp5columns: 6;
     .row {
         @for $i from 1 to $vp3columns {
             .m-col-#{$columns}-offset-#{$i} {
-                margin-left: percentage($i / $vp3columns);
+                margin-#{$left}: percentage($i / $vp3columns);
             }
         }
     }
@@ -28,7 +28,7 @@ $vp5columns: 6;
     .row {
         @for $i from 1 to $vp4columns {
             .l-col-#{$columns}-offset-#{$i} {
-                margin-left: percentage($i / $vp4columns);
+                margin-#{$left}: percentage($i / $vp4columns);
             }
         }
     }
@@ -38,7 +38,7 @@ $vp5columns: 6;
     .row {
         @for $i from 1 to $vp5columns {
             .xl-col-#{$columns}-offset-#{$i} {
-                margin-left: percentage($i / $vp5columns);
+                margin-#{$left}: percentage($i / $vp5columns);
             }
         }
     }

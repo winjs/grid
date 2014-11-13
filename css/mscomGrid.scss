@@ -2,6 +2,7 @@
 //          #IMPORTS
 //------------------------------------
 @import "config";
+@import "directional";
 @import "offsets";
 @import "manual-colspans";
 
@@ -91,7 +92,7 @@
 
 [class*="col-"] {
     align-items: stretch;
-    float: left;
+    float: $left;
     width: 100%;
     position: relative;
     margin: 0;
@@ -105,6 +106,8 @@
         margin-right: auto;
     }
 }
+
+@if-mixed([class*="col-"], [float]);
 
 
 
