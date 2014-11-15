@@ -3,7 +3,7 @@ $dir: ltr !default;
 
 // Default $dir if not valid
 @if $dir != ltr and $dir != rtl {
-    $dir: ltr;
+  $dir: ltr;
 }
 
 @function if-ltr($if, $else: null) {
@@ -44,10 +44,10 @@ $right: if-ltr(right, left);
 	@else {
 		@return nth($values, 2) nth($values, 1) nth($values, 4) nth($values, 3);
 	}
-  }
-  @else {
-    @return $values;
-  }
+}
+@else {
+  @return $values;
+}
 }
 
 @mixin if-ltr { 
@@ -61,3 +61,66 @@ $right: if-ltr(right, left);
     @content;
   }
 }
+
+@function stripDirection($string) {
+  @return str-slice($string, 0, str-index($string, '-'));
+}
+
+@mixin outputSwap($val,$col){
+  @if $val == padding-left or $val == margin-left or $val == border-left {
+    $val: stripDirection($val) + right;
+    #{$val}: #{$col};
+  } @else if $val == padding-right or $val == margin-right or $val == border-right {
+    $val: stripDirection($val) + left;
+    #{$val}: #{$col};
+  } @else if $val == float {
+    @if $col == left {
+      #{$val}: right;
+    } @else if $col == right {
+      #{$val}: left;
+    } @else {
+      #{$val}: #{$col};
+    }
+  } @else if $val == text-align {
+    @if $col == left {
+      #{$val}: right;
+    } @else if $col == right {
+      #{$val}: left;
+    } @else {
+      #{$val}: #{$col};
+    }
+  } @else if $val == left {
+      right: #{$col};
+  } @else if $val == right {
+      left: #{$col};
+  }
+}
+
+@mixin print($val,$col){
+    #{$val}: #{$col};
+}
+
+@mixin if-mixed($selector, $property-value...) {
+  @if $dirMixed == true {
+    $default: ltr;
+    $secondary: rtl;
+    
+    @if $dir == rtl {
+      $secondary: $default;
+      $default: $dir;
+    }
+    [dir="#{$default}"] #{$selector} {
+      @each $pair in $property-value {
+          @include print(nth($pair, 1) ,nth($pair, 2));
+      }
+    }
+    [dir="#{$secondary}"] #{$selector} {
+      @each $pair in $property-value {
+          @include outputSwap(nth($pair, 1) ,nth($pair, 2));
+      }
+    }
+  }
+}
+
+@include if-mixed("[class*='col']", (padding-#{$left}, 30px), (padding-#{$right}, 55px), 
+(margin-#{$right}, 5px), (float, $right), ($left, 10px), ($right, 25px), (text-align, $right));

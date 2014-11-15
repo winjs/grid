@@ -107,7 +107,7 @@
     }
 }
 
-@if-mixed([class*="col-"], [float]);
+@include if-mixed("[class*='col']", (padding-left, 30px), (margin-right, 5px));
 
 
 
