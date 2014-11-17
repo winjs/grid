@@ -24,7 +24,7 @@
 .#{$grid-prefix}grid {
     display: block;
     position: relative;
-    width: 90%;
+    width: 92.5%; //Goes to 90% at vp2
     margin-left: auto;
     margin-right: auto;
     max-width: $max-grid-width;
@@ -207,6 +207,10 @@
 }
 
 @media screen and (min-width: $vp2) {
+    .#{$grid-prefix}grid {
+        width: 90%;
+    }
+
     .col-1-4,
     .col-1-6,
     .col-1-8,
