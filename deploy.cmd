@@ -65,13 +65,7 @@ IF NOT DEFINED MSBUILD_PATH (
 :: Deployment
 :: ----------
 
-echo Handling .NET Web Application deployment.
-
-:: 1. Restore NuGet packages
-IF /I "Explore.sln" NEQ "" (
-  call :ExecuteCmd nuget restore "%DEPLOYMENT_SOURCE%\Explore.sln"
-  IF !ERRORLEVEL! NEQ 0 goto error
-)
+echo Handling Web deployment.
 
 :: 2. Install npm packages  
 if  /I "$DEPLOYMENT_SOURCE/package.json" NEQ "" (
@@ -85,13 +79,6 @@ if /I "$DEPLOYMENT_SOURCE/Gruntfile.js" NEQ "" (
   IF !ERRORLEVEL! NEQ 0 goto error 
    call :ExecuteCmd ./node_modules/.bin/grunt --no-color
   IF !ERRORLEVEL! NEQ 0 goto error 
-)
-
-:: 2. Build to the temporary path
-IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
-  call :ExecuteCmd "%MSBUILD_PATH%" "%DEPLOYMENT_SOURCE%\Explore\Explore.csproj" /nologo /verbosity:m /t:Build /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="%DEPLOYMENT_TEMP%";AutoParameterizationWebConfigConnectionStrings=false;Configuration=Release /p:SolutionDir="%DEPLOYMENT_SOURCE%\.\\" %SCM_BUILD_ARGS%
-) ELSE (
-  call :ExecuteCmd "%MSBUILD_PATH%" "%DEPLOYMENT_SOURCE%\Explore\Explore.csproj" /nologo /verbosity:m /t:Build /p:AutoParameterizationWebConfigConnectionStrings=false;Configuration=Release /p:SolutionDir="%DEPLOYMENT_SOURCE%\.\\" %SCM_BUILD_ARGS%
 )
 
 IF !ERRORLEVEL! NEQ 0 goto error
