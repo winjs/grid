@@ -6,8 +6,7 @@ module.exports = function (grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'compressed',
-                    sourcemap: true
+                    style: 'expanded'
                 },
                 files: [{
                     expand: true,
@@ -29,8 +28,11 @@ module.exports = function (grunt) {
         // Watch for changes
         watch: {
             sass: {
-                files: 'css/*.scss',
+                files: ['css/*.scss', 'css/demo/*.scss'],
                 tasks: ['sass']
+            },
+            html: {
+                files: '*.html'
             }
         },
 

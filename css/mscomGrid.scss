@@ -2,20 +2,17 @@
 //          #IMPORTS
 //------------------------------------
 @import "config";
-@import "offsets";
-@import "manual-colspans";
+@import "directional";
+//manual col spans and offset imports are at the bottom for specificity battle
 
 
 
 
 
 //Not assuming use of picchu or other library for box-sizing border-box
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+.#{$grid-prefix}grid, .#{$grid-prefix}row, [class*="col-"] { 
+    box-sizing: border-box; 
+} 
 
 
 
@@ -24,10 +21,10 @@ html {
 //------------------------------------
 //          #GRID, ROW, COL
 //------------------------------------
-.grid {
+.#{$grid-prefix}grid {
     display: block;
     position: relative;
-    width: 90%;
+    width: 92.5%; //Goes to 90% at vp2
     margin-left: auto;
     margin-right: auto;
     max-width: $max-grid-width;
@@ -37,7 +34,7 @@ html {
     padding-right: 1vw;
 
     &.full {
-        width:100%;
+        width: 100%;
         max-width: none;
     }
 
@@ -45,7 +42,7 @@ html {
         padding-left: $fixed-col-margin;
         padding-right: $fixed-col-margin;
 
-        .row {
+        .#{$grid-prefix}row {
             margin-left: $fixed-col-margin;
             margin-right: $fixed-col-margin;
 
@@ -57,7 +54,7 @@ html {
     }
 
     &.zero-margin {
-        .row {
+        .#{$grid-prefix}row {
             margin-left: 0;
             margin-right: 0;
 
@@ -68,7 +65,7 @@ html {
         }
     }
 
-    .row {
+    .#{$grid-prefix}row {
         display: flex;
         flex-wrap: wrap;
         margin-left: -1em;
@@ -84,7 +81,7 @@ html {
         }
     }
 
-    .row:after,
+    .#{$grid-prefix}row:after,
     [class*="col-"]:after {
         content: "";
         display: table;
@@ -94,7 +91,7 @@ html {
 
 [class*="col-"] {
     align-items: stretch;
-    float: left;
+    float: $left;
     width: 100%;
     position: relative;
     margin: 0;
@@ -108,6 +105,8 @@ html {
         margin-right: auto;
     }
 }
+
+@include if-mixed("[class*='col-']", (float, $left));
 
 
 
@@ -131,16 +130,17 @@ html {
 //------------------------------------
 //          #MOBILE FIRST SIZES
 //------------------------------------
-.col-1-3.nb {
+.col-1-3.nb, .col-2-6.nb {
     width: percentage(1 / 3);
 }
 
-.col-2-3.nb {
+.col-2-3.nb, .col-4-6.nb {
     width: percentage(2 / 3);
 }
 
 .col-1-2.nb,
 .col-2-4.nb,
+.col-3-6.nb,
 .col-1-8,
 .col-1-12,
 .col-1-16 {
@@ -207,6 +207,10 @@ html {
 }
 
 @media screen and (min-width: $vp2) {
+    .#{$grid-prefix}grid {
+        width: 90%;
+    }
+
     .col-1-4,
     .col-1-6,
     .col-1-8,
@@ -401,19 +405,27 @@ html {
 
 // Reducing padding to a reasonable size for "extremely" large displays
 @media screen and (min-width: 2000px) {
-    .grid {
-        padding: 0 1em;
-        padding: 0 0.5vw;
+    .#{$grid-prefix}grid {
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-left: 0.5vw;
+        padding-right: 0.5vw;
         
-        .row {
-            margin: 0 -1em;
-            margin: 0 -0.5vw;
+        .#{$grid-prefix}row {
+            margin-left: -1em;
+            margin-right: -1em;
+            margin-left: -0.5vw;
+            margin-right: -0.5vw;
 
             & > [class*="col-"] {
-                padding: 1em 1em;
-                padding: -webkit-calc(1em + 0.5vh) 0.5vw;
-                padding: calc(1em + 0.5vh) 0.5vw;
+                padding-left: 1em;
+                padding-right: 1em;
+                padding-left: 0.5vw;
+                padding-right: 0.5vw;
             }
         }
     }
 }
+
+@import "manual-colspans";
+@import "offsets";

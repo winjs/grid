@@ -2,24 +2,34 @@ $('.gridlinesToggle').on("click", function () {
 	$('.gridlines').toggle();
 });
 
+$('.rtlToggle').on("click", function () {
+	var current = $('html').attr("dir");
+	if(current === "ltr") {
+		$('html').attr("dir", "rtl");
+	}
+	else {
+		$('html').attr("dir", "ltr");
+	}
+});
+
 $('.fullGridToggle').on("click", function () {
-	var $grid = $('.grid');
+	var $grid = $('.ms-grid');
 	if(!$grid.hasClass('full')){
-		$('.grid').addClass('full');
+		$('.ms-grid').addClass('full');
 		$('.gridlines').children('row').addClass('full');
 	};
 });
 
 $('.marginGridToggle').on("click", function () {
-	var $grid = $('.grid');
+	var $grid = $('.ms-grid');
 	if($grid.hasClass('full')){
-		$('.grid').removeClass('full');
+		$('.ms-grid').removeClass('full');
 		$('.inside').removeClass('full');
 	};
 });
 
 $('.fixedGridToggle').on("click", function() {
-	var $grid = $('.grid');
+	var $grid = $('.ms-grid');
 	if($grid.hasClass('zero-margin')) {
 		$grid.removeClass('zero-margin');
 	}
@@ -27,7 +37,7 @@ $('.fixedGridToggle').on("click", function() {
 });
 
 $('.zeroMarginToggle').on("click", function() {
-	var $grid = $('.grid');
+	var $grid = $('.ms-grid');
 	if($grid.hasClass('fixed')) {
 		$grid.removeClass('fixed');
 	}
