@@ -50,7 +50,7 @@ To enable directional support, you need to apply the `dir` attribute to the html
 
 Mixed language support is enabled through the use of a `dir` attribute override. For example, you could have a default `dir` tag of ltr on the html tag, but than place the 'dir' attribute again where you needed to support the opposite, say on a `row` element to override that specific `row` and make it rtl.
 ```
-<html dir="rtl">
+<html dir="ltr">
 ...
 <div class="row" dir="rtl"></div>
 ```
