@@ -401,13 +401,13 @@
 
 // Reducing padding to a reasonable size for "extremely" large displays
 @media screen and (min-width: 2000px) {
-    .grid {
+    .#{$grid-prefix}grid {
         padding-left: 1em;
         padding-right: 1em;
         padding-left: 0.5vw;
         padding-right: 0.5vw;
         
-        .row {
+        .#{$grid-prefix}row {
             margin-left: -1em;
             margin-right: -1em;
             margin-left: -0.5vw;
