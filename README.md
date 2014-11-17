@@ -2,6 +2,9 @@
 
 Microsoft.com CSS grid framework.
 
+## Demo
+[http://mscom-grid.azurewebsites.net] (http://mscom-grid.azurewebsites.net)
+
 ## Compile Sass files
 
 ### With the Sass command line
