@@ -23,7 +23,7 @@ $left: if-ltr(left, right);
 $right: if-ltr(right, left);
 
 @function side-values($values) {
-  @if $dir == rtl and length($values) >= 4 {
+  @if ($dir == rtl or $dirMixed == true) and length($values) >= 4 {
     // Reorder right and left positions in list
     @return nth($values, 1) nth($values, 4) nth($values, 3) nth($values, 2);
   }
@@ -63,64 +63,67 @@ $right: if-ltr(right, left);
 }
 
 @function stripDirection($string) {
-  @return str-slice($string, 0, str-index($string, '-'));
+  @return str-slice($string, 0, str-index($string, "-"));
 }
 
-@mixin outputSwap($val,$col){
-  @if $val == padding-left or $val == margin-left or $val == border-left {
-    $val: stripDirection($val) + right;
-    #{$val}: #{$col};
-  } @else if $val == padding-right or $val == margin-right or $val == border-right {
-    $val: stripDirection($val) + left;
-    #{$val}: #{$col};
-  } @else if $val == float {
-    @if $col == left {
-      #{$val}: right;
-    } @else if $col == right {
-      #{$val}: left;
-    } @else {
-      #{$val}: #{$col};
-    }
-  } @else if $val == text-align {
-    @if $col == left {
-      #{$val}: right;
-    } @else if $col == right {
-      #{$val}: left;
-    } @else {
-      #{$val}: #{$col};
-    }
-  } @else if $val == left {
-      right: #{$col};
-  } @else if $val == right {
-      left: #{$col};
+@mixin outputSwap($prop,$val){
+  @if $prop == padding-left or $prop == margin-left or $prop == border-left {
+      $prop: stripDirection($prop) + right;
+      #{$prop}: #{$val};
+  } @else if $prop == padding-right or $prop == margin-right or $prop == border-right {
+      $prop: stripDirection($prop) + left;
+      #{$prop}: #{$val};
+  } @else if $prop == padding {
+      #{$prop}: side-values($val);
+  } @else if $prop == margin {
+      #{$prop}: side-values($val);
+  } @else if $prop == float {
+      @if $val == left {
+        #{$prop}: right;
+      } @else if $val == right {
+        #{$prop}: left;
+      } @else {
+        #{$prop}: #{$val};
+      }
+  } @else if $prop == text-align {
+      @if $val == left {
+        #{$prop}: right;
+      } @else if $val == right {
+        #{$prop}: left;
+      } @else {
+        #{$prop}: #{$val};
+      }
+  } @else if $prop == left {
+      right: #{$val};
+  } @else if $prop == right {
+      left: #{$val};
   }
 }
-
-@mixin print($val,$col){
-    #{$val}: #{$col};
+ 
+@mixin print($prop, $val){
+    #{$prop}: #{$val};
 }
 
 @mixin if-mixed($selector, $property-value...) {
-  @if $dirMixed == true {
-    $default: ltr;
-    $secondary: rtl;
-    
-    @if $dir == rtl {
-      $secondary: $default;
-      $default: $dir;
-    }
-    [dir="#{$default}"] #{$selector} {
-      @each $pair in $property-value {
-          @include print(nth($pair, 1) ,nth($pair, 2));
+  @if variable-exists(dirMixed) {
+    @if $dirMixed == true {
+      $default: ltr;
+      $secondary: rtl;
+      
+      @if $dir == rtl {
+        $secondary: $default;
+        $default: $dir;
       }
-    }
-    [dir="#{$secondary}"] #{$selector} {
-      @each $pair in $property-value {
+      [dir="#{$default}"] #{$selector} {
+        @each $pair in $property-value {
+          @include print(nth($pair, 1) ,nth($pair, 2));
+        }
+      }
+      [dir="#{$secondary}"] #{$selector} {
+        @each $pair in $property-value {
           @include outputSwap(nth($pair, 1) ,nth($pair, 2));
+        }
       }
     }
   }
 }
-
-@include if-mixed("[class*='col']", (padding-#{$left}, 30px), (padding-#{$right}, 55px), 
-(margin-#{$right}, 5px), (float, $right), ($left, 10px), ($right, 25px), (text-align, $right));

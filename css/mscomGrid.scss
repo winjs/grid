@@ -3,8 +3,7 @@
 //------------------------------------
 @import "config";
 @import "directional";
-@import "offsets";
-@import "manual-colspans";
+//manual col spans and offset imports are at the bottom for specificity battle
 
 
 
@@ -35,7 +34,7 @@
     padding-right: 1vw;
 
     &.full {
-        width:100%;
+        width: 100%;
         max-width: none;
     }
 
@@ -107,7 +106,7 @@
     }
 }
 
-@include if-mixed("[class*='col']", (padding-left, 30px), (margin-right, 5px));
+@include if-mixed("[class*='col-']", (float, $left));
 
 
 
@@ -423,3 +422,6 @@
         }
     }
 }
+
+@import "manual-colspans";
+@import "offsets";
