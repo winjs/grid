@@ -2,6 +2,16 @@ $('.gridlinesToggle').on("click", function () {
 	$('.gridlines').toggle();
 });
 
+$('.rtlToggle').on("click", function () {
+	var current = $('html').attr("dir");
+	if(current === "ltr") {
+		$('html').attr("dir", "rtl");
+	}
+	else {
+		$('html').attr("dir", "ltr");
+	}
+});
+
 $('.fullGridToggle').on("click", function () {
 	var $grid = $('.ms-grid');
 	if(!$grid.hasClass('full')){
