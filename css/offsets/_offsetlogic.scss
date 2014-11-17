@@ -4,7 +4,7 @@
             .#{$vp1prefix}-col-#{$columns}-offset-#{$i} {
                 margin-#{$left}: percentage($i / $vp1columns);
             }
-            @include if-mixed(".#{$vp1prefix}-col-#{$columns}-offset-#{$i}", (margin-#{$left}, percentage($i / $vp1columns)));
+            @include if-mixed(".#{$vp1prefix}-col-#{$columns}-offset-#{$i}", (margin-#{$left}, percentage($i / $vp1columns)), (margin-#{$right}, 0));
         }
     }
 }
@@ -15,7 +15,7 @@
             .#{$vp2prefix}-col-#{$columns}-offset-#{$i} {
                 margin-#{$left}: percentage($i / $vp2columns);
             }
-            @include if-mixed(".#{$vp2prefix}-col-#{$columns}-offset-#{$i}", (margin-#{$left}, percentage($i / $vp2columns)));
+            @include if-mixed(".#{$vp2prefix}-col-#{$columns}-offset-#{$i}", (margin-#{$left}, percentage($i / $vp2columns)), (margin-#{$right}, 0));
         }
     }
 }
@@ -26,7 +26,7 @@
             .#{$vp3prefix}-col-#{$columns}-offset-#{$i} {
                 margin-#{$left}: percentage($i / $vp3columns);
             }
-            @include if-mixed(".#{$vp3prefix}-col-#{$columns}-offset-#{$i}", (margin-#{$left}, percentage($i / $vp3columns)));
+            @include if-mixed(".#{$vp3prefix}-col-#{$columns}-offset-#{$i}", (margin-#{$left}, percentage($i / $vp3columns)), (margin-#{$right}, 0));
         }
     }
 }
@@ -37,7 +37,7 @@
             .#{$vp4prefix}-col-#{$columns}-offset-#{$i} {
                 margin-#{$left}: percentage($i / $vp4columns);
             }
-            @include if-mixed(".#{$vp4prefix}-col-#{$columns}-offset-#{$i}", (margin-#{$left}, percentage($i / $vp4columns)));
+            @include if-mixed(".#{$vp4prefix}-col-#{$columns}-offset-#{$i}", (margin-#{$left}, percentage($i / $vp4columns)), (margin-#{$right}, 0));
         }
     }
 }
@@ -48,7 +48,7 @@
             .#{$vp5prefix}-col-#{$columns}-offset-#{$i} {
                 margin-#{$left}: percentage($i / $vp5columns);
             }
-            @include if-mixed(".#{$vp5prefix}-col-#{$columns}-offset-#{$i}", (margin-#{$left}, percentage($i / $vp5columns)));
+            @include if-mixed(".#{$vp5prefix}-col-#{$columns}-offset-#{$i}", (margin-#{$left}, percentage($i / $vp5columns)), (margin-#{$right}, 0));
         }
     }
 }
