@@ -10,7 +10,7 @@
 
 
 //Not assuming use of picchu or other library for box-sizing border-box
-.grid, .row, [class*="col-"] { 
+.#{$grid-prefix}grid, .#{$grid-prefix}row, [class*="col-"] { 
     box-sizing: border-box; 
 } 
 
@@ -21,7 +21,7 @@
 //------------------------------------
 //          #GRID, ROW, COL
 //------------------------------------
-.grid {
+.#{$grid-prefix}grid {
     display: block;
     position: relative;
     width: 90%;
@@ -42,7 +42,7 @@
         padding-left: $fixed-col-margin;
         padding-right: $fixed-col-margin;
 
-        .row {
+        .#{$grid-prefix}row {
             margin-left: $fixed-col-margin;
             margin-right: $fixed-col-margin;
 
@@ -54,7 +54,7 @@
     }
 
     &.zero-margin {
-        .row {
+        .#{$grid-prefix}row {
             margin-left: 0;
             margin-right: 0;
 
@@ -65,7 +65,7 @@
         }
     }
 
-    .row {
+    .#{$grid-prefix}row {
         display: flex;
         flex-wrap: wrap;
         margin-left: -1em;
@@ -81,7 +81,7 @@
         }
     }
 
-    .row:after,
+    .#{$grid-prefix}row:after,
     [class*="col-"]:after {
         content: "";
         display: table;
