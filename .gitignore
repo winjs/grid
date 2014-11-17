@@ -3,3 +3,5 @@
 
 .sass-cache
 node_modules
+.css
+.css.map
