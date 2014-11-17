@@ -2,15 +2,15 @@
 //          #IMPORTS
 //------------------------------------
 @import "config";
-@import "offsets";
-@import "manual-colspans";
+@import "directional";
+//manual col spans and offset imports are at the bottom for specificity battle
 
 
 
 
 
 //Not assuming use of picchu or other library for box-sizing border-box
-.grid, .row, [class*="col-"] { 
+.#{$grid-prefix}grid, .#{$grid-prefix}row, [class*="col-"] { 
     box-sizing: border-box; 
 } 
 
@@ -21,7 +21,7 @@
 //------------------------------------
 //          #GRID, ROW, COL
 //------------------------------------
-.grid {
+.#{$grid-prefix}grid {
     display: block;
     position: relative;
     width: 90%;
@@ -34,7 +34,7 @@
     padding-right: 1vw;
 
     &.full {
-        width:100%;
+        width: 100%;
         max-width: none;
     }
 
@@ -42,7 +42,7 @@
         padding-left: $fixed-col-margin;
         padding-right: $fixed-col-margin;
 
-        .row {
+        .#{$grid-prefix}row {
             margin-left: $fixed-col-margin;
             margin-right: $fixed-col-margin;
 
@@ -54,7 +54,7 @@
     }
 
     &.zero-margin {
-        .row {
+        .#{$grid-prefix}row {
             margin-left: 0;
             margin-right: 0;
 
@@ -65,7 +65,7 @@
         }
     }
 
-    .row {
+    .#{$grid-prefix}row {
         display: flex;
         flex-wrap: wrap;
         margin-left: -1em;
@@ -81,7 +81,7 @@
         }
     }
 
-    .row:after,
+    .#{$grid-prefix}row:after,
     [class*="col-"]:after {
         content: "";
         display: table;
@@ -91,7 +91,7 @@
 
 [class*="col-"] {
     align-items: stretch;
-    float: left;
+    float: $left;
     width: 100%;
     position: relative;
     margin: 0;
@@ -105,6 +105,8 @@
         margin-right: auto;
     }
 }
+
+@include if-mixed("[class*='col-']", (float, $left));
 
 
 
@@ -399,13 +401,13 @@
 
 // Reducing padding to a reasonable size for "extremely" large displays
 @media screen and (min-width: 2000px) {
-    .grid {
+    .#{$grid-prefix}grid {
         padding-left: 1em;
         padding-right: 1em;
         padding-left: 0.5vw;
         padding-right: 0.5vw;
         
-        .row {
+        .#{$grid-prefix}row {
             margin-left: -1em;
             margin-right: -1em;
             margin-left: -0.5vw;
@@ -420,3 +422,6 @@
         }
     }
 }
+
+@import "manual-colspans";
+@import "offsets";

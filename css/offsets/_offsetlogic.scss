@@ -1,0 +1,54 @@
+@if variable-exists(vp1columns) {
+    @media screen and (min-width: $vp1) {
+        @for $i from 1 to $vp1columns {
+            .#{$vp1prefix}-col-#{$columns}-offset-#{$i} {
+                margin-#{$left}: percentage($i / $vp1columns);
+            }
+            @include if-mixed(".#{$vp1prefix}-col-#{$columns}-offset-#{$i}", (margin-#{$left}, percentage($i / $vp1columns)), (margin-#{$right}, 0));
+        }
+    }
+}
+
+@if variable-exists(vp2columns) {
+    @media screen and (min-width: $vp2) {
+        @for $i from 1 to $vp2columns {
+            .#{$vp2prefix}-col-#{$columns}-offset-#{$i} {
+                margin-#{$left}: percentage($i / $vp2columns);
+            }
+            @include if-mixed(".#{$vp2prefix}-col-#{$columns}-offset-#{$i}", (margin-#{$left}, percentage($i / $vp2columns)), (margin-#{$right}, 0));
+        }
+    }
+}
+
+@if variable-exists(vp3columns) {
+    @media screen and (min-width: $vp3) {
+        @for $i from 1 to $vp3columns {
+            .#{$vp3prefix}-col-#{$columns}-offset-#{$i} {
+                margin-#{$left}: percentage($i / $vp3columns);
+            }
+            @include if-mixed(".#{$vp3prefix}-col-#{$columns}-offset-#{$i}", (margin-#{$left}, percentage($i / $vp3columns)), (margin-#{$right}, 0));
+        }
+    }
+}
+
+@if variable-exists(vp4columns) {
+    @media screen and (min-width: $vp4) {
+        @for $i from 1 to $vp4columns {
+            .#{$vp4prefix}-col-#{$columns}-offset-#{$i} {
+                margin-#{$left}: percentage($i / $vp4columns);
+            }
+            @include if-mixed(".#{$vp4prefix}-col-#{$columns}-offset-#{$i}", (margin-#{$left}, percentage($i / $vp4columns)), (margin-#{$right}, 0));
+        }
+    }
+}
+
+@if variable-exists(vp5columns) {
+    @media screen and (min-width: $vp5) {
+        @for $i from 1 to $vp5columns {
+            .#{$vp5prefix}-col-#{$columns}-offset-#{$i} {
+                margin-#{$left}: percentage($i / $vp5columns);
+            }
+            @include if-mixed(".#{$vp5prefix}-col-#{$columns}-offset-#{$i}", (margin-#{$left}, percentage($i / $vp5columns)), (margin-#{$right}, 0));
+        }
+    }
+}
