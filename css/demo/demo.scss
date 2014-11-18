@@ -58,16 +58,16 @@ input[type="button"]:hover, input[type="button"]:focus {
 		z-index: 1;
 	}
 
-	& > .grid > .row {
+	& > .ms-grid > .ms-row {
 		height: 100vh;
 	}
 
-	& > .full.row {
+	& > .full.ms-row {
 		width: 100%;
 		max-width: none;
 	}
 
-	.row .col-1-24 {
+	.ms-row .col-1-24 {
 		height: 100%;
 	}
 
