@@ -822,14 +822,14 @@ input[type="button"]:hover, input[type="button"]:focus {
   width: 100%;
   z-index: 1;
 }
-.gridlines > .grid > .row {
+.gridlines > .ms-grid > .ms-row {
   height: 100vh;
 }
-.gridlines > .full.row {
+.gridlines > .full.ms-row {
   width: 100%;
   max-width: none;
 }
-.gridlines .row .col-1-24 {
+.gridlines .ms-row .col-1-24 {
   height: 100%;
 }
 .gridlines .bar {
