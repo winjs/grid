@@ -1,5 +1,6 @@
 /*CSS that is just for demo site purposes*/
 @import "picchu/picchu";
+@import "msdotcomoffsetmenu";
 
 
 .ms-row {
@@ -22,17 +23,6 @@
 	}
 }
 
-input[type="button"] {
-	border: 0;
-	padding: 1em;
-	padding: 1rem;
-	background-color: #F65314;
-}
-
-input[type="button"]:hover, input[type="button"]:focus {
-	background-color: #7CBB00;
-}
-
 .colNum {
 	font-size: 1.5em;
 	color: rgba(255, 255, 255, 0.8);
@@ -52,23 +42,18 @@ input[type="button"]:hover, input[type="button"]:focus {
 	display: none;
 
 	&.outside {
-		position: fixed;
-		top: 3em;
+		position: absolute;
 		width: 100%;
 		z-index: 1;
 	}
 
-	& > .grid > .row {
-		height: 100vh;
-	}
-
-	& > .full.row {
+	& > .full.ms-row {
 		width: 100%;
 		max-width: none;
 	}
 
-	.row .col-1-24 {
-		height: 100%;
+	.ms-row .col-1-24 {
+		height: 9999em;
 	}
 
 	.bar {
@@ -111,6 +96,10 @@ input[type="button"]:hover, input[type="button"]:focus {
 	h1, h2, h3, h4, h5, h6 {
 		margin: 0;
 	}
+}
+
+.notes {
+	padding-top: 5em;
 }
 
 .list-of-links {
