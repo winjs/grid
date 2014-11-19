@@ -1,0 +1,123 @@
+body.offsetopened {
+  overflow-x: hidden;
+}
+
+.toolbox button, .toolbox .button {
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  color: #fff;
+  padding: 0.75em 2em;
+  margin: 0.25em 0.25em 0.25em 0;
+  outline: none;
+  transition: all 0.15s;
+}
+.toolbox button.blue, .toolbox .button.blue {
+  background-color: #1570a6;
+}
+.toolbox button.blue:hover, .toolbox button.blue:focus, .toolbox .button.blue:hover, .toolbox .button.blue:focus {
+  border: 2px solid #072435;
+}
+.toolbox button.blue:active, .toolbox button.blue:active, .toolbox .button.blue:active, .toolbox .button.blue:active {
+  background-color: #0c4262;
+}
+.toolbox button.green, .toolbox .button.green {
+  background-color: #107c10;
+}
+.toolbox button.green:hover, .toolbox button.green:focus, .toolbox .button.green:hover, .toolbox .button.green:focus {
+  border: 2px solid #010b01;
+}
+.toolbox button.green:active, .toolbox button.green:active, .toolbox .button.green:active, .toolbox .button.green:active {
+  background-color: #073807;
+}
+.toolbox button.pink, .toolbox .button.pink {
+  background-color: #ef0060;
+}
+.toolbox button.pink:hover, .toolbox button.pink:focus, .toolbox .button.pink:hover, .toolbox .button.pink:focus {
+  border: 2px solid #6f002d;
+}
+.toolbox button.pink:active, .toolbox button.pink:active, .toolbox .button.pink:active, .toolbox .button.pink:active {
+  background-color: #a30041;
+}
+
+.toolbox {
+  text-align: center;
+}
+
+.page {
+  background-color: #FFF;
+  padding-bottom: 1em;
+  position: relative;
+}
+.page.offset-docked {
+  left: auto !important;
+  margin-left: 20%;
+  overflow: hidden;
+  right: auto;
+}
+
+.msdotcomoffsetmenu {
+  background-color: #333333;
+  height: 100vh;
+  left: 0;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  width: 18em;
+  transition: width 0.3s linear;
+}
+.msdotcomoffsetmenu.offset-docked {
+  width: 20%;
+}
+.msdotcomoffsetmenu ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.msdotcomoffsetmenu .offset-menu-link {
+  background-color: transparent;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  padding: 1em;
+  text-align: left;
+  white-space: normal;
+  width: 100%;
+}
+.msdotcomoffsetmenu .offset-menu-link:hover, .msdotcomoffsetmenu .offset-menu-link:focus {
+  background-color: #EEE;
+  color: #333;
+}
+
+.offset-menu-button {
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+.offset-menu-button:hover, .offset-menu-button:focus {
+  background-color: #333;
+}
+.offset-menu-button:hover .menu-icon rect, .offset-menu-button:focus .menu-icon rect {
+  fill: #FFF;
+}
+.offset-menu-button .menu-icon {
+  width: 2.5em;
+}
+
+@media all and (max-width: 768px) {
+  .dock-button {
+    display: none;
+  }
+
+  .msdotcomoffsetmenu {
+    width: 12em;
+  }
+}
+
+/*# sourceMappingURL=msdotcomoffsetmenu.css.map */
