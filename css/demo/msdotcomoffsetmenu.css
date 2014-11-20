@@ -10,7 +10,8 @@ body.offsetopened {
   padding: 0.75em 2em;
   margin: 0.25em 0.25em 0.25em 0;
   outline: none;
-  transition: all 0.15s;
+  -webkit-transition: all 0.15s;
+          transition: all 0.15s;
 }
 .toolbox button.blue, .toolbox .button.blue {
   background-color: #1570a6;
@@ -64,7 +65,8 @@ body.offsetopened {
   position: fixed;
   top: 0;
   width: 18em;
-  transition: width 0.3s linear;
+  -webkit-transition: width 0.3s linear;
+          transition: width 0.3s linear;
 }
 .msdotcomoffsetmenu.offset-docked {
   width: 20%;
@@ -119,5 +121,3 @@ body.offsetopened {
     width: 12em;
   }
 }
-
-/*# sourceMappingURL=msdotcomoffsetmenu.css.map */
