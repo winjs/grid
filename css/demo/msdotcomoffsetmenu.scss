@@ -1,3 +1,5 @@
+$large-size: 18em;
+$small-size: 12em;
 $ms-pink: #ef0060;
 $ms-blue: #1570a6;
 $ms-green: #107c10;
@@ -76,7 +78,7 @@ body {
 	overflow-y: auto;
 	position: fixed;
 	top: 0;
-	width: 18em;
+	width: $large-size;
 	transition: width 0.3s linear;
 
 	&.offset-docked {
@@ -135,6 +137,6 @@ body {
 		display: none;
 	}
 	.msdotcomoffsetmenu {
-		width: 12em;
+		width: $small-size;
 	}
 }
