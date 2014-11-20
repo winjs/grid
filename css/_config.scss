@@ -1,9 +1,21 @@
 $max-grid-width: 1600px;
 $fixed-col-margin: 2px; //4px fixed margin, gets doubled
 $grid-prefix: "ms-";
+$dirMixed: false !default; //Toggle for having mixed langauge support
+
+//Different viewport sizes and list for mixin use
 $vp1: 320px;
 $vp2: 540px;
 $vp3: 768px;
 $vp4: 992px;
 $vp5: 1400px;
-$dirMixed: false !default;
+$vp-list: ($vp1, $vp2, $vp3, $vp4, $vp5);
+
+
+//Different prefixes for each viewport and list for mixin use
+$vp1prefix: xs;
+$vp2prefix: s;
+$vp3prefix: m;
+$vp4prefix: l;
+$vp5prefix: xl;
+$vp-prefix-list: ($vp1prefix, $vp2prefix, $vp3prefix, $vp4prefix, $vp5prefix);

@@ -18,6 +18,10 @@
   width: 100%;
   max-width: none;
 }
+.ms-grid.full.zero-margin {
+  padding-left: 0;
+  padding-right: 0;
+}
 .ms-grid.fixed {
   padding-left: 2px;
   padding-right: 2px;
@@ -361,6 +365,11 @@
   }
 }
 @media screen and (min-width: 320px) {
+  .xs-col-1-24,
+  .xs-col-4-24 {
+    width: 16.66667%;
+  }
+
   .xs-col-2-24,
   .xs-col-8-24 {
     width: 33.33333%;
@@ -387,6 +396,11 @@
   }
 }
 @media screen and (min-width: 540px) {
+  .s-col-1-24,
+  .s-col-2-24 {
+    width: 8.33333%;
+  }
+
   .s-col-2-24,
   .s-col-4-24 {
     width: 16.66667%;
@@ -443,6 +457,10 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .m-col-1-24 {
+    width: 4.16667%;
+  }
+
   .m-col-2-24 {
     width: 8.33333%;
   }
@@ -536,6 +554,10 @@
   }
 }
 @media screen and (min-width: 992px) {
+  .l-col-1-24 {
+    width: 4.16667%;
+  }
+
   .l-col-2-24 {
     width: 8.33333%;
   }
@@ -629,6 +651,10 @@
   }
 }
 @media screen and (min-width: 1400px) {
+  .xl-col-1-24 {
+    width: 4.16667%;
+  }
+
   .xl-col-2-24 {
     width: 8.33333%;
   }
@@ -814,11 +840,6 @@
 
   .xl-col-4-offset-3 {
     margin-left: 75%;
-  }
-}
-@media screen and (min-width: 540px) {
-  .s-col-5-offset-1 {
-    margin-left: 50%;
   }
 }
 @media screen and (min-width: 768px) {
