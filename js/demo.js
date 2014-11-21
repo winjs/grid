@@ -49,8 +49,7 @@ $('.headersToggle').on("click", function () {
 });
 
 $('.gridBackgroundToggle').on("click", function () {
-	$('.fullGridDemo .row').toggleClass('light-gray');
-	$('.extras .row').toggleClass('light-gray');
+	$('.ms-grid').toggleClass('light-gray');
 });
 
 $(document).ready(function () {
