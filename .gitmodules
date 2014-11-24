@@ -1,0 +1,6 @@
+[submodule "demo/components/picchu"]
+	path = demo/components/picchu
+	url = https://github.com/MicrosoftDotCom/picchu.git
+[submodule "demo/components/offsetmenu"]
+	path = demo/components/offsetmenu
+	url = https://github.com/MicrosoftDotCom/mscom-offset-menu.git
