@@ -3,7 +3,7 @@
 Microsoft.com CSS grid framework.
 
 ## Demo
-[http://msdotcomgrid.azurewebsites.net] (http://msdotcomgrid.azurewebsites.net)
+[http://msdotcom.azurewebsites.net/Grid] (http://msdotcom.azurewebsites.net/Grid)
 
 ## Compile Sass files
 
