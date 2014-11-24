@@ -1,6 +1,7 @@
 /*CSS that is just for demo site purposes*/
-@import "picchu/picchu";
-@import "msdotcomoffsetmenu";
+@import "../components/picchu/picchu";
+@import "../components/offsetmenu/src/scss/msdotcomoffsetmenu";
+@import "../../src/sass/mscom-grid-mixed";
 
 
 .ms-row {
@@ -95,6 +96,10 @@
 .ms-grid {
 	h1, h2, h3, h4, h5, h6 {
 		margin: 0;
+	}
+
+	&.extras img {
+		width: 100%;
 	}
 }
 

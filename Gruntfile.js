@@ -10,16 +10,16 @@ module.exports = function (grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'css',
+                    cwd: 'src/sass',
                     src: ['*.scss'],
-                    dest: 'css',
+                    dest: 'src/sass/css',
                     ext: '.css'
                 },
                 {
                     expand: true,
-                    cwd: 'css/demo',
+                    cwd: 'demo/sass',
                     src: ['*.scss'],
-                    dest: 'css/demo',
+                    dest: 'demo/sass/css',
                     ext: '.css'
                 }]
             }
@@ -31,8 +31,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'css/demo/demo.css': 'css/demo/demo.css',
-                    'css/demo/msdotcomoffsetmenu.css': 'css/demo/msdotcomoffsetmenu.css'
+                    'src/sass/css/mscom-grid.css': 'src/sass/css/mscom-grid.css'
                 }
             }
         },
@@ -40,7 +39,7 @@ module.exports = function (grunt) {
         // Watch for changes
         watch: {
             sass: {
-                files: ['css/*.scss', 'css/demo/*.scss'],
+                files: ['src/sass/*.scss', 'demo/sass/*.scss'],
                 tasks: ['sass', 'autoprefixer']
             },
             html: {
@@ -53,7 +52,7 @@ module.exports = function (grunt) {
             server: {
                 options: {
                     port: 9001,
-                    base: './'
+                    base: './demo'
                 }
             }
         }
