@@ -1,4 +1,4 @@
-var mscomGrid = (function() {
+var msGrid = (function() {
 	var findPrecedingColumns = function() {
 		$('.col-3-4').prev('.col-1-4').addClass('preceding-col-1-4');
 		$('.col-4-6').prev('.col-2-6').addClass('preceding-col-2-6');
@@ -17,4 +17,4 @@ var mscomGrid = (function() {
 	return obj;
 })();
 
-mscomGrid.init();
+msGrid.init();
