@@ -2,22 +2,13 @@
     @media screen and (min-width: $vp) {
         $ratio: $total / $vpcolumns;
         @for $i from 1 through $vpcolumns {
-            @if $ratio != 1 {
-                .#{$vpprefix}-col-#{$i}-#{$total},
-                .#{$vpprefix}-col-#{$i*$ratio}-#{$total}  {
-                    width: percentage(($i*$ratio) / $total);
-            }
-            } @else {
-                .#{$vpprefix}-col-#{$i}-#{$total} {
-                    width: percentage(($i) / $total);
-                }
+            .#{$vpprefix}-col-#{$i}-#{$total} {
+                width: percentage(($i*$ratio) / $total);
             }
         }
     }
 }
 
-@if variable-exists(column-breakdown) {
-    @for $i from 1 through length($column-breakdown) {
-            @include manual-colspans(nth($vp-list, $i), nth($vp-prefix-list, $i), nth($column-breakdown, $i), $columns);
-    }
+@for $i from 1 through length($column-breakdown) {
+    @include manual-colspans(nth($vp-list, $i), nth($vp-prefix-list, $i), nth($column-breakdown, $i), $columns);
 }
