@@ -65,7 +65,7 @@ Through the use of the variables in the _config.scss file, you can control:
 * Mixed langauge support
 * Breakpoint values for the 5 built in breakpoints/viewports
 * Prefixing of the viewport specific classes (manual colspans and offsets)
-```sass
+```
 $max-grid-width: 1600px;
 $fixed-col-margin: 2px; //4px fixed margin, gets doubled
 $grid-prefix: "ms-";
