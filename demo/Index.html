@@ -8,30 +8,39 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MSCOM Grid</title>
+    <title>msdotcom grid</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="sass/css/demo.css">
+
+    <!--[if lt IE 9]>
+    <script src="/js/vendor/html5shiv.js"></script>
+    <script src="/js/vendor/respond.js"></script>
+    <![endif]-->
 </head>
 <body>
     <nav id="msdotcomoffsetmenuleft" class="msdotcomoffsetmenu left">
         <section class="toolbox">
-            <button class="close-button pink">Close</button>
-            <button class="dock-button pink">Dock</button>
+            <button class="close-button pink">
+                Close
+            </button>
+            <button class="dock-button pink">
+                Dock
+            </button>
         </section>
         <ul>
             <li>
-                <a role="button" class="offset-menu-link fullGridToggle">Full grid</a>
+                <a role="button" class="offset-menu-link marginGridToggle">Default margin grid</a>
             </li>
             <li>
-                <a role="button" class="offset-menu-link marginGridToggle">Margin grid</a>
+                <a role="button" class="offset-menu-link fullGridToggle">Toggle full grid</a>
             </li>
             <li>
-                <a role="button" value="Toggle fixed margin" class="offset-menu-link fixedGridToggle">Toggle fixed margin</a>
+                <a role="button" value="Toggle fixed margin" class="offset-menu-link fixedGridToggle">Toggle fixed column margins</a>
             </li>
             <li>
-                <a role="button" class="offset-menu-link zeroMarginToggle">Toggle zero margin</a>
+                <a role="button" class="offset-menu-link zeroMarginToggle">Toggle zero column margins</a>
             </li>
             <li>
                 <a role="button" class="offset-menu-link gridlinesToggle">Toggle gridlines</a>
@@ -48,6 +57,9 @@
             <li>
                 <a href="HPDemo.html" class="offset-menu-link">Homepage demo</a>
             </li>
+            <li>
+                <a class="offset-menu-link" href="../Index.html">Home</a>
+            </li>
         </ul>
     </nav>
     <section class="page">
@@ -63,6 +75,7 @@
             <div class="ms-row">
                 <div class="col-1-1 tac">
                     <h1>msdotcom grid</h1>
+                    <a href="https://github.com/winjs/grid">View on GitHub</a>
                 </div>
                 <div class="col-1-1">
                     <h2>Notes</h2>
@@ -155,7 +168,7 @@
         <section class="ms-grid fullGridDemo">
             <section class="ms-row">
                 <div class="col-1-1">
-                    <div class="colNum marine">1/1</div>
+                    <div class="colNum forest-bgc">1/1</div>
                     <h1 class="text-center">
                         Header one
                     </h1>
@@ -164,13 +177,13 @@
 
             <section class="ms-row">
                 <div class="col-1-2">
-                    <div class="colNum pink">1/2</div>
+                    <div class="colNum pink-bgc">1/2</div>
                     <h2 class="text-center">
                         Header two 1
                     </h2>
                 </div>
                 <div class="col-1-2">
-                    <div class="colNum pink">2/2</div>
+                    <div class="colNum pink-bgc">2/2</div>
                     <h2 class="text-center">
                         Header two 2
                     </h2>
@@ -179,13 +192,13 @@
 
             <section class="ms-row">
                 <div class="col-1-2 nb">
-                    <div class="colNum pink">1/2</div>
+                    <div class="colNum pink-bgc">1/2</div>
                     <h2 class="text-center">
                         Header two (No break) 1
                     </h2>
                 </div>
                 <div class="col-1-2 nb">
-                    <div class="colNum pink">2/2</div>
+                    <div class="colNum pink-bgc">2/2</div>
                     <h2 class="text-center">
                         Header two (No break) 2
                     </h2>
@@ -194,1000 +207,1001 @@
 
             <section class="ms-row">
                 <div class="col-1-3">
-                    <div class="colNum purple">1/3</div>
+                    <div class="colNum purple-bgc">1/3</div>
                     <h3 class="text-center">Header three 1</h3>
                 </div>
                 <div class="col-1-3">
-                    <div class="colNum purple">2/3</div>
+                    <div class="colNum purple-bgc">2/3</div>
                     <h3 class="text-center">Header three 2</h3>
                 </div>
                 <div class="col-1-3">
-                    <div class="colNum purple">3/3</div>
+                    <div class="colNum purple-bgc">3/3</div>
                     <h3 class="text-center">Header three 3</h3>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-1-3 nb">
-                    <div class="colNum purple">1/3</div>
+                    <div class="colNum purple-bgc">1/3</div>
                     <h3 class="text-center">Header three (no break) 1</h3>
                 </div>
                 <div class="col-2-3 nb">
-                    <div class="colNum purple">3/3</div>
+                    <div class="colNum purple-bgc">3/3</div>
                     <h3 class="text-center">Header three (no break) 2</h3>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-1-4 ">
-                    <div class="colNum aqua">1/4</div>
+                    <div class="colNum aqua-bgc">1/4</div>
                     <h4 class="text-center">Header four 1</h4>
                 </div>
                 <div class="col-1-4 ">
-                    <div class="colNum aqua">2/4</div>
+                    <div class="colNum aqua-bgc">2/4</div>
                     <h4 class="text-center">Header four 2</h4>
                 </div>
                 <div class="col-1-4 ">
-                    <div class="colNum aqua">3/4</div>
+                    <div class="colNum aqua-bgc">3/4</div>
                     <h4 class="text-center">Header four 3</h4>
                 </div>
                 <div class="col-1-4 ">
-                    <div class="colNum aqua">4/4</div>
+                    <div class="colNum aqua-bgc">4/4</div>
                     <h4 class="text-center">Header four 4</h4>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-1-4 nb">
-                    <div class="colNum aqua">1/4</div>
+                    <div class="colNum aqua-bgc">1/4</div>
                     <h4 class="text-center">Header four 1</h4>
                 </div>
                 <div class="col-1-4 nb">
-                    <div class="colNum aqua">2/4</div>
+                    <div class="colNum aqua-bgc">2/4</div>
                     <h4 class="text-center">Header four 2</h4>
                 </div>
                 <div class="col-1-4 nb">
-                    <div class="colNum aqua">3/4</div>
+                    <div class="colNum aqua-bgc">3/4</div>
                     <h4 class="text-center">Header four 3</h4>
                 </div>
                 <div class="col-1-4 nb">
-                    <div class="colNum aqua">4/4</div>
+                    <div class="colNum aqua-bgc">4/4</div>
                     <h4 class="text-center">Header four 4</h4>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-2-4 ">
-                    <div class="colNum aqua">2/4</div>
+                    <div class="colNum aqua-bgc">2/4</div>
                     <h4 class="text-center">Header four</h4>
                 </div>
                 <div class="col-1-4 ">
-                    <div class="colNum aqua">3/4</div>
+                    <div class="colNum aqua-bgc">3/4</div>
                     <h4 class="text-center">Header four</h4>
                 </div>
                 <div class="col-1-4 ">
-                    <div class="colNum aqua">4/4</div>
+                    <div class="colNum aqua-bgc">4/4</div>
                     <h4 class="text-center">Header four</h4>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-3-4 ">
-                    <div class="colNum aqua">3/4</div>
+                    <div class="colNum aqua-bgc">3/4</div>
                     <h4 class="text-center">Header four</h4>
                 </div>
                 <div class="col-1-4 ">
-                    <div class="colNum aqua">4/4</div>
+                    <div class="colNum aqua-bgc">4/4</div>
                     <h4 class="text-center">Header four</h4>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-1-4 ">
-                    <div class="colNum aqua">3/4</div>
+                    <div class="colNum aqua-bgc">3/4</div>
                     <h4 class="text-center">Header four</h4>
                 </div>
                 <div class="col-3-4 ">
-                    <div class="colNum aqua">4/4</div>
+                    <div class="colNum aqua-bgc">4/4</div>
                     <h4 class="text-center">Header four</h4>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-1-5 ">
-                    <div class="colNum lightorange">1/5</div>
+                    <div class="colNum yellow-bgc">1/5</div>
                 </div>
                 <div class="col-1-5 ">
-                    <div class="colNum lightorange">2/5</div>
+                    <div class="colNum yellow-bgc">2/5</div>
                 </div>
                 <div class="col-1-5 ">
-                    <div class="colNum lightorange">3/5</div>
+                    <div class="colNum yellow-bgc">3/5</div>
                 </div>
                 <div class="col-1-5 ">
-                    <div class="colNum lightorange">4/5</div>
+                    <div class="colNum yellow-bgc">4/5</div>
                 </div>
                 <div class="col-1-5 ">
-                    <div class="colNum lightorange">5/5</div>
+                    <div class="colNum yellow-bgc">5/5</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-2-5 ">
-                    <div class="colNum lightorange">2/5</div>
+                    <div class="colNum yellow-bgc">2/5</div>
                 </div>
                 <div class="col-1-5 ">
-                    <div class="colNum lightorange">3/5</div>
+                    <div class="colNum yellow-bgc">3/5</div>
                 </div>
                 <div class="col-1-5 ">
-                    <div class="colNum lightorange">4/5</div>
+                    <div class="colNum yellow-bgc">4/5</div>
                 </div>
                 <div class="col-1-5 ">
-                    <div class="colNum lightorange">5/5</div>
+                    <div class="colNum yellow-bgc">5/5</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-1-5 ">
-                    <div class="colNum lightorange">1/5</div>
+                    <div class="colNum yellow-bgc">1/5</div>
                 </div>
                 <div class="col-1-5 ">
-                    <div class="colNum lightorange">2/5</div>
+                    <div class="colNum yellow-bgc">2/5</div>
                 </div>
                 <div class="col-3-5 ">
-                    <div class="colNum lightorange">5/5</div>
+                    <div class="colNum yellow-bgc">5/5</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-4-5 ">
-                    <div class="colNum lightorange">4/5</div>
+                    <div class="colNum yellow-bgc">4/5</div>
                 </div>
                 <div class="col-1-5 ">
-                    <div class="colNum lightorange">5/5</div>
+                    <div class="colNum yellow-bgc">5/5</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-1-6 ">
-                    <div class="colNum orange">1/6</div>
+                    <div class="colNum orange-bgc">1/6</div>
                 </div>
                 <div class="col-1-6 ">
-                    <div class="colNum orange">2/6</div>
+                    <div class="colNum orange-bgc">2/6</div>
                 </div>
                 <div class="col-1-6 ">
-                    <div class="colNum orange">3/6</div>
+                    <div class="colNum orange-bgc">3/6</div>
                 </div>
                 <div class="col-1-6 ">
-                    <div class="colNum orange">4/6</div>
+                    <div class="colNum orange-bgc">4/6</div>
                 </div>
                 <div class="col-1-6 ">
-                    <div class="colNum orange">5/6</div>
+                    <div class="colNum orange-bgc">5/6</div>
                 </div>
                 <div class="col-1-6 ">
-                    <div class="colNum orange">6/6</div>
+                    <div class="colNum orange-bgc">6/6</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-2-6 ">
-                    <div class="colNum orange">2/6</div>
+                    <div class="colNum orange-bgc">2/6</div>
                 </div>
                 <div class="col-1-6 ">
-                    <div class="colNum orange">3/6</div>
+                    <div class="colNum orange-bgc">3/6</div>
                 </div>
                 <div class="col-1-6 ">
-                    <div class="colNum orange">4/6</div>
+                    <div class="colNum orange-bgc">4/6</div>
                 </div>
                 <div class="col-1-6 ">
-                    <div class="colNum orange">5/6</div>
+                    <div class="colNum orange-bgc">5/6</div>
                 </div>
                 <div class="col-1-6 ">
-                    <div class="colNum orange">6/6</div>
+                    <div class="colNum orange-bgc">6/6</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-3-6 ">
-                    <div class="colNum orange">3/6</div>
+                    <div class="colNum orange-bgc">3/6</div>
                 </div>
                 <div class="col-1-6 ">
-                    <div class="colNum orange">4/6</div>
+                    <div class="colNum orange-bgc">4/6</div>
                 </div>
                 <div class="col-1-6 ">
-                    <div class="colNum orange">5/6</div>
+                    <div class="colNum orange-bgc">5/6</div>
                 </div>
                 <div class="col-1-6 ">
-                    <div class="colNum orange">6/6</div>
+                    <div class="colNum orange-bgc">6/6</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-4-6 ">
-                    <div class="colNum orange">4/6</div>
+                    <div class="colNum orange-bgc">4/6</div>
                 </div>
                 <div class="col-1-6 ">
-                    <div class="colNum orange">5/6</div>
+                    <div class="colNum orange-bgc">5/6</div>
                 </div>
                 <div class="col-1-6 ">
-                    <div class="colNum orange">6/6</div>
+                    <div class="colNum orange-bgc">6/6</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-1-6 ">
-                    <div class="colNum orange">4/6</div>
+                    <div class="colNum orange-bgc">4/6</div>
                 </div>
                 <div class="col-1-6 ">
-                    <div class="colNum orange">5/6</div>
+                    <div class="colNum orange-bgc">5/6</div>
                 </div>
                 <div class="col-4-6 ">
-                    <div class="colNum orange">6/6</div>
+                    <div class="colNum orange-bgc">6/6</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-2-6 ">
-                    <div class="colNum orange">4/6</div>
+                    <div class="colNum orange-bgc">4/6</div>
                 </div>
                 <div class="col-4-6 ">
-                    <div class="colNum orange">6/6</div>
+                    <div class="colNum orange-bgc">6/6</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-1-8 ">
-                    <div class="colNum teal">1/8</div>
+                    <div class="colNum teal-bgc">1/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">2/8</div>
+                    <div class="colNum teal-bgc">2/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">3/8</div>
+                    <div class="colNum teal-bgc">3/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">4/8</div>
+                    <div class="colNum teal-bgc">4/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">5/8</div>
+                    <div class="colNum teal-bgc">5/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">6/8</div>
+                    <div class="colNum teal-bgc">6/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">7/8</div>
+                    <div class="colNum teal-bgc">7/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">8/8</div>
+                    <div class="colNum teal-bgc">8/8</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-2-8 ">
-                    <div class="colNum teal">2/8</div>
+                    <div class="colNum teal-bgc">2/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">3/8</div>
+                    <div class="colNum teal-bgc">3/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">4/8</div>
+                    <div class="colNum teal-bgc">4/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">5/8</div>
+                    <div class="colNum teal-bgc">5/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">6/8</div>
+                    <div class="colNum teal-bgc">6/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">7/8</div>
+                    <div class="colNum teal-bgc">7/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">8/8</div>
+                    <div class="colNum teal-bgc">8/8</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-4-8 ">
-                    <div class="colNum teal">4/8</div>
+                    <div class="colNum teal-bgc">4/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">5/8</div>
+                    <div class="colNum teal-bgc">5/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">6/8</div>
+                    <div class="colNum teal-bgc">6/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">7/8</div>
+                    <div class="colNum teal-bgc">7/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">8/8</div>
+                    <div class="colNum teal-bgc">8/8</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-6-8 ">
-                    <div class="colNum teal">6/8</div>
+                    <div class="colNum teal-bgc">6/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">7/8</div>
+                    <div class="colNum teal-bgc">7/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">8/8</div>
+                    <div class="colNum teal-bgc">8/8</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-6-8 ">
-                    <div class="colNum teal">6/8</div>
+                    <div class="colNum teal-bgc">6/8</div>
                 </div>
                 <div class="col-2-8 ">
-                    <div class="colNum teal">8/8</div>
+                    <div class="colNum teal-bgc">8/8</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-1-8 ">
-                    <div class="colNum teal">6/8</div>
+                    <div class="colNum teal-bgc">6/8</div>
                 </div>
                 <div class="col-1-8 ">
-                    <div class="colNum teal">7/8</div>
+                    <div class="colNum teal-bgc">7/8</div>
                 </div>
                 <div class="col-6-8 ">
-                    <div class="colNum teal">8/8</div>
+                    <div class="colNum teal-bgc">8/8</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-2-8 ">
-                    <div class="colNum teal">6/8</div>
+                    <div class="colNum teal-bgc">6/8</div>
                 </div>
                 <div class="col-6-8 ">
-                    <div class="colNum teal">8/8</div>
+                    <div class="colNum teal-bgc">8/8</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-1-12 ">
-                    <div class="colNum blue">1/12</div>
+                    <div class="colNum blue-bgc">1/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">2/12</div>
+                    <div class="colNum blue-bgc">2/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">3/12</div>
+                    <div class="colNum blue-bgc">3/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">4/12</div>
+                    <div class="colNum blue-bgc">4/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">5/12</div>
+                    <div class="colNum blue-bgc">5/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">6/12</div>
+                    <div class="colNum blue-bgc">6/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">7/12</div>
+                    <div class="colNum blue-bgc">7/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">8/12</div>
+                    <div class="colNum blue-bgc">8/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">9/12</div>
+                    <div class="colNum blue-bgc">9/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">10/12</div>
+                    <div class="colNum blue-bgc">10/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">11/12</div>
+                    <div class="colNum blue-bgc">11/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">12/12</div>
+                    <div class="colNum blue-bgc">12/12</div>
                 </div>
             </section>
             <section class="ms-row">
                 <div class="col-2-12 ">
-                    <div class="colNum blue">1/12</div>
+                    <div class="colNum blue-bgc">1/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">3/12</div>
+                    <div class="colNum blue-bgc">3/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">4/12</div>
+                    <div class="colNum blue-bgc">4/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">5/12</div>
+                    <div class="colNum blue-bgc">5/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">6/12</div>
+                    <div class="colNum blue-bgc">6/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">7/12</div>
+                    <div class="colNum blue-bgc">7/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">8/12</div>
+                    <div class="colNum blue-bgc">8/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">9/12</div>
+                    <div class="colNum blue-bgc">9/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">10/12</div>
+                    <div class="colNum blue-bgc">10/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">11/12</div>
+                    <div class="colNum blue-bgc">11/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">12/12</div>
+                    <div class="colNum blue-bgc">12/12</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-4-12 ">
-                    <div class="colNum blue">1/12</div>
+                    <div class="colNum blue-bgc">1/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">5/12</div>
+                    <div class="colNum blue-bgc">5/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">6/12</div>
+                    <div class="colNum blue-bgc">6/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">7/12</div>
+                    <div class="colNum blue-bgc">7/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">8/12</div>
+                    <div class="colNum blue-bgc">8/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">9/12</div>
+                    <div class="colNum blue-bgc">9/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">10/12</div>
+                    <div class="colNum blue-bgc">10/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">11/12</div>
+                    <div class="colNum blue-bgc">11/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">12/12</div>
+                    <div class="colNum blue-bgc">12/12</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-1-12 ">
-                    <div class="colNum blue">3/12</div>
+                    <div class="colNum blue-bgc">3/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">4/12</div>
+                    <div class="colNum blue-bgc">4/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">5/12</div>
+                    <div class="colNum blue-bgc">5/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">6/12</div>
+                    <div class="colNum blue-bgc">6/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">7/12</div>
+                    <div class="colNum blue-bgc">7/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">8/12</div>
+                    <div class="colNum blue-bgc">8/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">9/12</div>
+                    <div class="colNum blue-bgc">9/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">10/12</div>
+                    <div class="colNum blue-bgc">10/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">11/12</div>
+                    <div class="colNum blue-bgc">11/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">12/12</div>
+                    <div class="colNum blue-bgc">12/12</div>
                 </div>
                 <div class="col-2-12 ">
-                    <div class="colNum blue">1/12</div>
+                    <div class="colNum blue-bgc">1/12</div>
                 </div>
             </section>
 
             <section class="ms-row">
 
                 <div class="col-1-12 ">
-                    <div class="colNum blue">5/12</div>
+                    <div class="colNum blue-bgc">5/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">6/12</div>
+                    <div class="colNum blue-bgc">6/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">7/12</div>
+                    <div class="colNum blue-bgc">7/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">8/12</div>
+                    <div class="colNum blue-bgc">8/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">9/12</div>
+                    <div class="colNum blue-bgc">9/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">10/12</div>
+                    <div class="colNum blue-bgc">10/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">11/12</div>
+                    <div class="colNum blue-bgc">11/12</div>
                 </div>
                 <div class="col-1-12 ">
-                    <div class="colNum blue">12/12</div>
+                    <div class="colNum blue-bgc">12/12</div>
                 </div>
                 <div class="col-4-12 ">
-                    <div class="colNum blue">1/12</div>
+                    <div class="colNum blue-bgc">1/12</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-1-16">
-                    <div class="colNum red">1/16</div>
+                    <div class="colNum red-bgc">1/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">2/16</div>
+                    <div class="colNum red-bgc">2/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">3/16</div>
+                    <div class="colNum red-bgc">3/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">4/16</div>
+                    <div class="colNum red-bgc">4/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">5/16</div>
+                    <div class="colNum red-bgc">5/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">6/16</div>
+                    <div class="colNum red-bgc">6/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">7/16</div>
+                    <div class="colNum red-bgc">7/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">8/16</div>
+                    <div class="colNum red-bgc">8/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">9/16</div>
+                    <div class="colNum red-bgc">9/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">10/16</div>
+                    <div class="colNum red-bgc">10/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">11/16</div>
+                    <div class="colNum red-bgc">11/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">12/16</div>
+                    <div class="colNum red-bgc">12/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">13/16</div>
+                    <div class="colNum red-bgc">13/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">14/16</div>
+                    <div class="colNum red-bgc">14/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">15/16</div>
+                    <div class="colNum red-bgc">15/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">16/16</div>
+                    <div class="colNum red-bgc">16/16</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-2-16">
-                    <div class="colNum red">1/16</div>
+                    <div class="colNum red-bgc">1/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">3/16</div>
+                    <div class="colNum red-bgc">3/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">4/16</div>
+                    <div class="colNum red-bgc">4/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">5/16</div>
+                    <div class="colNum red-bgc">5/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">6/16</div>
+                    <div class="colNum red-bgc">6/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">7/16</div>
+                    <div class="colNum red-bgc">7/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">8/16</div>
+                    <div class="colNum red-bgc">8/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">9/16</div>
+                    <div class="colNum red-bgc">9/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">10/16</div>
+                    <div class="colNum red-bgc">10/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">11/16</div>
+                    <div class="colNum red-bgc">11/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">12/16</div>
+                    <div class="colNum red-bgc">12/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">13/16</div>
+                    <div class="colNum red-bgc">13/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">14/16</div>
+                    <div class="colNum red-bgc">14/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">15/16</div>
+                    <div class="colNum red-bgc">15/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">16/16</div>
+                    <div class="colNum red-bgc">16/16</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-4-16">
-                    <div class="colNum red">1/16</div>
+                    <div class="colNum red-bgc">1/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">5/16</div>
+                    <div class="colNum red-bgc">5/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">6/16</div>
+                    <div class="colNum red-bgc">6/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">7/16</div>
+                    <div class="colNum red-bgc">7/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">8/16</div>
+                    <div class="colNum red-bgc">8/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">9/16</div>
+                    <div class="colNum red-bgc">9/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">10/16</div>
+                    <div class="colNum red-bgc">10/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">11/16</div>
+                    <div class="colNum red-bgc">11/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">12/16</div>
+                    <div class="colNum red-bgc">12/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">13/16</div>
+                    <div class="colNum red-bgc">13/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">14/16</div>
+                    <div class="colNum red-bgc">14/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">15/16</div>
+                    <div class="colNum red-bgc">15/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">16/16</div>
+                    <div class="colNum red-bgc">16/16</div>
                 </div>
             </section>
 
             <section class="ms-row">
                 <div class="col-8-16">
-                    <div class="colNum red">1/16</div>
+                    <div class="colNum red-bgc">1/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">9/16</div>
+                    <div class="colNum red-bgc">9/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">10/16</div>
+                    <div class="colNum red-bgc">10/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">9/16</div>
+                    <div class="colNum red-bgc">9/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">10/16</div>
+                    <div class="colNum red-bgc">10/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">11/16</div>
+                    <div class="colNum red-bgc">11/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">12/16</div>
+                    <div class="colNum red-bgc">12/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">13/16</div>
+                    <div class="colNum red-bgc">13/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">16/16</div>
+                    <div class="colNum red-bgc">16/16</div>
                 </div>
             </section>
 
             <section class="ms-row">
 
                 <div class="col-1-16">
-                    <div class="colNum red">3/16</div>
+                    <div class="colNum red-bgc">3/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">4/16</div>
+                    <div class="colNum red-bgc">4/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">5/16</div>
+                    <div class="colNum red-bgc">5/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">6/16</div>
+                    <div class="colNum red-bgc">6/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">7/16</div>
+                    <div class="colNum red-bgc">7/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">8/16</div>
+                    <div class="colNum red-bgc">8/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">9/16</div>
+                    <div class="colNum red-bgc">9/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">10/16</div>
+                    <div class="colNum red-bgc">10/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">11/16</div>
+                    <div class="colNum red-bgc">11/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">12/16</div>
+                    <div class="colNum red-bgc">12/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">13/16</div>
+                    <div class="colNum red-bgc">13/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">14/16</div>
+                    <div class="colNum red-bgc">14/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">15/16</div>
+                    <div class="colNum red-bgc">15/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">16/16</div>
+                    <div class="colNum red-bgc">16/16</div>
                 </div>
                 <div class="col-2-16">
-                    <div class="colNum red">1/16</div>
+                    <div class="colNum red-bgc">1/16</div>
                 </div>
             </section>
 
             <section class="ms-row">
 
                 <div class="col-1-16">
-                    <div class="colNum red">5/16</div>
+                    <div class="colNum red-bgc">5/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">6/16</div>
+                    <div class="colNum red-bgc">6/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">7/16</div>
+                    <div class="colNum red-bgc">7/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">8/16</div>
+                    <div class="colNum red-bgc">8/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">9/16</div>
+                    <div class="colNum red-bgc">9/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">10/16</div>
+                    <div class="colNum red-bgc">10/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">11/16</div>
+                    <div class="colNum red-bgc">11/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">12/16</div>
+                    <div class="colNum red-bgc">12/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">13/16</div>
+                    <div class="colNum red-bgc">13/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">14/16</div>
+                    <div class="colNum red-bgc">14/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">15/16</div>
+                    <div class="colNum red-bgc">15/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">16/16</div>
+                    <div class="colNum red-bgc">16/16</div>
                 </div>
                 <div class="col-4-16">
-                    <div class="colNum red">1/16</div>
+                    <div class="colNum red-bgc">1/16</div>
                 </div>
             </section>
 
             <section class="ms-row">
 
                 <div class="col-1-16">
-                    <div class="colNum red">9/16</div>
+                    <div class="colNum red-bgc">9/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">10/16</div>
+                    <div class="colNum red-bgc">10/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">11/16</div>
+                    <div class="colNum red-bgc">11/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">12/16</div>
+                    <div class="colNum red-bgc">12/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">13/16</div>
+                    <div class="colNum red-bgc">13/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">14/16</div>
+                    <div class="colNum red-bgc">14/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">15/16</div>
+                    <div class="colNum red-bgc">15/16</div>
                 </div>
                 <div class="col-1-16">
-                    <div class="colNum red">16/16</div>
+                    <div class="colNum red-bgc">16/16</div>
                 </div>
                 <div class="col-8-16">
-                    <div class="colNum red">1/16</div>
+                    <div class="colNum red-bgc">1/16</div>
                 </div>
             </section>
             <section class="ms-row">
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-1-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
             </section>
             <section class="ms-row">
                 <div class="col-6-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-6-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-12-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
             </section>
             <section class="ms-row">
                 <div class="col-6-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-12-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-6-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
             </section>
             <section class="ms-row">
                 <div class="col-12-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-6-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="col-6-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
             </section>
-            <h1>
-                Manual column spanning (supported on all column counts)
-            </h1>
+
             <section class="ms-row">
+                <div class="col-1-1">
+                    <h2>Manual column spanning (supported on all column counts)</h2>
+                </div>
                 <div class="xs-col-3-24 m-col-7-24 xl-col-6-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="xs-col-3-24 m-col-8-24 xl-col-6-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="xs-col-6-24 s-col-12-24 m-col-9-24 xl-col-12-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
             </section>
             <section class="ms-row">
                 <div class="s-col-6-24 m-col-13-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
                 <div class="s-col-6-24 m-col-11-24">
-                    <div class="colNum green"></div>
+                    <div class="colNum green-bgc"></div>
                 </div>
             </section>
         </section>
         <section class="ms-grid extras">
-            <h1>
-                Nesting
-            </h1>
             <section class="ms-row">
-                <div class="col-1-4">
-                    <div class="colNum aqua"></div>
+                <div class="col-1-1">
+                    <h2>Nesting</h2>
                 </div>
                 <div class="col-1-4">
-                    <div class="aqua">
+                    <div class="colNum aqua-bgc"></div>
+                </div>
+                <div class="col-1-4">
+                    <div class="aqua-bgc">
                         <section class="ms-row">
                             <div class="col-1-6">
-                                <div class="colNum orange"></div>
+                                <div class="colNum orange-bgc"></div>
                             </div>
                             <div class="col-1-6">
-                                <div class="colNum orange"></div>
+                                <div class="colNum orange-bgc"></div>
                             </div>
                             <div class="col-1-6">
-                                <div class="colNum orange"></div>
+                                <div class="colNum orange-bgc"></div>
                             </div>
                             <div class="col-1-6">
-                                <div class="colNum orange"></div>
+                                <div class="colNum orange-bgc"></div>
                             </div>
                             <div class="col-1-6">
-                                <div class="colNum orange"></div>
+                                <div class="colNum orange-bgc"></div>
                             </div>
                             <div class="col-1-6">
-                                <div class="colNum orange"></div>
+                                <div class="colNum orange-bgc"></div>
                             </div>
                         </section>
                     </div>
                 </div>
                 <div class="col-1-4">
-                    <div class="colNum aqua"></div>
+                    <div class="colNum aqua-bgc"></div>
                 </div>
                 <div class="col-1-4">
-                    <div class="aqua">
+                    <div class="aqua-bgc">
                         <section class="ms-row">
                             <div class="col-1-4">
-                                <div class="colNum green"></div>
+                                <div class="colNum green-bgc"></div>
                             </div>
                             <div class="col-1-4">
-                                <div class="colNum green"></div>
+                                <div class="colNum green-bgc"></div>
                             </div>
                             <div class="col-1-4">
-                                <div class="colNum green"></div>
+                                <div class="colNum green-bgc"></div>
                             </div>
                             <div class="col-1-4">
-                                <div class="colNum green"></div>
+                                <div class="colNum green-bgc"></div>
                             </div>
                         </section>
                     </div>
@@ -1195,37 +1209,37 @@
             </section>
             <section class="ms-row">
                 <div class="col-1-2">
-                    <div class="pink">
+                    <div class="pink-bgc">
                         <section class="ms-row">
                             <div class="col-1-4">
-                                <div class="colNum aqua"></div>
+                                <div class="colNum aqua-bgc"></div>
                             </div>
                             <div class="col-1-4">
-                                <div class="aqua">
+                                <div class="aqua-bgc">
                                     <section class="ms-row">
                                         <div class="col-1-3">
-                                            <div class="colNum purple"></div>
+                                            <div class="colNum purple-bgc"></div>
                                         </div>
                                         <div class="col-1-3">
-                                            <div class="colNum purple"></div>
+                                            <div class="colNum purple-bgc"></div>
                                         </div>
                                         <div class="col-1-3">
-                                            <div class="colNum purple"></div>
+                                            <div class="colNum purple-bgc"></div>
                                         </div>
                                     </section>
                                 </div>
                             </div>
                             <div class="col-1-4">
-                                <div class="colNum aqua"></div>
+                                <div class="colNum aqua-bgc"></div>
                             </div>
                             <div class="col-1-4">
-                                <div class="aqua">
+                                <div class="aqua-bgc">
                                     <section class="ms-row">
                                         <div class="col-1-2">
-                                            <div class="colNum pink"></div>
+                                            <div class="colNum pink-bgc"></div>
                                         </div>
                                         <div class="col-1-2">
-                                            <div class="colNum pink"></div>
+                                            <div class="colNum pink-bgc"></div>
                                         </div>
                                     </section>
                                 </div>
@@ -1234,136 +1248,160 @@
                     </div>
                 </div>
                 <div class="col-1-2">
-                    <div class="pink">
+                    <div class="pink-bgc">
                         <section class="ms-row">
                             <div class="col-1-8">
-                                <div class="colNum teal"></div>
+                                <div class="colNum teal-bgc"></div>
                             </div>
                             <div class="col-1-8">
-                                <div class="colNum teal"></div>
+                                <div class="colNum teal-bgc"></div>
                             </div>
                             <div class="col-1-8">
-                                <div class="colNum teal"></div>
+                                <div class="colNum teal-bgc"></div>
                             </div>
                             <div class="col-1-8">
-                                <div class="colNum teal"></div>
+                                <div class="colNum teal-bgc"></div>
                             </div>
                             <div class="col-1-8">
-                                <div class="colNum teal"></div>
+                                <div class="colNum teal-bgc"></div>
                             </div>
                             <div class="col-1-8">
-                                <div class="colNum teal"></div>
+                                <div class="colNum teal-bgc"></div>
                             </div>
                             <div class="col-1-8">
-                                <div class="colNum teal"></div>
+                                <div class="colNum teal-bgc"></div>
                             </div>
                             <div class="col-1-8">
-                                <div class="colNum teal"></div>
+                                <div class="colNum teal-bgc"></div>
                             </div>
                         </section>
                     </div>
                 </div>
             </section>
-            <h1>
-                Offsets
-            </h1>
+
             <section class="ms-row">
+                <div class="col-1-1">
+                    <h2>Offsets</h2>
+                </div>
                 <div class="col-1-4">
-                    <div class="colNum aqua"></div>
+                    <div class="colNum aqua-bgc"></div>
                 </div>
                 <div class="col-1-4 m-col-4-offset-2">
-                    <div class="colNum aqua"></div>
+                    <div class="colNum aqua-bgc"></div>
                 </div>
             </section>
             <section class="ms-row">
                 <div class="col-1-6">
-                    <div class="colNum orange"></div>
+                    <div class="colNum orange-bgc"></div>
                 </div>
                 <div class="col-1-6 l-col-6-offset-2">
-                    <div class="colNum orange"></div>
+                    <div class="colNum orange-bgc"></div>
                 </div>
                 <div class="col-1-6 l-col-6-offset-1">
-                    <div class="colNum orange"></div>
+                    <div class="colNum orange-bgc"></div>
                 </div>
             </section>
             <section class="ms-row">
                 <div class="col-1-8 xl-col-8-offset-1">
-                    <div class="colNum teal"></div>
+                    <div class="colNum teal-bgc"></div>
                 </div>
                 <div class="col-1-8 xl-col-8-offset-2">
-                    <div class="colNum teal"></div>
+                    <div class="colNum teal-bgc"></div>
                 </div>
                 <div class="col-1-8 xl-col-8-offset-2">
-                    <div class="colNum teal"></div>
+                    <div class="colNum teal-bgc"></div>
                 </div>
             </section>
             <section class="ms-row">
                 <div class="col-1-24 m-col-24-offset-12 l-col-24-offset-5 xl-col-24-offset-10">
-                    <div class="colNum teal"></div>
+                    <div class="colNum teal-bgc"></div>
                 </div>
                 <div class="col-1-24 s-col-24-offset-7 m-col-24-offset-1 l-col-24-offset-3 xl-col-24-offset-8">
-                    <div class="colNum teal"></div>
+                    <div class="colNum teal-bgc"></div>
                 </div>
                 <div class="col-1-24 xs-col-24-offset-3 m-col-24-offset-2 l-col-24-offset-9 xl-col-24-offset-2">
-                    <div class="colNum teal"></div>
+                    <div class="colNum teal-bgc"></div>
                 </div>
             </section>
 
-            <h1>
-                Centered columns
-            </h1>
             <section class="ms-row">
+                <div class="col-1-1">
+                    <h2>Centered columns</h2>
+                </div>
                 <div class="col-1-4 centered">
-                    <div class="colNum aqua"></div>
+                    <div class="colNum aqua-bgc"></div>
                 </div>
             </section>
             <section class="ms-row">
                 <div class="col-1-3 centered">
-                    <div class="colNum purple"></div>
+                    <div class="colNum purple-bgc"></div>
                 </div>
             </section>
             <section class="ms-row">
                 <div class="col-1-2 centered">
-                    <div class="colNum pink"></div>
+                    <div class="colNum pink-bgc"></div>
                 </div>
             </section>
 
-            <h1>
-                RTL support
-            </h1>
             <section class="ms-row" dir="rtl">
+                <div class="col-1-1">
+                    <h2>RTL Support</h2>
+                </div>
                 <div class="col-1-3 nb">
-                    <div class="colNum purple">1/3</div>
+                    <div class="colNum purple-bgc">1/3</div>
                     <h3 class="text-center">Column 1</h3>
                 </div>
                 <div class="col-2-3 nb">
-                    <div class="colNum purple">3/3</div>
+                    <div class="colNum purple-bgc">3/3</div>
                     <h3 class="text-center">Column 2</h3>
                 </div>
             </section>
             <section class="ms-row" dir="rtl">
                 <div class="col-1-4 ">
-                    <div class="colNum aqua">1/4</div>
+                    <div class="colNum aqua-bgc">1/4</div>
                     <h4 class="text-center">Column 1</h4>
                 </div>
                 <div class="col-1-4 ">
-                    <div class="colNum aqua">2/4</div>
+                    <div class="colNum aqua-bgc">2/4</div>
                     <h4 class="text-center">Column 2</h4>
                 </div>
                 <div class="col-1-4 ">
-                    <div class="colNum aqua">3/4</div>
+                    <div class="colNum aqua-bgc">3/4</div>
                     <h4 class="text-center">Column 3</h4>
                 </div>
                 <div class="col-1-4 ">
-                    <div class="colNum aqua">4/4</div>
+                    <div class="colNum aqua-bgc">4/4</div>
                     <h4 class="text-center">Column 4</h4>
                 </div>
             </section>
 
-            <h1>
-                Other examples of possible behaviors
-            </h1>
             <section class="ms-row">
+                <div class="col-1-1">
+                    <h2>IE8 Support</h2>
+                </div>
+                <div class="col-1-1">
+                    <p>
+                        Without doing anything, IE8 will show the mobile first view. If that is not acceptable for your project, full IE8 support is supported by adding <a href="https://github.com/scottjehl/Respond">Respond.js</a> to your project will allow it to behave as it does in modern browsers. Remember that if you're using any HTML5 elements (like section), you'll also want to add the <a href="https://github.com/aFarkas/html5shiv">Html5Shiv</a>. Include this JS in the head of your HTML, putting in the conditional comment below will only serve it to browsers below IE9.
+                        <code>
+                            <pre>
+                                &lt;head>
+                                ...
+
+                                &lt;!--[if lt IE 9]>
+                                &lt;script src="/pathto/html5shiv.js">&lt;/script>
+                                &lt;script src="/pathto/respond.js">&lt;/script>
+                                &lt;![endif]-->
+                                &lt;/head>
+                            </pre>
+                        </code>
+                    </p>
+                </div>
+            </section>
+
+            <section class="ms-row">
+                <div class="col-1-1">
+                    <h2>Other examples of possible behaviors</h2>
+                </div>
                 <div class="col-1-4 justify">
                     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
                 </div>
@@ -1435,163 +1473,165 @@
         </section>
         <section class="ms-grid spec-tables">
             <section class="ms-row">
-                <h1>Media queries and column breakdown chart</h1>
-                <table class="demoTable">
-                    <thead>
-                        <tr>
-                            <th>Columns</th>
-                            <th>< 320px</th>
-                            <th>> 320px</th>
-                            <th>> 540px</th>
-                            <th>> 768px</th>
-                            <th>> 992px</th>
-                            <th>> 1400px</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>1</th>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <th>2</th>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <th>3</th>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <th>4</th>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <th>5</th>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>5</td>
-                            <td>5</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <th>6</th>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>6</td>
-                            <td>6</td>
-                        </tr>
-                        <tr>
-                            <th>8</th>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>4</td>
-                            <td>8</td>
-                            <td>8</td>
-                        </tr>
-                        <tr>
-                            <th>12</th>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>12</td>
-                            <td>12</td>
-                        </tr>
-                        <tr>
-                            <th>16</th>
-                            <td>2</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>8</td>
-                            <td>8</td>
-                            <td>16</td>
-                        </tr>
-                        <tr>
-                            <th>24</th>
-                            <td>6</td>
-                            <td>6</td>
-                            <td>12</td>
-                            <td>24</td>
-                            <td>24</td>
-                            <td>24</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <h1>Column spanning "automagically" supported</h1>
-                <table class="demoTable">
-                    <thead>
-                        <tr>
-                            <th>Columns</th>
-                            <th>Spans</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>1</th>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <th>2</th>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <th>3</th>
-                            <td>1, 2</td>
-                        </tr>
-                        <tr>
-                            <th>4</th>
-                            <td>1, 2, 3</td>
-                        </tr>
-                        <tr>
-                            <th>5</th>
-                            <td>1, 2, 3, 4</td>
-                        </tr>
-                        <tr>
-                            <th>6</th>
-                            <td>1, 2, 3, 4</td>
-                        </tr>
-                        <tr>
-                            <th>8</th>
-                            <td>1, 2, 4, 6</td>
-                        </tr>
-                        <tr>
-                            <th>12</th>
-                            <td>1, 2, 4</td>
-                        </tr>
-                        <tr>
-                            <th>16</th>
-                            <td>1, 2, 4, 8</td>
-                        </tr>
-                        <tr>
-                            <th>24</th>
-                            <td>1, 6, 12</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="col-1-1">
+                    <h2>Media queries and column breakdown chart</h2>
+                    <table class="demoTable">
+                        <thead>
+                            <tr>
+                                <th>Columns</th>
+                                <th>< 320px</th>
+                                <th>> 320px</th>
+                                <th>> 540px</th>
+                                <th>> 768px</th>
+                                <th>> 992px</th>
+                                <th>> 1400px</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>6</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <th>8</th>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>8</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <th>12</th>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>12</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <th>16</th>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <th>24</th>
+                                <td>6</td>
+                                <td>6</td>
+                                <td>12</td>
+                                <td>24</td>
+                                <td>24</td>
+                                <td>24</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2>Column spanning "automagically" supported</h2>
+                    <table class="demoTable">
+                        <thead>
+                            <tr>
+                                <th>Columns</th>
+                                <th>Spans</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>1, 2</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>1, 2, 3</td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td>1, 2, 3, 4</td>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <td>1, 2, 3, 4</td>
+                            </tr>
+                            <tr>
+                                <th>8</th>
+                                <td>1, 2, 4, 6</td>
+                            </tr>
+                            <tr>
+                                <th>12</th>
+                                <td>1, 2, 4</td>
+                            </tr>
+                            <tr>
+                                <th>16</th>
+                                <td>1, 2, 4, 8</td>
+                            </tr>
+                            <tr>
+                                <th>24</th>
+                                <td>1, 6, 12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
         </section>
     </section>
