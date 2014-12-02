@@ -1,5 +1,5 @@
 # Msdotcom/WinJS Grid Framework
-A CSS grid framework built on SASS to provide an automatic responsive grid for web developers with flexibility for manual control when needed. This grid is a "padding-based" grid meaning that it works by using padding to create the gutters between columns instead of margin. 
+A CSS grid framework built on SASS to provide an automatic responsive grid for web developers with flexibility for manual control when needed. This grid is a float and padding-based grid, meaning that it works by using floats to create rows and padding to create the gutters between columns instead of margin. 
 
 Supports column layouts of 1, 2, 3, 4, 5, 6, 8, 12, 16, and 24.
 
@@ -50,13 +50,46 @@ A grid is a container for rows and rows are containers for columns. A grid shoul
 
 ### Class breakdown
 Grid - `.grid`
-Row - `.row`
-Column - `.col-1-24` where the numbers mean # of columns to span and total # of columns, respectively. Please see the "automagic" and manual column spanning sections below for details on what and how values are supported for the column span number.
 
-## Grid Features
+Row - `.row`
+
+Column - `.col-1-24` where the numbers mean # of columns to span and total # of columns, respectively. 
+
+Please see the "automagic" and manual column spanning sections below for details on what and how values are supported for the column span number.
 
 ###SASS configuration variables
-TO BE ADDED
+Through the use of the variables in the _config.scss file, you can control: 
+* Maximum width of the grid
+* Prefixing of the grid and row classes
+* Fixed column margin mode's fixed margins
+* Mixed langauge support
+* Breakpoint values for the 5 built in breakpoints/viewports
+* Prefixing of the viewport specific classes (manual colspans and offsets)
+```
+$max-grid-width: 1600px;
+$fixed-col-margin: 2px; //4px fixed margin, gets doubled
+$grid-prefix: "ms-";
+$dirMixed: false !default; //Toggle for having mixed langauge support
+
+//Different viewport sizes and list for mixin use
+$vp1: 320px;
+$vp2: 540px;
+$vp3: 768px;
+$vp4: 992px;
+$vp5: 1400px;
+$vp-list: ($vp1, $vp2, $vp3, $vp4, $vp5);
+
+
+//Different prefixes for each viewport and list for mixin use
+$vp1prefix: xs;
+$vp2prefix: s;
+$vp3prefix: m;
+$vp4prefix: l;
+$vp5prefix: xl;
+$vp-prefix-list: ($vp1prefix, $vp2prefix, $vp3prefix, $vp4prefix, $vp5prefix);
+```
+
+## Grid Features
 
 ### "Automagic" responsive breakdown
 Built into the grid is an opinated take on how the different column layouts should reflow and breakdown across the 5 breakpoints. This works nicely for those that want to get up and running quickly, need their content to look great across many screens, and don't need the granualar control over the breakdown of columns for each breakpoint.
