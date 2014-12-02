@@ -63,20 +63,56 @@ Built into the grid is an opinated take on how the different column layouts shou
 
 In this "automagic" mode, only certain column spanning values are supported out of the box. For example, if you need a column spanning 7 columns in a 24 column layout, you'll need to use the manual class overrides described below.
 
-Column spanning supported "automagically":
-CHART TO BE ADDED
+Column spanning options that are supported "automagically", these will reflow and respond across the different breakpoints without any manual classes:
+
+| Columns |      Spans     |
+|:-------:|:--------------:|
+|    1    | 1              |
+|    2    | 1, 2           |
+|    3    | 1, 2, 3        |
+|    4    | 1, 2, 3, 4     |
+|    5    | 1, 2, 3, 4, 5  |
+|    6    | 1, 2 ,3 ,4, 6  |
+|    8    | 1, 2, 4, 6, 8  |
+|    12   | 1, 2, 4, 12    |
+|    16   | 1, 2, 4, 8, 16 |
+|    24   | 1, 6, 12, 24   |
+
+Example row:
+```html
+<section class="ms-row">
+    <div class="col-3-4 ">
+    </div>
+    <div class="col-1-4 ">
+    </div>
+</section>
+```
 
 Column breakdown across each breakpoint:
-CHART TO BE ADDED
+
+| Columns | < 320px (mf) | > 320px (vp1) | > 540px (vp2) | > 768px (vp3) | > 992px (vp4) | > 1400px (vp5) |
+|:-------:|:------------:|:-------------:|:-------------:|:-------------:|:-------------:|:--------------:|
+|    1    |       1      |       1       |       1       |       1       |       1       |        1       |
+|    2    |       1      |       1       |       1       |       2       |       2       |        2       |
+|    3    |       1      |       1       |       3       |       3       |       3       |        3       |
+|    4    |       1      |       1       |       2       |       4       |       4       |        4       |
+|    5    |       1      |       1       |       1       |       5       |       5       |        5       |
+|    6    |       1      |       1       |       2       |       3       |       6       |        6       |
+|    8    |       2      |       2       |       2       |       4       |       8       |        8       |
+|    12   |       2      |       2       |       4       |       4       |       12      |       12       |
+|    16   |       2      |       4       |       4       |       8       |       8       |       16       |
+|    24   |       6      |       6       |       12      |       24      |       24      |       24       |
 
 
 ### Manual column spanning
 Manual column span class overrides are supported for all column counts and all breakpoints. They are structured in a way to only support column spanning in relation to the total columns available for that column count by the breakdown chart specified above.
 
 Here is the pattern for the classes:
+
 viewport - col - # of columns to span - total # of columns
 
 Examples:
+
 `s-col-3-34` - 25% of the viewport - Above the small(viewport 2) breakpoint, this column will span 3 columns of the 12 columns in the row. This is because the 24 column layout at this breakpoint is now broken down to 12 column rows.
 
 `l-col-14-24` - At the large(viewport 4) breakpoint, this column will span 14 columns of the 24 columns in the row.
@@ -113,7 +149,7 @@ To enable directional support, you need to apply the `dir` attribute to the html
 `<html dir="rtl">` or `<html dir="ltr">`
 
 Mixed language support is enabled through the use of a `dir` attribute override. For example, you could have a default `dir` tag of ltr on the html tag, but than place the 'dir' attribute again where you needed to support the opposite, say on a `row` element to override that specific `row` and make it rtl.
-```
+```html
 <html dir="ltr">
 ...
 <div class="row" dir="rtl"></div>
