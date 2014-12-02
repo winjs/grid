@@ -1,5 +1,5 @@
 # Msdotcom/WinJS Grid Framework
-A CSS grid framework built on SASS to provide an automatic responsive grid for web developers with flexibility for manual control when needed. This grid is a "padding-based" grid meaning that it works by using padding to create the gutters between columns instead of margin. 
+A CSS grid framework built on SASS to provide an automatic responsive grid for web developers with flexibility for manual control when needed. This grid is a float and padding-based grid, meaning that it works by using floats to create rows and padding to create the gutters between columns instead of margin. 
 
 Supports column layouts of 1, 2, 3, 4, 5, 6, 8, 12, 16, and 24.
 
@@ -65,7 +65,7 @@ Through the use of the variables in the _config.scss file, you can control:
 * Mixed langauge support
 * Breakpoint values for the 5 built in breakpoints/viewports
 * Prefixing of the viewport specific classes (manual colspans and offsets)
-```
+```sass
 $max-grid-width: 1600px;
 $fixed-col-margin: 2px; //4px fixed margin, gets doubled
 $grid-prefix: "ms-";
