@@ -64,6 +64,7 @@ Built into the grid is an opinated take on how the different column layouts shou
 In this "automagic" mode, only certain column spanning values are supported out of the box. For example, if you need a column spanning 7 columns in a 24 column layout, you'll need to use the manual class overrides described below.
 
 Column spanning options that are supported "automagically", these will reflow and respond across the different breakpoints without any manual classes:
+
 | Columns |      Spans     |
 |:-------:|:--------------:|
 |    1    | 1              |
@@ -88,6 +89,7 @@ Example row:
 ```
 
 Column breakdown across each breakpoint:
+
 | Columns | < 320px (mf) | > 320px (vp1) | > 540px (vp2) | > 768px (vp3) | > 992px (vp4) | > 1400px (vp5) |
 |:-------:|:------------:|:-------------:|:-------------:|:-------------:|:-------------:|:--------------:|
 |    1    |       1      |       1       |       1       |       1       |       1       |        1       |
