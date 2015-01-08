@@ -2091,6 +2091,10 @@ body.offsetopened {
   padding-left: 2px;
   padding-right: 2px;
 }
+.ms-grid.zero-margin {
+  padding-left: 0;
+  padding-right: 0;
+}
 .ms-grid.zero-margin .ms-row {
   margin-left: 0;
   margin-right: 0;
