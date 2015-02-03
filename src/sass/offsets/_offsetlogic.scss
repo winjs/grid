@@ -1,7 +1,7 @@
 @mixin offsets($vp, $vpprefix, $vpcolumns, $total){
     @if $vpcolumns > 1 {
         @media screen and (min-width: $vp) {
-            @for $i from 1 to $vpcolumns {
+            @for $i from 0 to $vpcolumns {
                 .#{$vpprefix}-col-#{$total}-offset-#{$i} {
                     margin-#{$left}: percentage($i / $vpcolumns);
                 }

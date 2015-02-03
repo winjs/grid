@@ -28,10 +28,6 @@
     margin-left: auto;
     margin-right: auto;
     max-width: $max-grid-width;
-    padding-left: 1em;
-    padding-left: 1vw;
-    padding-right: 1em;
-    padding-right: 1vw;
 
     &.full {
         width: 100%;
@@ -44,12 +40,9 @@
     }
 
     &.fixed {
-        padding-left: $fixed-col-margin;
-        padding-right: $fixed-col-margin;
-
         .#{$grid-prefix}row {
-            margin-left: $fixed-col-margin;
-            margin-right: $fixed-col-margin;
+            margin-left: -$fixed-col-margin;
+            margin-right: -$fixed-col-margin;
 
             & > [class*="col-"] {
                 padding-left: $fixed-col-margin;
@@ -59,9 +52,6 @@
     }
 
     &.zero-margin {
-        padding-left: 0;
-        padding-right: 0;
-        
         .#{$grid-prefix}row {
             margin-left: 0;
             margin-right: 0;
@@ -422,12 +412,7 @@
 
 // Reducing padding to a reasonable size for "extremely" large displays
 @media screen and (min-width: 2000px) {
-    .#{$grid-prefix}grid {
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-left: 0.5vw;
-        padding-right: 0.5vw;
-        
+    .#{$grid-prefix}grid {       
         .#{$grid-prefix}row {
             margin-left: -1em;
             margin-right: -1em;
