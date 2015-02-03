@@ -189,7 +189,7 @@ Mixed language support is enabled through the use of a `dir` attribute override.
 ```
 
 ### IE8 Support
-Without doing anything, IE8 will show the mobile first view. If that is not acceptable for your project, full IE8 support is supported by adding [https://github.com/scottjehl/Respond](Respond.js) to your project will allow it to behave as it does in modern browsers. Remember that if you're using any HTML5 elements (like section), you'll also want to add the [https://github.com/aFarkas/html5shiv](HTML5Shiv). Include this JS in the head of your HTML, putting in the conditional comment below will only serve it to browsers below IE9.
+Without doing anything, IE8 will show the mobile first view. If that is not acceptable for your project, full IE8 support is supported by adding [Respond.js](https://github.com/scottjehl/Respond) to your project will allow it to behave as it does in modern browsers. Remember that if you're using any HTML5 elements (like section), you'll also want to add the [HTML5Shiv](https://github.com/aFarkas/html5shiv). Include this JS in the head of your HTML, putting in the conditional comment below will only serve it to browsers below IE9.
 ```
 <head>
 	...
