@@ -1,8 +1,18 @@
-@import "colspans/colspans24";
-@import "colspans/colspans16";
-@import "colspans/colspans12";
-@import "colspans/colspans8";
-@import "colspans/colspans6";
-@import "colspans/colspans5";
-@import "colspans/colspans4";
-@import "colspans/colspans3";
+@mixin manual-colspans($vp, $vpprefix, $vpcolumns, $total){
+    @media screen and (min-width: $vp) {
+        $ratio: $total / $vpcolumns;
+        @for $i from 1 through $vpcolumns {
+            .#{$vpprefix}-col-#{$i}-#{$total} {
+                width: percentage(($i*$ratio) / $total);
+            }
+        }
+    }
+}
+
+@each $columnCount, $column-breakdown in $columns {
+
+	@for $i from 1 through length($column-breakdown) {
+	    @include manual-colspans(nth($vp-list, $i), nth($vp-prefix-list, $i), nth($column-breakdown, $i), $columnCount);
+	}
+	
+}
