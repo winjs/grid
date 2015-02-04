@@ -1,10 +1,21 @@
-@import "offsets/offsetsall";
-// @import "offsets/offsets2";
-// @import "offsets/offsets3";
-// @import "offsets/offsets4";
-// @import "offsets/offsets5";
-// @import "offsets/offsets6";
-// @import "offsets/offsets8";
-// @import "offsets/offsets12";
-// @import "offsets/offsets16";
-// @import "offsets/offsets24";
+@mixin offsets($vp, $vpprefix, $vpcolumns, $total){
+    @if $vpcolumns > 1 {
+        @media screen and (min-width: $vp) {
+            @for $i from 0 to $vpcolumns {
+                .#{$vpprefix}-col-#{$total}-offset-#{$i} {
+                    margin-#{$left}: percentage($i / $vpcolumns);
+                }
+                @include if-mixed(".#{$vpprefix}-col-#{$total}-offset-#{$i}", (margin-#{$left}, percentage($i / $vpcolumns)), (margin-#{$right}, 0));
+            }
+        }
+    }
+}
+
+
+@each $columnCount, $column-breakdown in $columns {
+
+    @for $i from 1 through length($column-breakdown) {
+        @include offsets(nth($vp-list, $i), nth($vp-prefix-list, $i), nth($column-breakdown, $i), $columnCount);
+    }
+    
+}
