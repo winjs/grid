@@ -12,14 +12,14 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: 'src/sass',
                     src: ['*.scss'],
-                    dest: 'src/sass/css',
+                    dest: 'dist/css',
                     ext: '.css'
                 },
                 {
                     expand: true,
                     cwd: 'demo/sass',
                     src: ['*.scss'],
-                    dest: 'demo/sass/css',
+                    dest: 'demo/css',
                     ext: '.css'
                 }]
             }
@@ -31,8 +31,20 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'src/sass/css/mscom-grid.css': 'src/sass/css/mscom-grid.css'
+                    'dist/css/mscom-grid.css': 'dist/css/mscom-grid.css'
                 }
+            }
+        },
+
+        cssmin: {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: 'dist/css',
+                    src: ['*.css', '!*.min.css'],
+                    dest: 'dist/css/min',
+                    ext: '.min.css'
+                }]
             }
         },
 
@@ -40,7 +52,7 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: ['src/sass/*.scss', 'demo/sass/*.scss'],
-                tasks: ['sass', 'autoprefixer']
+                tasks: ['sass', 'autoprefixer', 'cssmin']
             },
             html: {
                 files: '*.html'
@@ -64,8 +76,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // Set Grunt tasks
-    grunt.registerTask('default', ['sass', 'autoprefixer']);
+    grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin']);
     grunt.registerTask('server', ['connect', 'watch']);
 }
