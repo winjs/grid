@@ -1,7 +1,9 @@
 # Msdotcom/WinJS Grid Framework
 A CSS grid framework built on SASS to provide an automatic responsive grid for web developers with flexibility for manual control when needed. This grid is a float and padding-based grid, meaning that it works by using floats to create rows and padding to create the gutters between columns instead of margin. 
 
-Supports column layouts of 1, 2, 3, 4, 5, 6, 8, 12, 16, and 24.
+This framework is built based off of config values so any number of columns, gutter sizes, column breakdowns, and breakpoints can be configured and built with ease.
+
+Supports column layouts of 1, 2, 3, 4, 5, 6, 8, 12, and 24 by default. 
 
 ## Demo
 [http://msdotcom.azurewebsites.net/Grid](http://msdotcom.azurewebsites.net/Grid)
@@ -71,13 +73,24 @@ $fixed-col-margin: 2px; //4px fixed margin, gets doubled
 $grid-prefix: "ms-";
 $dirMixed: false !default; //Toggle for having mixed langauge support
 
-//Different viewport sizes and list for mixin use
+
+
+//Columns supported AND their associated "automatic" rwd column breakdown
+//Can be any amount - 1 column doesn't need to be specfied
+//Format for key/value pair - columnCount: (vp1col, vp2col, vp3col, vp4col, vp5col)
+$columns: (2: (1, 1, 2, 2, 2), 3: (1, 3, 3, 3, 3), 4: (1, 2, 4, 4, 4),
+5: (1, 1, 5, 5, 5), 6: (1, 2, 3, 6, 6), 8: (2, 2, 4, 8, 8), 
+12: (2, 4, 4, 12, 12), 24: (6, 12, 24, 24, 24));
+
+
+//Grid breakpoints, different viewport sizes and list for mixin use
 $vp1: 320px;
 $vp2: 540px;
 $vp3: 768px;
 $vp4: 992px;
 $vp5: 1400px;
 $vp-list: ($vp1, $vp2, $vp3, $vp4, $vp5);
+
 
 
 //Different prefixes for each viewport and list for mixin use
