@@ -10,50 +10,6 @@ body {
 	}
 }
 
-.toolbox button, .toolbox .button {
-	position: relative;
-	box-sizing: border-box;
-	border: 2px solid rgba(0,0,0,0);
-	color: #fff;
-	padding: 0.75em 2em;
-	margin: 0.25em 0.25em 0.25em 0;
-	outline: none;
-	transition: all 0.15s;
-
-	&.blue {
-		background-color: $ms-blue;
-
-		&:hover, &:focus {
-			border: 2px solid darken($ms-blue, 25%);
-		}
-		&:active, &:active {
-			background-color: darken($ms-blue, 15%);
-		}
-	}
-
-	&.green {
-		background-color: $ms-green;
-
-		&:hover, &:focus {
-			border: 2px solid darken($ms-green, 25%);
-		}
-		&:active, &:active {
-			background-color: darken($ms-green, 15%);
-		}
-	}
-
-	&.pink {
-		background-color: $ms-pink;
-
-		&:hover, &:focus {
-			border: 2px solid darken($ms-pink, 25%);
-		}
-		&:active, &:active {
-			background-color: darken($ms-pink, 15%);
-		}
-	}
-}
-
 .toolbox {
 	text-align: center;
 }
