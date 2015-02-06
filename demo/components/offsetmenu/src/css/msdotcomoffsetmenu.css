@@ -2,45 +2,6 @@ body.offsetopened {
   overflow-x: hidden;
 }
 
-.toolbox button, .toolbox .button {
-  position: relative;
-  box-sizing: border-box;
-  border: 2px solid transparent;
-  color: #fff;
-  padding: 0.75em 2em;
-  margin: 0.25em 0.25em 0.25em 0;
-  outline: none;
-  -webkit-transition: all 0.15s;
-          transition: all 0.15s;
-}
-.toolbox button.blue, .toolbox .button.blue {
-  background-color: #1570a6;
-}
-.toolbox button.blue:hover, .toolbox button.blue:focus, .toolbox .button.blue:hover, .toolbox .button.blue:focus {
-  border: 2px solid #072435;
-}
-.toolbox button.blue:active, .toolbox button.blue:active, .toolbox .button.blue:active, .toolbox .button.blue:active {
-  background-color: #0c4262;
-}
-.toolbox button.green, .toolbox .button.green {
-  background-color: #107c10;
-}
-.toolbox button.green:hover, .toolbox button.green:focus, .toolbox .button.green:hover, .toolbox .button.green:focus {
-  border: 2px solid #010b01;
-}
-.toolbox button.green:active, .toolbox button.green:active, .toolbox .button.green:active, .toolbox .button.green:active {
-  background-color: #073807;
-}
-.toolbox button.pink, .toolbox .button.pink {
-  background-color: #ef0060;
-}
-.toolbox button.pink:hover, .toolbox button.pink:focus, .toolbox .button.pink:hover, .toolbox .button.pink:focus {
-  border: 2px solid #6f002d;
-}
-.toolbox button.pink:active, .toolbox button.pink:active, .toolbox .button.pink:active, .toolbox .button.pink:active {
-  background-color: #a30041;
-}
-
 .toolbox {
   text-align: center;
 }
