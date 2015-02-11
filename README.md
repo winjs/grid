@@ -178,11 +178,14 @@ Example:
 ### Centered columns
 Putting the `.centered` class on a single column will center it in that row.
 
+### Vertically centering columns
+In [browsers that support Flexbox](http://caniuse.com/#search=flexbox), putting the `.vertically-centered` class on a single row will align all items center which will vertically center them. Great for vertically centering text next to images.
+
 ### No break
 Putting the `.nb` class on a column will make it hold it's original width across all breakpoints.
 
 Example:
-An element with the classes of `class="col-1-4 nb"` will always stay at a width of 25%.
+An element with the classes of `class="col-1-4 nb` will always stay at a width of 25%.
 
 ### Prefixing of grid and row classes
 The _config file has the variable named `$grid-prefix` where you can specify any prefixing that you would like added to all the `.grid` and `.row` classes. The default is `ms-`.

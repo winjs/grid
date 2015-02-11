@@ -121,6 +121,7 @@ body.offsetopened {
   padding-right: 0;
 }
 .ms-grid .ms-row {
+  align-items: stretch;
   display: flex;
   flex-wrap: wrap;
   margin-left: -1em;
@@ -134,6 +135,9 @@ body.offsetopened {
   margin-left: -2vw;
   margin-right: -2vw;
 }
+.ms-grid .ms-row.vertically-centered {
+  align-items: center;
+}
 .ms-grid .ms-row:after,
 .ms-grid [class*="col-"]:after {
   content: "";
@@ -142,7 +146,6 @@ body.offsetopened {
 }
 
 [class*="col-"] {
-  align-items: stretch;
   float: left;
   width: 100%;
   position: relative;

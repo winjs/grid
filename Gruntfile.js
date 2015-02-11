@@ -50,6 +50,9 @@ module.exports = function (grunt) {
 
         // Watch for changes
         watch: {
+            options: { 
+                livereload: true 
+            },
             sass: {
                 files: ['src/sass/*.scss', 'demo/sass/*.scss'],
                 tasks: ['sass', 'autoprefixer', 'cssmin']
