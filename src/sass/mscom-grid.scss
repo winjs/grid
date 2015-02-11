@@ -3,7 +3,8 @@
 //------------------------------------
 @import "config";
 @import "directional";
-//manual col spans and offset imports are at the bottom for specificity battle
+//manual col spans, offset, and column ordering imports are at the
+//bottom for specificity battle
 
 
 
@@ -233,3 +234,4 @@
 
 @import "manual-colspans";
 @import "offsets";
+@import "column-ordering";
