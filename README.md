@@ -183,7 +183,7 @@ Pull - viewport - col - total #of columns - pull - # of columns to pull over by
 Push - viewport - col - total #of columns - push - # of columns to push over by
 
 Example:
-If these classes were used in conjunction on two adjacent columns, it would swap them.
+If these classes were used in conjunction on two adjacent columns, it would swap them, their order.
 
 `l-col-24-pull-12` - This will pull the column over by 12 column widths for a 24 column row above the large(viewport 4) breakpoint.
 
