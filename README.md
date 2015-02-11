@@ -136,7 +136,7 @@ Example row:
 
 Column breakdown across each breakpoint:
 
-| Columns | < 320px (mf) | > 320px (vp1) | > 540px (vp2) | > 768px (vp3) | > 992px (vp4) | > 1400px (vp5) |
+| Columns | < 320px (mf) | > 320px (vp1) XS | > 540px (vp2) S | > 768px (vp3) M | > 992px (vp4) L | > 1400px (vp5) XL |
 |:-------:|:------------:|:-------------:|:-------------:|:-------------:|:-------------:|:--------------:|
 |    1    |       1      |       1       |       1       |       1       |       1       |        1       |
 |    2    |       1      |       1       |       1       |       2       |       2       |        2       |
