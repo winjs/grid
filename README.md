@@ -175,6 +175,21 @@ viewport - col - total # of columns - offset - # of columns to offset
 Example:
 `l-col-8-offset-2` - This will offset the column by 2 column widths for an 8 column row above the large(viewport 4) breakpoint.
 
+### Column ordering (push/pull)
+Using these classes will allow you to change the built-in column ordering .
+
+Here is the pattern for the classes:
+Pull - viewport - col - total #of columns - pull - # of columns to pull over by
+Push - viewport - col - total #of columns - push - # of columns to push over by
+
+Example:
+If these classes were used in conjunction on two adjacent columns, it would swap them.
+
+`l-col-24-pull-12` - This will pull the column over by 12 column widths for a 24 column row above the large(viewport 4) breakpoint.
+
+`l-col-24-push-12` - This will push the column over by 12 column widths for a 24 column row above the large(viewport 4) breakpoint.
+
+
 ### Centered columns
 Putting the `.centered` class on a single column will center it in that row.
 
