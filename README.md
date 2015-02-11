@@ -136,7 +136,7 @@ Example row:
 
 Column breakdown across each breakpoint:
 
-| Columns | < 320px (mf) | > 320px (vp1) | > 540px (vp2) | > 768px (vp3) | > 992px (vp4) | > 1400px (vp5) |
+| Columns | < 320px (mf) | > 320px (vp1) XS | > 540px (vp2) S | > 768px (vp3) M | > 992px (vp4) L | > 1400px (vp5) XL |
 |:-------:|:------------:|:-------------:|:-------------:|:-------------:|:-------------:|:--------------:|
 |    1    |       1      |       1       |       1       |       1       |       1       |        1       |
 |    2    |       1      |       1       |       1       |       2       |       2       |        2       |
@@ -175,14 +175,32 @@ viewport - col - total # of columns - offset - # of columns to offset
 Example:
 `l-col-8-offset-2` - This will offset the column by 2 column widths for an 8 column row above the large(viewport 4) breakpoint.
 
+### Column ordering (push/pull)
+Using these classes will allow you to change the built-in column ordering .
+
+Here is the pattern for the classes:
+Pull - viewport - col - total #of columns - pull - # of columns to pull over by
+Push - viewport - col - total #of columns - push - # of columns to push over by
+
+Example:
+If these classes were used in conjunction on two adjacent columns, it would swap them, their order.
+
+`l-col-24-pull-12` - This will pull the column over by 12 column widths for a 24 column row above the large(viewport 4) breakpoint.
+
+`l-col-24-push-12` - This will push the column over by 12 column widths for a 24 column row above the large(viewport 4) breakpoint.
+
+
 ### Centered columns
 Putting the `.centered` class on a single column will center it in that row.
+
+### Vertically centering columns
+In [browsers that support Flexbox](http://caniuse.com/#search=flexbox), putting the `.vertically-centered` class on a single row will align all items center which will vertically center them. Great for vertically centering text next to images.
 
 ### No break
 Putting the `.nb` class on a column will make it hold it's original width across all breakpoints.
 
 Example:
-An element with the classes of `class="col-1-4 nb"` will always stay at a width of 25%.
+An element with the classes of `class="col-1-4 nb` will always stay at a width of 25%.
 
 ### Prefixing of grid and row classes
 The _config file has the variable named `$grid-prefix` where you can specify any prefixing that you would like added to all the `.grid` and `.row` classes. The default is `ms-`.
