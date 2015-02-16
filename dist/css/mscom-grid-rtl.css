@@ -26,6 +26,58 @@
   padding-left: 2px;
   padding-right: 2px;
 }
+.ms-grid.fixed-small .ms-row {
+  margin-left: -2px;
+  margin-right: -2px;
+}
+.ms-grid.fixed-small .ms-row > [class*="col-"] {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.ms-grid.fixed-large .ms-row {
+  margin-left: -4px;
+  margin-right: -4px;
+}
+.ms-grid.fixed-large .ms-row > [class*="col-"] {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+@media screen and (min-width: 540px) {
+  .ms-grid.fixed-small .ms-row {
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+  .ms-grid.fixed-small .ms-row > [class*="col-"] {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .ms-grid.fixed-large .ms-row {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  .ms-grid.fixed-large .ms-row > [class*="col-"] {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ms-grid.fixed-small .ms-row {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  .ms-grid.fixed-small .ms-row > [class*="col-"] {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .ms-grid.fixed-large .ms-row {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+  .ms-grid.fixed-large .ms-row > [class*="col-"] {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
 .ms-grid.zero-margin .ms-row {
   margin-left: 0;
   margin-right: 0;

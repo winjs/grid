@@ -1,0 +1,87 @@
+    &.fixed {
+        .#{$grid-prefix}row {
+            margin-left: -$fixed4;
+            margin-right: -$fixed4;
+
+            & > [class*="col-"] {
+                padding-left: $fixed4;
+                padding-right: $fixed4;
+            }
+        }
+    }
+
+    &.fixed-small {
+        .#{$grid-prefix}row {
+            margin-left: -$fixed-small-margin;
+            margin-right: -$fixed-small-margin;
+
+            & > [class*="col-"] {
+                padding-left: $fixed-small-margin;
+                padding-right: $fixed-small-margin;
+            }
+        }
+    }
+
+    &.fixed-large {
+        .#{$grid-prefix}row {
+            margin-left: -$fixed-large-margin;
+            margin-right: -$fixed-large-margin;
+
+            & > [class*="col-"] {
+                padding-left: $fixed-large-margin;
+                padding-right: $fixed-large-margin;
+            }
+        }
+    }
+
+    @media screen and (min-width: $vp2) {
+        &.fixed-small {
+            .#{$grid-prefix}row {
+                margin-left: -$fixed-small-margin*3;
+                margin-right: -$fixed-small-margin*3;
+
+                & > [class*="col-"] {
+                    padding-left: $fixed-small-margin*3;
+                    padding-right: $fixed-small-margin*3;
+                }
+            }
+        }
+
+        &.fixed-large {
+            .#{$grid-prefix}row {
+                margin-left: -$fixed-large-margin*3;
+                margin-right: -$fixed-large-margin*3;
+
+                & > [class*="col-"] {
+                    padding-left: $fixed-large-margin*3;
+                    padding-right: $fixed-large-margin*3;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: $vp3) {
+        &.fixed-small {
+            .#{$grid-prefix}row {
+                margin-left: -($fixed-small-margin*3)*2;
+                margin-right: -($fixed-small-margin*3)*2;
+
+                & > [class*="col-"] {
+                    padding-left: ($fixed-small-margin*3)*2;
+                    padding-right: ($fixed-small-margin*3)*2;
+                }
+            }
+        }
+
+        &.fixed-large {
+            .#{$grid-prefix}row {
+                margin-left: -($fixed-large-margin*3)*2;
+                margin-right: -($fixed-large-margin*3)*2;
+
+                & > [class*="col-"] {
+                    padding-left: ($fixed-large-margin*3)*2;
+                    padding-right: ($fixed-large-margin*3)*2;
+                }
+            }
+        }
+    }
