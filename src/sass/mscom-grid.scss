@@ -25,13 +25,14 @@
 .#{$grid-prefix}grid {
     display: block;
     position: relative;
-    width: 92.5%; //Goes to 90% at vp2
+    width: 100%; //Goes to 90% at vp4
     margin-left: auto;
     margin-right: auto;
     max-width: $max-grid-width;
+    padding-left: 12px;
+    padding-right: 12px;
 
     &.full {
-        width: 100%;
         max-width: none;
 
         &.zero-margin {
@@ -40,17 +41,15 @@
         }
     }
 
-    &.fixed {
-        .#{$grid-prefix}row {
-            margin-left: -$fixed-col-margin;
-            margin-right: -$fixed-col-margin;
 
-            & > [class*="col-"] {
-                padding-left: $fixed-col-margin;
-                padding-right: $fixed-col-margin;
-            }
-        }
-    }
+
+
+    //Import of fixed column offerings/options
+    @import "fixed-col-options";
+
+
+
+
 
     &.zero-margin {
         .#{$grid-prefix}row {
@@ -109,7 +108,54 @@
     }
 }
 
+//Include for mixed LTR/RTL support
 @include if-mixed("[class*='col-']", (float, $left));
+
+
+
+
+
+//----------------------------------------------------
+//          #PAGE MARGINS MEDIA QUERIES
+//----------------------------------------------------
+@media screen and (min-width: $vp2) {
+    .#{$grid-prefix}grid {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+@media screen and (min-width: $vp3) {
+    .#{$grid-prefix}grid {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+}
+@media screen and (min-width: $vp4) {
+    .#{$grid-prefix}grid {
+        padding-left: 0;
+        padding-right: 0;
+        width: 90%; //To provide 5% page margins
+    }
+}
+
+// Reducing padding to a reasonable size for "extremely" large displays
+@media screen and (min-width: 2000px) {
+    .#{$grid-prefix}grid {       
+        .#{$grid-prefix}row {
+            margin-left: -1em;
+            margin-right: -1em;
+            margin-left: -0.5vw;
+            margin-right: -0.5vw;
+
+            & > [class*="col-"] {
+                padding-left: 1em;
+                padding-right: 1em;
+                padding-left: 0.5vw;
+                padding-right: 0.5vw;
+            }
+        }
+    }
+}
 
 
 
@@ -145,8 +191,7 @@
 .col-2-4.nb,
 .col-3-6.nb,
 .col-1-8,
-.col-1-12,
-.col-1-16 {
+.col-1-12 {
     width: percentage(1 / 2);
 }
 
@@ -175,10 +220,6 @@
     width: percentage(1 / 12);
 }
 
-.col-1-16.nb {
-    width: percentage(1 / 16);
-}
-
 .col-1-24.nb {
     width: percentage(1 / 24);
 }
@@ -186,9 +227,6 @@
 .col-2-8,
 .col-2-12,
 .col-4-12,
-.col-2-16,
-.col-4-16,
-.col-8-16,
 .col-2-2,
 .col-3-3,
 .col-4-4,
@@ -196,7 +234,6 @@
 .col-6-6,
 .col-8-8,
 .col-12-12,
-.col-16-16,
 .col-24-24 {
     width: percentage(1);
 }
@@ -213,24 +250,6 @@
 
 
 
-// Reducing padding to a reasonable size for "extremely" large displays
-@media screen and (min-width: 2000px) {
-    .#{$grid-prefix}grid {       
-        .#{$grid-prefix}row {
-            margin-left: -1em;
-            margin-right: -1em;
-            margin-left: -0.5vw;
-            margin-right: -0.5vw;
-
-            & > [class*="col-"] {
-                padding-left: 1em;
-                padding-right: 1em;
-                padding-left: 0.5vw;
-                padding-right: 0.5vw;
-            }
-        }
-    }
-}
 
 @import "manual-colspans";
 @import "offsets";

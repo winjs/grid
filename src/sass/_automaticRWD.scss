@@ -1,18 +1,4 @@
-@media screen and (min-width: $vp1) {
-    .col-1-16 {
-        width: percentage(1 / 4);
-    }
-
-    .col-2-16 {
-        width: percentage(1 / 2);
-    }
-}
-
 @media screen and (min-width: $vp2) {
-    .#{$grid-prefix}grid {
-        width: 90%;
-    }
-
     .col-1-4,
     .col-1-6,
     .col-1-8,
@@ -58,7 +44,6 @@
     .col-2-8,
     .col-6-8 ~ .col-1-8,
     .preceding-col-1-8,
-    .col-4-16,
     .col-12-24 {
         width: percentage(1 / 2);
     }
@@ -67,7 +52,6 @@
     .col-3-4 + .col-1-4,
     .preceding-col-1-4,
     .col-1-8,
-    .col-2-16,
     .col-6-24,
     .preceding-col-6-24,
     .col-6-24 + .preceding-col-6-24,
@@ -115,13 +99,8 @@
     .col-4-8,
     .col-6-8,
     .col-6-8 + .col-2-8,
-    .preceding-col-2-8,
-    .col-8-16  {
+    .preceding-col-2-8 {
         width: percentage(1);
-    }
-
-    .col-1-16 {
-        width: percentage(1 / 8);
     }
 
     .col-1-24 {
@@ -148,22 +127,19 @@
 
     .col-6-8 + .col-2-8, 
     .preceding-col-2-8,
-    .col-2-8,
-    .col-2-16 {
+    .col-2-8 {
         width: percentage(1 / 4);
     }
 
     .col-6-8 ~ .col-1-8,
     .preceding-col-1-8,
     .col-1-8 + .preceding-col-1-8,
-    .col-1-8,
-    .col-1-16 {
+    .col-1-8 {
         width: percentage(1 / 8);
     }
 
     .col-3-6,
-    .col-4-8,
-    .col-4-16 {
+    .col-4-8 {
         width: percentage(1 / 2);
     }
 
@@ -171,8 +147,7 @@
         width: percentage(2 / 3);
     }
 
-    .col-6-6,
-    .col-8-16 {
+    .col-6-6 {
         width: percentage(3 / 3);
     }
 
@@ -182,23 +157,5 @@
 
     .col-1-12 {
         width: percentage(1 / 12);
-    }
-}
-
-@media screen and (min-width: $vp5) {
-    .col-1-16 {
-        width: percentage(1 / 16);
-    }
-
-    .col-2-16 {
-        width: percentage(1 / 8);
-    }
-
-    .col-4-16 {
-        width: percentage(1 / 4);
-    }
-
-    .col-8-16 {
-        width: percentage(1 / 2);
     }
 }

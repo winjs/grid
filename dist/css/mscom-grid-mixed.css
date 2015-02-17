@@ -5,13 +5,14 @@
 .ms-grid {
   display: block;
   position: relative;
-  width: 92.5%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   max-width: 1600px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 .ms-grid.full {
-  width: 100%;
   max-width: none;
 }
 .ms-grid.full.zero-margin {
@@ -25,6 +26,58 @@
 .ms-grid.fixed .ms-row > [class*="col-"] {
   padding-left: 2px;
   padding-right: 2px;
+}
+.ms-grid.fixed-small .ms-row {
+  margin-left: -2px;
+  margin-right: -2px;
+}
+.ms-grid.fixed-small .ms-row > [class*="col-"] {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.ms-grid.fixed-large .ms-row {
+  margin-left: -4px;
+  margin-right: -4px;
+}
+.ms-grid.fixed-large .ms-row > [class*="col-"] {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+@media screen and (min-width: 540px) {
+  .ms-grid.fixed-small .ms-row {
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+  .ms-grid.fixed-small .ms-row > [class*="col-"] {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .ms-grid.fixed-large .ms-row {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  .ms-grid.fixed-large .ms-row > [class*="col-"] {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ms-grid.fixed-small .ms-row {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  .ms-grid.fixed-small .ms-row > [class*="col-"] {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .ms-grid.fixed-large .ms-row {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+  .ms-grid.fixed-large .ms-row > [class*="col-"] {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 .ms-grid.zero-margin .ms-row {
   margin-left: 0;
@@ -83,6 +136,39 @@
   float: right;
 }
 
+@media screen and (min-width: 540px) {
+  .ms-grid {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ms-grid {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .ms-grid {
+    padding-left: 0;
+    padding-right: 0;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .ms-grid .ms-row {
+    margin-left: -1em;
+    margin-right: -1em;
+    margin-left: -0.5vw;
+    margin-right: -0.5vw;
+  }
+  .ms-grid .ms-row > [class*="col-"] {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+  }
+}
 .mscom-vertical [class*="col-"] {
   padding: 1em 1em;
   padding: -webkit-calc(1em + 0.5vh) 1vw;
@@ -101,8 +187,7 @@
 .col-2-4.nb,
 .col-3-6.nb,
 .col-1-8,
-.col-1-12,
-.col-1-16 {
+.col-1-12 {
   width: 50%;
 }
 
@@ -131,10 +216,6 @@
   width: 8.33333%;
 }
 
-.col-1-16.nb {
-  width: 6.25%;
-}
-
 .col-1-24.nb {
   width: 4.16667%;
 }
@@ -142,9 +223,6 @@
 .col-2-8,
 .col-2-12,
 .col-4-12,
-.col-2-16,
-.col-4-16,
-.col-8-16,
 .col-2-2,
 .col-3-3,
 .col-4-4,
@@ -152,25 +230,11 @@
 .col-6-6,
 .col-8-8,
 .col-12-12,
-.col-16-16,
 .col-24-24 {
   width: 100%;
 }
 
-@media screen and (min-width: 320px) {
-  .col-1-16 {
-    width: 25%;
-  }
-
-  .col-2-16 {
-    width: 50%;
-  }
-}
 @media screen and (min-width: 540px) {
-  .ms-grid {
-    width: 90%;
-  }
-
   .col-1-4,
   .col-1-6,
   .col-1-8,
@@ -215,7 +279,6 @@
   .col-2-8,
   .col-6-8 ~ .col-1-8,
   .preceding-col-1-8,
-  .col-4-16,
   .col-12-24 {
     width: 50%;
   }
@@ -224,7 +287,6 @@
   .col-3-4 + .col-1-4,
   .preceding-col-1-4,
   .col-1-8,
-  .col-2-16,
   .col-6-24,
   .preceding-col-6-24,
   .col-6-24 + .preceding-col-6-24,
@@ -271,13 +333,8 @@
   .col-4-8,
   .col-6-8,
   .col-6-8 + .col-2-8,
-  .preceding-col-2-8,
-  .col-8-16 {
+  .preceding-col-2-8 {
     width: 100%;
-  }
-
-  .col-1-16 {
-    width: 12.5%;
   }
 
   .col-1-24 {
@@ -303,22 +360,19 @@
 
   .col-6-8 + .col-2-8,
   .preceding-col-2-8,
-  .col-2-8,
-  .col-2-16 {
+  .col-2-8 {
     width: 25%;
   }
 
   .col-6-8 ~ .col-1-8,
   .preceding-col-1-8,
   .col-1-8 + .preceding-col-1-8,
-  .col-1-8,
-  .col-1-16 {
+  .col-1-8 {
     width: 12.5%;
   }
 
   .col-3-6,
-  .col-4-8,
-  .col-4-16 {
+  .col-4-8 {
     width: 50%;
   }
 
@@ -326,8 +380,7 @@
     width: 66.66667%;
   }
 
-  .col-6-6,
-  .col-8-16 {
+  .col-6-6 {
     width: 100%;
   }
 
@@ -337,37 +390,6 @@
 
   .col-1-12 {
     width: 8.33333%;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .col-1-16 {
-    width: 6.25%;
-  }
-
-  .col-2-16 {
-    width: 12.5%;
-  }
-
-  .col-4-16 {
-    width: 25%;
-  }
-
-  .col-8-16 {
-    width: 50%;
-  }
-}
-@media screen and (min-width: 2000px) {
-  .ms-grid .ms-row {
-    margin-left: -1em;
-    margin-right: -1em;
-    margin-left: -0.5vw;
-    margin-right: -0.5vw;
-  }
-  .ms-grid .ms-row > [class*="col-"] {
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
   }
 }
 @media screen and (min-width: 320px) {
