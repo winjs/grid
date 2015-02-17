@@ -50,7 +50,7 @@
         MSdotcomOffsetMenu.leftDockButton.on("click", function (e) {
             MSdotcomOffsetMenu.leftMenu.toggleClass("offset-docked");
             MSdotcomOffsetMenu.page.toggleClass("offset-docked");
-            if(MSdotcomOffsetMenu.leftDockButton.text().toLowerCase() === "dock") {
+            if(MSdotcomOffsetMenu.leftDockButton.text().toLowerCase().trim() === "dock") {
                 MSdotcomOffsetMenu.leftDockButton.text("Undock");
             }
             else {
