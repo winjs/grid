@@ -33,13 +33,53 @@ $('.fixedGridToggle').on("click", function() {
 	if($grid.hasClass('zero-margin')) {
 		$grid.removeClass('zero-margin');
 	}
+	if($grid.hasClass('fixed-small')) {
+		$grid.removeClass('fixed-small');
+	}
+	if($grid.hasClass('fixed-large')) {
+		$grid.removeClass('fixed-large');
+	}
 	$grid.toggleClass('fixed');
+});
+
+$('.fixedSmallGridToggle').on("click", function() {
+	var $grid = $('.ms-grid');
+	if($grid.hasClass('zero-margin')) {
+		$grid.removeClass('zero-margin');
+	}
+	if($grid.hasClass('fixed')) {
+		$grid.removeClass('fixed');
+	}
+	if($grid.hasClass('fixed-large')) {
+		$grid.removeClass('fixed-large');
+	}
+	$grid.toggleClass('fixed-small');
+});
+
+$('.fixedLargeGridToggle').on("click", function() {
+	var $grid = $('.ms-grid');
+	if($grid.hasClass('zero-margin')) {
+		$grid.removeClass('zero-margin');
+	}
+	if($grid.hasClass('fixed')) {
+		$grid.removeClass('fixed');
+	}
+	if($grid.hasClass('fixed-small')) {
+		$grid.removeClass('fixed-small');
+	}
+	$grid.toggleClass('fixed-large');
 });
 
 $('.zeroMarginToggle').on("click", function() {
 	var $grid = $('.ms-grid');
 	if($grid.hasClass('fixed')) {
 		$grid.removeClass('fixed');
+	}
+	if($grid.hasClass('fixed-small')) {
+		$grid.removeClass('fixed-small');
+	}
+	if($grid.hasClass('fixed-large')) {
+		$grid.removeClass('fixed-large');
 	}
 	$grid.toggleClass('zero-margin');
 });

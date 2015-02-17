@@ -25,13 +25,14 @@
 .#{$grid-prefix}grid {
     display: block;
     position: relative;
-    width: 92.5%; //Goes to 90% at vp2
+    width: 100%; //Goes to 90% at vp4
     margin-left: auto;
     margin-right: auto;
     max-width: $max-grid-width;
+    padding-left: 12px;
+    padding-right: 12px;
 
     &.full {
-        width: 100%;
         max-width: none;
 
         &.zero-margin {
@@ -42,54 +43,53 @@
 
 
 
-    //----------------------------------------------------
-//          #MEDIA QUERIES FOR FIXED COL OPTIONS
-//----------------------------------------------------
-@import "fixed-col-options";
+
+    //Import of fixed column offerings/options
+    @import "fixed-col-options";
 
 
 
 
 
-&.zero-margin {
-    .#{$grid-prefix}row {
-        margin-left: 0;
-        margin-right: 0;
+    &.zero-margin {
+        .#{$grid-prefix}row {
+            margin-left: 0;
+            margin-right: 0;
 
-        & > [class*="col-"] {
-            padding-left: 0;
-            padding-right: 0;
+            & > [class*="col-"] {
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
     }
-}
 
-.#{$grid-prefix}row {
-    align-items: stretch;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -1em;
-    margin-right: -1em;
-    margin-left: -1vw;
-    margin-right: -1vw;
+    .#{$grid-prefix}row {
+        align-items: stretch;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -1em;
+        margin-right: -1em;
+        margin-left: -1vw;
+        margin-right: -1vw;
 
-    &.content-flush {
-        margin-left: -2em;
-        margin-right: -2em;
-        margin-left: -2vw;
-        margin-right: -2vw;
+        &.content-flush {
+            margin-left: -2em;
+            margin-right: -2em;
+            margin-left: -2vw;
+            margin-right: -2vw;
+        }
+
+        &.vertically-centered {
+            align-items: center;
+        }
     }
 
-    &.vertically-centered {
-        align-items: center;
+    .#{$grid-prefix}row:after,
+    [class*="col-"]:after {
+        content: "";
+        display: table;
+        clear: both;
     }
-}
-
-.#{$grid-prefix}row:after,
-[class*="col-"]:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 }
 
 [class*="col-"] {
@@ -108,7 +108,54 @@
     }
 }
 
+//Include for mixed LTR/RTL support
 @include if-mixed("[class*='col-']", (float, $left));
+
+
+
+
+
+//----------------------------------------------------
+//          #PAGE MARGINS MEDIA QUERIES
+//----------------------------------------------------
+@media screen and (min-width: $vp2) {
+    .#{$grid-prefix}grid {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+@media screen and (min-width: $vp3) {
+    .#{$grid-prefix}grid {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+}
+@media screen and (min-width: $vp4) {
+    .#{$grid-prefix}grid {
+        padding-left: 0;
+        padding-right: 0;
+        width: 90%; //To provide 5% page margins
+    }
+}
+
+// Reducing padding to a reasonable size for "extremely" large displays
+@media screen and (min-width: 2000px) {
+    .#{$grid-prefix}grid {       
+        .#{$grid-prefix}row {
+            margin-left: -1em;
+            margin-right: -1em;
+            margin-left: -0.5vw;
+            margin-right: -0.5vw;
+
+            & > [class*="col-"] {
+                padding-left: 1em;
+                padding-right: 1em;
+                padding-left: 0.5vw;
+                padding-right: 0.5vw;
+            }
+        }
+    }
+}
 
 
 
@@ -212,24 +259,6 @@
 
 
 
-// Reducing padding to a reasonable size for "extremely" large displays
-@media screen and (min-width: 2000px) {
-    .#{$grid-prefix}grid {       
-        .#{$grid-prefix}row {
-            margin-left: -1em;
-            margin-right: -1em;
-            margin-left: -0.5vw;
-            margin-right: -0.5vw;
-
-            & > [class*="col-"] {
-                padding-left: 1em;
-                padding-right: 1em;
-                padding-left: 0.5vw;
-                padding-right: 0.5vw;
-            }
-        }
-    }
-}
 
 @import "manual-colspans";
 @import "offsets";

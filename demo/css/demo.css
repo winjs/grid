@@ -91,13 +91,14 @@ body.offsetopened {
 .ms-grid {
   display: block;
   position: relative;
-  width: 92.5%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   max-width: 1600px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 .ms-grid.full {
-  width: 100%;
   max-width: none;
 }
 .ms-grid.full.zero-margin {
@@ -221,6 +222,39 @@ body.offsetopened {
   float: right;
 }
 
+@media screen and (min-width: 540px) {
+  .ms-grid {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ms-grid {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .ms-grid {
+    padding-left: 0;
+    padding-right: 0;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .ms-grid .ms-row {
+    margin-left: -1em;
+    margin-right: -1em;
+    margin-left: -0.5vw;
+    margin-right: -0.5vw;
+  }
+  .ms-grid .ms-row > [class*="col-"] {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+  }
+}
 .mscom-vertical [class*="col-"] {
   padding: 1em 1em;
   padding: -webkit-calc(1em + 0.5vh) 1vw;
@@ -305,10 +339,6 @@ body.offsetopened {
   }
 }
 @media screen and (min-width: 540px) {
-  .ms-grid {
-    width: 90%;
-  }
-
   .col-1-4,
   .col-1-6,
   .col-1-8,
@@ -492,20 +522,6 @@ body.offsetopened {
 
   .col-8-16 {
     width: 50%;
-  }
-}
-@media screen and (min-width: 2000px) {
-  .ms-grid .ms-row {
-    margin-left: -1em;
-    margin-right: -1em;
-    margin-left: -0.5vw;
-    margin-right: -0.5vw;
-  }
-  .ms-grid .ms-row > [class*="col-"] {
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
   }
 }
 @media screen and (min-width: 320px) {
