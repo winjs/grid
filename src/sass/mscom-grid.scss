@@ -191,8 +191,7 @@
 .col-2-4.nb,
 .col-3-6.nb,
 .col-1-8,
-.col-1-12,
-.col-1-16 {
+.col-1-12 {
     width: percentage(1 / 2);
 }
 
@@ -221,10 +220,6 @@
     width: percentage(1 / 12);
 }
 
-.col-1-16.nb {
-    width: percentage(1 / 16);
-}
-
 .col-1-24.nb {
     width: percentage(1 / 24);
 }
@@ -232,9 +227,6 @@
 .col-2-8,
 .col-2-12,
 .col-4-12,
-.col-2-16,
-.col-4-16,
-.col-8-16,
 .col-2-2,
 .col-3-3,
 .col-4-4,
@@ -242,7 +234,6 @@
 .col-6-6,
 .col-8-8,
 .col-12-12,
-.col-16-16,
 .col-24-24 {
     width: percentage(1);
 }
