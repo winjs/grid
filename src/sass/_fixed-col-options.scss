@@ -1,11 +1,11 @@
     &.fixed {
         .#{$grid-prefix}row {
-            margin-left: -$fixed4;
-            margin-right: -$fixed4;
+            margin-left: -$fixed-standard;
+            margin-right: -$fixed-standard;
 
             & > [class*="col-"] {
-                padding-left: $fixed4;
-                padding-right: $fixed4;
+                padding-left: $fixed-standard;
+                padding-right: $fixed-standard;
             }
         }
     }

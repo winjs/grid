@@ -91,9 +91,17 @@
   padding-right: 0;
 }
 .ms-grid .ms-row {
-  align-items: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   margin-left: -1em;
   margin-right: -1em;
   margin-left: -1vw;
@@ -106,7 +114,10 @@
   margin-right: -2vw;
 }
 .ms-grid .ms-row.vertically-centered {
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .ms-grid .ms-row:after,
 .ms-grid [class*="col-"]:after {
@@ -166,7 +177,6 @@
 }
 .mscom-vertical [class*="col-"] {
   padding: 1em 1em;
-  padding: -webkit-calc(1em + 0.5vh) 1vw;
   padding: calc(1em + 0.5vh) 1vw;
 }
 
@@ -4040,5 +4050,3 @@
     left: auto;
   }
 }
-
-/*# sourceMappingURL=mscom-grid-ltr.css.map */

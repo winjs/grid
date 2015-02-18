@@ -51,9 +51,11 @@ With this server you can access the demo page at this URL: [localhost:9001](http
 A grid is a container for rows and rows are containers for columns. A grid should never have another grid nested anywhere inside it, only one grid is needed for a section that is using the grid framework.
 
 ### Class breakdown
-Grid - `.grid`
+The grid and row class names can be prefixed with any text you'd like, we default to "ms" but you can use whatever you'd like by setting the SASS grid-prefix variable in the config file. See below.
 
-Row - `.row`
+Grid - `.ms-grid`
+
+Row - `.ms-row`
 
 Column - `.col-1-24` where the numbers mean # of columns to span and total # of columns, respectively. 
 
@@ -61,15 +63,19 @@ Please see the "automagic" and manual column spanning sections below for details
 
 ###SASS configuration variables
 Through the use of the variables in the _config.scss file, you can control: 
+* Number of columns
+* The way columns will breakdown by breakpoint (i.e. if a 24 column should become 12 based at some point)
 * Maximum width of the grid
 * Prefixing of the grid and row classes
-* Fixed column margin mode's fixed margins
+* Fixed column margin mode's fixed margins (standard, small, large)
 * Mixed langauge support
 * Breakpoint values for the 5 built in breakpoints/viewports
 * Prefixing of the viewport specific classes (manual colspans and offsets)
 ```
 $max-grid-width: 1600px;
-$fixed-col-margin: 2px; //4px fixed margin, gets doubled
+$fixed-standard: 2px;
+$fixed-small-margin: 2px; //4px fixed margin for start of small fixed option which steps up, 4px, 12px, 24px
+$fixed-large-margin: 4px; //8px fixed margin for start of large fixed option which steps up, 8px, 24px, 48px
 $grid-prefix: "ms-";
 $dirMixed: false !default; //Toggle for having mixed langauge support
 
@@ -121,7 +127,6 @@ Column spanning options that are supported "automagically", these will reflow an
 |    6    | 1, 2 ,3 ,4, 6  |
 |    8    | 1, 2, 4, 6, 8  |
 |    12   | 1, 2, 4, 12    |
-|    16   | 1, 2, 4, 8, 16 |
 |    24   | 1, 6, 12, 24   |
 
 Example row:
@@ -146,7 +151,6 @@ Column breakdown across each breakpoint:
 |    6    |       1      |       1       |       2       |       3       |       6       |        6       |
 |    8    |       2      |       2       |       2       |       4       |       8       |        8       |
 |    12   |       2      |       2       |       4       |       4       |       12      |       12       |
-|    16   |       2      |       4       |       4       |       8       |       8       |       16       |
 |    24   |       6      |       6       |       12      |       24      |       24      |       24       |
 
 
@@ -162,6 +166,16 @@ Examples:
 `s-col-3-34` - 25% of the viewport - Above the small(viewport 2) breakpoint, this column will span 3 columns of the 12 columns in the row. This is because the 24 column layout at this breakpoint is now broken down to 12 column rows.
 
 `l-col-14-24` - At the large(viewport 4) breakpoint, this column will span 14 columns of the 24 columns in the row.
+
+### Fluid vs. fixed gutter options
+The grid can support fluid and fixed gutter options, all of which is configurable. By default the grid uses fluid gutters. If you want to use fixed gutters, you will add one of three helper classes: `fixed`, `fixed-small`, or `fixed-large`.
+
+`fixed` - stays at one value across all breakpoints, default is 4px.
+`fixed-small` - starts at 4px, jumps to 12px at viewport 2, and to 24px at viewport 3.
+`fixed-large` - starts at 8px, jumps to 24px at viewport 2, and to 48px at viewport 3.
+
+### Page margins
+The grid's page margins start at 12px, jump to 24px at vp2, 48px at vp3, and 5% at vp4.
 
 ### jQuery plugin for preceding columns
 There is a scenario where the CSS sibling selector, +, fails for the "automagic" mode. This selector only selects siblings that follow after and not preceding siblings. Because of this scenario, when a smaller column span could be used preceding a larger column span, those preceding columns need to be decorated with a class so that they can be selected. If you don't want to use the jQuery plugin, that is fine, but they will need to be decorated with a preceding class. Or add the small jQuery plugin that runs on load to decorate those classes automatically for you.

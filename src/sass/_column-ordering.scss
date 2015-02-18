@@ -3,9 +3,11 @@
         $ratio: $total / $vpcolumns;
         @for $i from 1 to $vpcolumns {
             .#{$vpprefix}-col-#{$total}-pull-#{$i} {
-                right: percentage(($i*$ratio) / $total);
-                left: auto;
+                #{$right}: percentage(($i*$ratio) / $total);
+                #{$left}: auto;
             }
+
+            @include if-mixed(".#{$vpprefix}-col-#{$total}-pull-#{$i}", (#{$right}, percentage(($i*$ratio) / $total)), (#{$left}, auto));
         }
     }
 }
@@ -15,9 +17,11 @@
         $ratio: $total / $vpcolumns;
         @for $i from 1 to $vpcolumns {
             .#{$vpprefix}-col-#{$total}-push-#{$i} {
-                left: percentage(($i*$ratio) / $total);
-                right: auto;
+                #{$left}: percentage(($i*$ratio) / $total);
+                #{$right}: auto;
             }
+
+            @include if-mixed(".#{$vpprefix}-col-#{$total}-push-#{$i}", (#{$left}, percentage(($i*$ratio) / $total)), (#{$right}, auto));
         }
     }
 }
