@@ -57,7 +57,9 @@ Grid - `.ms-grid`
 
 Row - `.ms-row`
 
-Column - `.col-1-24` where the numbers mean # of columns to span and total # of columns, respectively. 
+Columns:
+Auto columns - `.col-1-24` where the numbers mean # of columns to span and total # of columns, respectively. 
+Manual columns - `.l-col-1-24` same as above but with a viewport/breakpoint size prefix.
 
 Please see the "automagic" and manual column spanning sections below for details on what and how values are supported for the column span number.
 
