@@ -31,7 +31,10 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'dist/css/mscom-grid.css': 'dist/css/mscom-grid.css'
+                    'dist/css/mscom-grid.css': 'dist/css/mscom-grid.css',
+                    'dist/css/mscom-grid-ltr.css': 'dist/css/mscom-grid-ltr.css',
+                    'dist/css/mscom-grid-rtl.css': 'dist/css/mscom-grid-rtl.css',
+                    'dist/css/mscom-grid-mixed.css': 'dist/css/mscom-grid-mixed.css'
                 }
             }
         },
