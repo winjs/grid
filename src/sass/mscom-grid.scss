@@ -25,23 +25,24 @@
 .#{$grid-prefix}grid {
     display: block;
     position: relative;
-    width: 100%; //Goes to 90% at vp4
+    width: 94%;
     margin-left: auto;
     margin-right: auto;
     max-width: $max-grid-width;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 0;
+    padding-right: 0;
+    
+    &.fixed, &.fixed-small, &.fixed-large {
+        padding-left: 12px;
+        padding-right: 12px;
+        width: 100%;
+    }
 
     &.full {
         max-width: none;
         padding-left: 0;
         padding-right: 0;
         width: 100%;
-
-        &.zero-margin {
-            padding-left: 0;
-            padding-right: 0;
-        }
     }
 
 
@@ -122,19 +123,27 @@
 //          #PAGE MARGINS MEDIA QUERIES
 //----------------------------------------------------
 @media screen and (min-width: $vp2) {
-    .#{$grid-prefix}grid {
+    .#{$grid-prefix}grid.fixed, .#{$grid-prefix}grid.fixed-small, .#{$grid-prefix}grid.fixed-large {
         padding-left: 24px;
         padding-right: 24px;
     }
+
+    .#{$grid-prefix}grid {
+        width: 93%
+    }
 }
 @media screen and (min-width: $vp3) {
-    .#{$grid-prefix}grid {
+    .#{$grid-prefix}grid.fixed, .#{$grid-prefix}grid.fixed-small, .#{$grid-prefix}grid.fixed-large {
         padding-left: 48px;
         padding-right: 48px;
     }
+
+    .#{$grid-prefix}grid {
+        width: 92%
+    }
 }
 @media screen and (min-width: $vp4) {
-    .#{$grid-prefix}grid {
+    .#{$grid-prefix}grid, .#{$grid-prefix}grid.fixed, .#{$grid-prefix}grid.fixed-small, .#{$grid-prefix}grid.fixed-large {
         padding-left: 0;
         padding-right: 0;
         width: 90%; //To provide 5% page margins
