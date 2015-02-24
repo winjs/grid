@@ -5,22 +5,23 @@
 .ms-grid {
   display: block;
   position: relative;
-  width: 100%;
+  width: 94%;
   margin-left: auto;
   margin-right: auto;
   max-width: 1600px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.ms-grid.fixed, .ms-grid.fixed-small, .ms-grid.fixed-large {
   padding-left: 12px;
   padding-right: 12px;
+  width: 100%;
 }
 .ms-grid.full {
   max-width: none;
   padding-left: 0;
   padding-right: 0;
   width: 100%;
-}
-.ms-grid.full.zero-margin {
-  padding-left: 0;
-  padding-right: 0;
 }
 .ms-grid.fixed .ms-row {
   margin-left: -2px;
@@ -151,19 +152,27 @@
 }
 
 @media screen and (min-width: 540px) {
-  .ms-grid {
+  .ms-grid.fixed, .ms-grid.fixed-small, .ms-grid.fixed-large {
     padding-left: 24px;
     padding-right: 24px;
   }
+
+  .ms-grid {
+    width: 93%;
+  }
 }
 @media screen and (min-width: 768px) {
-  .ms-grid {
+  .ms-grid.fixed, .ms-grid.fixed-small, .ms-grid.fixed-large {
     padding-left: 48px;
     padding-right: 48px;
   }
+
+  .ms-grid {
+    width: 92%;
+  }
 }
 @media screen and (min-width: 992px) {
-  .ms-grid {
+  .ms-grid, .ms-grid.fixed, .ms-grid.fixed-small, .ms-grid.fixed-large {
     padding-left: 0;
     padding-right: 0;
     width: 90%;
