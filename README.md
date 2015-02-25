@@ -73,7 +73,7 @@ Through the use of the variables in the _config.scss file, you can control:
 * Mixed langauge support
 * Breakpoint values for the 5 built in breakpoints/viewports
 * Prefixing of the viewport specific classes (manual colspans and offsets)
-```
+```sass
 $max-grid-width: 1600px;
 $fixed-standard: 2px;
 $fixed-small-margin: 2px; //4px fixed margin for start of small fixed option which steps up, 4px, 12px, 24px
@@ -221,6 +221,26 @@ An element with the classes of `class="col-1-4 nb` will always stay at a width o
 ### Prefixing of grid and row classes
 The _config file has the variable named `$grid-prefix` where you can specify any prefixing that you would like added to all the `.grid` and `.row` classes. The default is `ms-`.
 
+### Hiding and showing content
+Helpers are available to you to hide, show, or make invisible content based on the breakpoints of the grid. Here is an example of the classes output for the default medium breakpoint.
+```css
+@media screen and (min-width: 768px) {
+  .show-m {
+    display: block;
+    visibility: visible;
+  }
+
+  .hide-m {
+    display: none;
+    visibility: hidden;
+  }
+
+  .invisible-m {
+    visibility: hidden;
+  }
+}
+```
+
 ### RTL Support
 The grid has full support for RTL. There are predefined SCSS files and labeled respectively for LTR, RTL, and mixed. Compiliation for direction is controlled by two different config values: `$dir` (ltr or rtl) and `$dirMixed` (boolean, false as a default). These variables then drive `$left` and `$right` variables throughout the SCSS to change as appropriate.
 
@@ -237,7 +257,7 @@ Mixed language support is enabled through the use of a `dir` attribute override.
 
 ### IE8 Support
 Without doing anything, IE8 will show the mobile first view. If that is not acceptable for your project, full IE8 support is supported by adding [Respond.js](https://github.com/scottjehl/Respond) to your project will allow it to behave as it does in modern browsers. Remember that if you're using any HTML5 elements (like section), you'll also want to add the [HTML5Shiv](https://github.com/aFarkas/html5shiv). Include this JS in the head of your HTML, putting in the conditional comment below will only serve it to browsers below IE9.
-```
+```html
 <head>
 	...
 	...
