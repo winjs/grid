@@ -1,0 +1,21 @@
+@mixin visibility-classes($vp, $prefix){
+    @media screen and (min-width: $vp) {
+        .show-#{$prefix} {
+            display: block;
+            visibility: visible;
+        }
+
+        .hide-#{$prefix} {
+            display: none;
+            visibility: hidden;
+        }
+
+        .invisible-#{$prefix} {
+            visibility: hidden;
+        }
+    }
+}
+
+@for $i from 1 through length($vp-list) {
+    @include visibility-classes(nth($vp-list, $i), nth($vp-prefix-list, $i));
+}

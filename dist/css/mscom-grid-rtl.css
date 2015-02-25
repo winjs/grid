@@ -4059,3 +4059,78 @@
     right: auto;
   }
 }
+@media screen and (min-width: 320px) {
+  .show-xs {
+    display: block;
+    visibility: visible;
+  }
+
+  .hide-xs {
+    display: none;
+    visibility: hidden;
+  }
+
+  .invisible-xs {
+    visibility: hidden;
+  }
+}
+@media screen and (min-width: 540px) {
+  .show-s {
+    display: block;
+    visibility: visible;
+  }
+
+  .hide-s {
+    display: none;
+    visibility: hidden;
+  }
+
+  .invisible-s {
+    visibility: hidden;
+  }
+}
+@media screen and (min-width: 768px) {
+  .show-m {
+    display: block;
+    visibility: visible;
+  }
+
+  .hide-m {
+    display: none;
+    visibility: hidden;
+  }
+
+  .invisible-m {
+    visibility: hidden;
+  }
+}
+@media screen and (min-width: 992px) {
+  .show-l {
+    display: block;
+    visibility: visible;
+  }
+
+  .hide-l {
+    display: none;
+    visibility: hidden;
+  }
+
+  .invisible-l {
+    visibility: hidden;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .show-xl {
+    display: block;
+    visibility: visible;
+  }
+
+  .hide-xl {
+    display: none;
+    visibility: hidden;
+  }
+
+  .invisible-xl {
+    visibility: hidden;
+  }
+}

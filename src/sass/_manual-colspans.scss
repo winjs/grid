@@ -10,9 +10,7 @@
 }
 
 @each $columnCount, $column-breakdown in $columns {
-
 	@for $i from 1 through length($column-breakdown) {
 	    @include manual-colspans(nth($vp-list, $i), nth($vp-prefix-list, $i), nth($column-breakdown, $i), $columnCount);
 	}
-	
 }
