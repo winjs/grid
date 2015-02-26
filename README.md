@@ -95,7 +95,7 @@ $columns: (2: (1, 1, 2, 2, 2), 3: (1, 3, 3, 3, 3), 4: (1, 2, 4, 4, 4),
 $vp1: 320px;
 $vp2: 540px;
 $vp3: 768px;
-$vp4: 992px;
+$vp4: 1084px;
 $vp5: 1400px;
 $vp-list: ($vp1, $vp2, $vp3, $vp4, $vp5);
 
@@ -143,7 +143,7 @@ Example row:
 
 Column breakdown across each breakpoint:
 
-| Columns | < 320px (mf) | > 320px (vp1) XS | > 540px (vp2) S | > 768px (vp3) M | > 992px (vp4) L | > 1400px (vp5) XL |
+| Columns | < 320px (mf) | > 320px (vp1) XS | > 540px (vp2) S | > 768px (vp3) M | > 1084px (vp4) L | > 1400px (vp5) XL |
 |:-------:|:------------:|:-------------:|:-------------:|:-------------:|:-------------:|:--------------:|
 |    1    |       1      |       1       |       1       |       1       |       1       |        1       |
 |    2    |       1      |       1       |       1       |       2       |       2       |        2       |
