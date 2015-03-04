@@ -16,7 +16,18 @@
   max-width: none;
   padding-left: 0;
   padding-right: 0;
-  width: 100%;
+}
+.ms-grid.full-mobile {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+@media all and (min-width: 768px) {
+  .ms-grid.full-mobile {
+    max-width: 1600px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 .ms-grid.fixed .ms-row {
   margin-left: -2px;
