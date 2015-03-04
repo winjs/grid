@@ -36,7 +36,17 @@
         max-width: none;
         padding-left: 0;
         padding-right: 0;
-        width: 100%;
+    }
+
+    &.full-mobile {
+        max-width: none;
+        padding-left: 0;
+        padding-right: 0;
+        @media all and (min-width: $vp3) {
+            max-width: $max-grid-width;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
     }
 
 
