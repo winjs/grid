@@ -175,13 +175,21 @@ The grid can support fluid, fixed, and zero/no gutter options, all of which is c
 To apply these different gutter options, you place the corresponding helper class on the grid element or an individual row. Place on the grid if you want it to go across that entire grid. Place on an individual row if you'd like to scope the behavior to only that row.
 
 Fluid - this is the default behavior.
+
 `fixed` - stays at one value across all breakpoints, default is 4px.
+
 `fixed-small` - starts at 4px, jumps to 12px at viewport 2, and to 24px at viewport 3.
+
 `fixed-large` - starts at 8px, jumps to 24px at viewport 2, and to 48px at viewport 3.
+
 `zero-margin` - removes all gutters between columns.
 
 ### Page margins
-The grid's page margins start at 12px, jump to 24px at vp2, 48px at vp3, and 5% at vp4.
+The grid supports two flavors of page margins. None or full width and an option with margin.
+
+The default grid's page margins start at 12px, jump to 24px at vp2, 48px at vp3, and 5% at vp4.
+
+The `full` class added on the grid element will enabled the no margin experience.
 
 ### Offsets
 Using these classes will offset a column by a specified amount.
