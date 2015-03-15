@@ -1,3 +1,11 @@
+    &.full {
+        max-width: none;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }    
+
     &.fixed {
         .#{$grid-prefix}row {
             margin-left: -$fixed-standard;
@@ -85,3 +93,16 @@
             }
         }
     }
+
+        //Zero margin for the grid level
+        &.zero-margin {
+            .#{$grid-prefix}row {
+                margin-left: 0;
+                margin-right: 0;
+
+                & > [class*="col-"] {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }

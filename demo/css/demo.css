@@ -144,6 +144,30 @@ body.offsetopened {
     margin-right: -1em;
     margin-left: -1vw;
     margin-right: -1vw; }
+    .ms-grid .ms-row.zero-margin {
+      margin-left: 0;
+      margin-right: 0; }
+      .ms-grid .ms-row.zero-margin > [class*="col-"] {
+        padding-left: 0;
+        padding-right: 0; }
+    .ms-grid .ms-row.fixed {
+      margin-left: -2px;
+      margin-right: -2px; }
+      .ms-grid .ms-row.fixed > [class*="col-"] {
+        padding-left: 2px;
+        padding-right: 2px; }
+    .ms-grid .ms-row.fixed-small {
+      margin-left: -2px;
+      margin-right: -2px; }
+      .ms-grid .ms-row.fixed-small > [class*="col-"] {
+        padding-left: 2px;
+        padding-right: 2px; }
+    .ms-grid .ms-row.fixed-large {
+      margin-left: -4px;
+      margin-right: -4px; }
+      .ms-grid .ms-row.fixed-large > [class*="col-"] {
+        padding-left: 4px;
+        padding-right: 4px; }
     .ms-grid .ms-row.content-flush {
       margin-left: -2em;
       margin-right: -2em;
@@ -151,6 +175,32 @@ body.offsetopened {
       margin-right: -2vw; }
     .ms-grid .ms-row.vertically-centered {
       align-items: center; }
+    @media screen and (min-width: 540px) {
+      .ms-grid .ms-row.fixed-small {
+        margin-left: -6px;
+        margin-right: -6px; }
+        .ms-grid .ms-row.fixed-small > [class*="col-"] {
+          padding-left: 6px;
+          padding-right: 6px; }
+      .ms-grid .ms-row.fixed-large {
+        margin-left: -12px;
+        margin-right: -12px; }
+        .ms-grid .ms-row.fixed-large > [class*="col-"] {
+          padding-left: 12px;
+          padding-right: 12px; } }
+    @media screen and (min-width: 768px) {
+      .ms-grid .ms-row.fixed-small {
+        margin-left: -12px;
+        margin-right: -12px; }
+        .ms-grid .ms-row.fixed-small > [class*="col-"] {
+          padding-left: 12px;
+          padding-right: 12px; }
+      .ms-grid .ms-row.fixed-large {
+        margin-left: -24px;
+        margin-right: -24px; }
+        .ms-grid .ms-row.fixed-large > [class*="col-"] {
+          padding-left: 24px;
+          padding-right: 24px; } }
   .ms-grid .ms-row:after, .ms-grid [class*="col-"]:after {
     content: "";
     display: table;
