@@ -8,6 +8,88 @@
 	margin-bottom: 1em;
 }
 
+.complex-layouts {
+	margin-bottom: 1em;
+
+	.bottom-spacer {
+		margin-bottom: 1em;
+	}
+
+	.ms-row {
+		margin-bottom: 0;
+	}
+
+	.fill-height {
+		display: flex;
+		flex-direction: column;
+
+		& > * {
+			flex: 1;
+		}
+	}
+
+	.pink-bgc, .blue-bgc {
+		min-height: 5em;
+	}
+
+	&.pinterest {
+		.uno, .dos, .tres {
+			& > .ms-row {
+				& > div {
+					margin-bottom: 1em;
+				}
+			}
+		}
+		.uno {
+			& > .ms-row {
+				div:nth-of-type(even) {
+					.filler {
+						height: 9em;
+					}
+				}
+
+				div:nth-of-type(odd) {
+					.filler {
+						height: 16em;
+					}
+				}
+			}
+		}
+
+		.dos {
+			& > .ms-row {
+				div:nth-of-type(odd) {
+					.filler {
+						height: 12em;
+					}
+				}
+
+				div:nth-of-type(even) {
+					.filler {
+						height: 18em;
+					}
+				}
+			}
+		}
+
+		.tres {
+			& > .ms-row {
+				div:nth-of-type(even) {
+					.filler {
+						height: 7em;
+					}
+				}
+
+				div:nth-of-type(odd) {
+					.filler {
+						height: 20em;
+					}
+				}
+			}
+		}
+	}
+}
+
 .demoTable {
 	font-size: 1.2em;
 	overflow: auto;
