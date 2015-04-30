@@ -6032,6 +6032,34 @@ body.offsetopened {
 .ms-row {
   margin-bottom: 1em; }
 
+.complex-layouts {
+  margin-bottom: 1em; }
+  .complex-layouts .bottom-spacer {
+    margin-bottom: 1em; }
+  .complex-layouts .ms-row {
+    margin-bottom: 0; }
+  .complex-layouts .fill-height {
+    display: flex;
+    flex-direction: column; }
+    .complex-layouts .fill-height > * {
+      flex: 1; }
+  .complex-layouts .pink-bgc, .complex-layouts .blue-bgc {
+    min-height: 5em; }
+  .complex-layouts.pinterest .uno > .ms-row > div, .complex-layouts.pinterest .dos > .ms-row > div, .complex-layouts.pinterest .tres > .ms-row > div {
+    margin-bottom: 1em; }
+  .complex-layouts.pinterest .uno > .ms-row div:nth-of-type(even) .filler {
+    height: 9em; }
+  .complex-layouts.pinterest .uno > .ms-row div:nth-of-type(odd) .filler {
+    height: 16em; }
+  .complex-layouts.pinterest .dos > .ms-row div:nth-of-type(odd) .filler {
+    height: 12em; }
+  .complex-layouts.pinterest .dos > .ms-row div:nth-of-type(even) .filler {
+    height: 18em; }
+  .complex-layouts.pinterest .tres > .ms-row div:nth-of-type(even) .filler {
+    height: 7em; }
+  .complex-layouts.pinterest .tres > .ms-row div:nth-of-type(odd) .filler {
+    height: 20em; }
+
 .demoTable {
   font-size: 1.2em;
   overflow: auto;
