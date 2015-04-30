@@ -170,17 +170,26 @@ Examples:
 `l-col-14-24` - At the large(viewport 4) breakpoint, this column will span 14 columns of the 24 columns in the row.
 
 ### Fluid vs. fixed gutter options
-The grid can support fluid and fixed gutter options, all of which is configurable. By default the grid uses fluid gutters. If you want to use fixed gutters, you will add one of three helper classes: `fixed`, `fixed-small`, or `fixed-large`.
+The grid can support fluid, fixed, and zero/no gutter options, all of which is configurable. By default the grid uses fluid gutters. If you want to use fixed gutters, you will add one of three helper classes: `fixed`, `fixed-small`, or `fixed-large`. Zero or no gutter uses the helper class `zero-margin`.
+
+To apply these different gutter options, you place the corresponding helper class on the grid element or an individual row. Place on the grid if you want it to go across that entire grid. Place on an individual row if you'd like to scope the behavior to only that row.
+
+Fluid - this is the default behavior.
 
 `fixed` - stays at one value across all breakpoints, default is 4px.
+
 `fixed-small` - starts at 4px, jumps to 12px at viewport 2, and to 24px at viewport 3.
+
 `fixed-large` - starts at 8px, jumps to 24px at viewport 2, and to 48px at viewport 3.
 
-### Page margins
-The grid's page margins start at 12px, jump to 24px at vp2, 48px at vp3, and 5% at vp4.
+`zero-margin` - removes all gutters between columns.
 
-### jQuery plugin for preceding columns
-There is a scenario where the CSS sibling selector, +, fails for the "automagic" mode. This selector only selects siblings that follow after and not preceding siblings. Because of this scenario, when a smaller column span could be used preceding a larger column span, those preceding columns need to be decorated with a class so that they can be selected. If you don't want to use the jQuery plugin, that is fine, but they will need to be decorated with a preceding class. Or add the small jQuery plugin that runs on load to decorate those classes automatically for you.
+### Page margins
+The grid supports two flavors of page margins. None or full width and an option with margin.
+
+The default grid's page margins start at 12px, jump to 24px at vp2, 48px at vp3, and 5% at vp4.
+
+The `full` class added on the grid element will enabled the no margin experience.
 
 ### Offsets
 Using these classes will offset a column by a specified amount.
@@ -240,6 +249,9 @@ Helpers are available to you to hide, show, or make invisible content based on t
   }
 }
 ```
+
+### jQuery plugin for preceding columns
+There is a scenario where the CSS sibling selector, +, fails for the "automagic" mode. This selector only selects siblings that follow after and not preceding siblings. Because of this scenario, when a smaller column span could be used preceding a larger column span, those preceding columns need to be decorated with a class so that they can be selected. If you don't want to use the jQuery plugin, that is fine, but they will need to be decorated with a preceding class. Or add the small jQuery plugin that runs on load to decorate those classes automatically for you.
 
 ### RTL Support
 The grid has full support for RTL. There are predefined SCSS files and labeled respectively for LTR, RTL, and mixed. Compiliation for direction is controlled by two different config values: `$dir` (ltr or rtl) and `$dirMixed` (boolean, false as a default). These variables then drive `$left` and `$right` variables throughout the SCSS to change as appropriate.

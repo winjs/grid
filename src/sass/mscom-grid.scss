@@ -32,65 +32,15 @@
     padding-left: 12px;
     padding-right: 12px;
 
-    &.full {
-        max-width: none;
-        padding-left: 0;
-        padding-right: 0;
-        width: 100%;
-        overflow-x: hidden;
-    }
+    //Import of grid helpers like fixed col and zero margin col options
+    @import "grid-helpers";
 
-
-
-
-    //Import of fixed column offerings/options
-    @import "fixed-col-options";
-
-
-
-
-
-    &.zero-margin {
-        .#{$grid-prefix}row {
-            margin-left: 0;
-            margin-right: 0;
-
-            & > [class*="col-"] {
-                padding-left: 0;
-                padding-right: 0;
-            }
-        }
-    }
-
-    .#{$grid-prefix}row {
-        align-items: stretch;
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -1em;
-        margin-right: -1em;
-        margin-left: -1vw;
-        margin-right: -1vw;
-
-        &.content-flush {
-            margin-left: -2em;
-            margin-right: -2em;
-            margin-left: -2vw;
-            margin-right: -2vw;
-        }
-
-        &.vertically-centered {
-            align-items: center;
-        }
-    }
-
-    .#{$grid-prefix}row:after,
-    [class*="col-"]:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+    //Import of row helpers like fixed col and zero margin col options to be put on an individual row
+    @import "row-helpers";
 }
 
+
+// Column classes
 [class*="col-"] {
     float: $left;
     width: 100%;
