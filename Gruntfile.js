@@ -1,4 +1,8 @@
 module.exports = function (grunt) {
+
+    // Load Grunt modules
+    require('load-grunt-tasks')(grunt);
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -53,9 +57,6 @@ module.exports = function (grunt) {
 
         // Watch for changes
         watch: {
-            options: { 
-                livereload: true 
-            },
             sass: {
                 files: ['src/sass/*.scss', 'demo/sass/*.scss'],
                 tasks: ['sass', 'autoprefixer', 'cssmin']
@@ -65,26 +66,21 @@ module.exports = function (grunt) {
             }
         },
 
-        // Launch a static server
-        connect: {
-            server: {
-                options: {
-                    port: 9001,
-                    base: './demo'
-                }
+        browserSync: {
+            files: {
+                src : ['demo/css/**', 'demo/*.html']
+            }, 
+            options: {
+              watchTask: true,
+              server: {
+                baseDir: "demo"
             }
+          }
         }
 
     });
 
-    // Load Grunt modules
-    grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-
     // Set Grunt tasks
     grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin']);
-    grunt.registerTask('server', ['connect', 'watch']);
+    grunt.registerTask('server', ['browserSync', 'watch']);
 }
