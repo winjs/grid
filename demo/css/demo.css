@@ -6032,6 +6032,15 @@ body.offsetopened {
 .ms-row {
   margin-bottom: 1em; }
 
+.spartan-layout .filler {
+  height: 25em; }
+  .spartan-layout .filler.tall {
+    height: 150em; }
+  .spartan-layout .filler.short {
+    height: 10em; }
+.spartan-layout .vert .col-1-3 {
+  margin-bottom: 1em; }
+
 .complex-layouts {
   margin-bottom: 1em; }
   .complex-layouts .bottom-spacer {
