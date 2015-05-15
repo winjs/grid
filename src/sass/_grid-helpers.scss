@@ -1,3 +1,15 @@
+    @mixin row($padding) {
+        .#{$grid-prefix}row {
+            margin-left: -$padding;
+            margin-right: -$padding;
+
+            & > [class*="col-"] {
+                padding-left: $padding;
+                padding-right: $padding;
+            }
+        }
+    }
+
     &.full {
         max-width: none;
         padding-left: 0;
@@ -7,102 +19,38 @@
     }    
 
     &.fixed {
-        .#{$grid-prefix}row {
-            margin-left: -$fixed-standard;
-            margin-right: -$fixed-standard;
-
-            & > [class*="col-"] {
-                padding-left: $fixed-standard;
-                padding-right: $fixed-standard;
-            }
-        }
+        @include row($fixed-standard);
     }
 
     &.fixed-small {
-        .#{$grid-prefix}row {
-            margin-left: -$fixed-small-margin;
-            margin-right: -$fixed-small-margin;
-
-            & > [class*="col-"] {
-                padding-left: $fixed-small-margin;
-                padding-right: $fixed-small-margin;
-            }
-        }
+        @include row($fixed-small-margin);
     }
 
     &.fixed-large {
-        .#{$grid-prefix}row {
-            margin-left: -$fixed-large-margin;
-            margin-right: -$fixed-large-margin;
-
-            & > [class*="col-"] {
-                padding-left: $fixed-large-margin;
-                padding-right: $fixed-large-margin;
-            }
-        }
+        @include row($fixed-large-margin);
     }
 
     @media screen and (min-width: $vp2) {
         &.fixed-small {
-            .#{$grid-prefix}row {
-                margin-left: -$fixed-small-margin*3;
-                margin-right: -$fixed-small-margin*3;
-
-                & > [class*="col-"] {
-                    padding-left: $fixed-small-margin*3;
-                    padding-right: $fixed-small-margin*3;
-                }
-            }
+            @include row($fixed-small-margin*3);
         }
 
         &.fixed-large {
-            .#{$grid-prefix}row {
-                margin-left: -$fixed-large-margin*3;
-                margin-right: -$fixed-large-margin*3;
-
-                & > [class*="col-"] {
-                    padding-left: $fixed-large-margin*3;
-                    padding-right: $fixed-large-margin*3;
-                }
-            }
+            @include row($fixed-large-margin*3);
         }
     }
 
     @media screen and (min-width: $vp3) {
         &.fixed-small {
-            .#{$grid-prefix}row {
-                margin-left: -($fixed-small-margin*3)*2;
-                margin-right: -($fixed-small-margin*3)*2;
-
-                & > [class*="col-"] {
-                    padding-left: ($fixed-small-margin*3)*2;
-                    padding-right: ($fixed-small-margin*3)*2;
-                }
-            }
+            @include row(($fixed-small-margin*3)*2);
         }
 
         &.fixed-large {
-            .#{$grid-prefix}row {
-                margin-left: -($fixed-large-margin*3)*2;
-                margin-right: -($fixed-large-margin*3)*2;
-
-                & > [class*="col-"] {
-                    padding-left: ($fixed-large-margin*3)*2;
-                    padding-right: ($fixed-large-margin*3)*2;
-                }
-            }
+            @include row(($fixed-large-margin*3)*2);
         }
     }
 
         //Zero margin for the grid level
         &.zero-margin {
-            .#{$grid-prefix}row {
-                margin-left: 0;
-                margin-right: 0;
-
-                & > [class*="col-"] {
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-            }
+            @include row(0);
         }
