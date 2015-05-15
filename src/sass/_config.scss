@@ -1,8 +1,8 @@
-$max-grid-width: 1600px;
-$fixed-standard: 2px;
-$fixed-small-margin: 2px; //4px fixed margin for start of small fixed option which steps up, 4px, 12px, 24px
-$fixed-large-margin: 4px; //8px fixed margin for start of large fixed option which steps up, 8px, 24px, 48px
-$grid-prefix: "ms-";
+$max-grid-width: 1600px !default;
+$fixed-standard: 2px !default;
+$fixed-small-margin: 2px !default; //4px fixed margin for start of small fixed option which steps up, 4px, 12px, 24px
+$fixed-large-margin: 4px !default; //8px fixed margin for start of large fixed option which steps up, 8px, 24px, 48px
+$grid-prefix: "ms-" !default;
 $dirMixed: false !default; //Toggle for having mixed langauge support
 
 
