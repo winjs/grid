@@ -178,6 +178,10 @@ body.offsetopened {
     .ms-grid .ms-row.horizontally-centered, .ms-grid .ms-row.hc {
       align-items: center;
       flex-direction: column; }
+    .ms-grid .ms-row.centered [class*="col-"] {
+      float: none;
+      margin-left: auto;
+      margin-right: auto; }
     @media screen and (min-width: 540px) {
       .ms-grid .ms-row.fixed-small {
         margin-left: -6px;

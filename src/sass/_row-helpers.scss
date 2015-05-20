@@ -48,7 +48,14 @@
             align-items: center;
             flex-direction: column;
         }
-
+        
+        &.centered {
+            [class*="col-"] {
+                float: none;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
 
         @media screen and (min-width: $vp2) {
             &.fixed-small {

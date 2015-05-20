@@ -126,6 +126,10 @@
       -webkit-flex-direction: column;
           -ms-flex-direction: column;
               flex-direction: column; }
+    .ms-grid .ms-row.centered [class*="col-"] {
+      float: none;
+      margin-left: auto;
+      margin-right: auto; }
     @media screen and (min-width: 540px) {
       .ms-grid .ms-row.fixed-small {
         margin-left: -6px;
