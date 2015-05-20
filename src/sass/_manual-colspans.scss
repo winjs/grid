@@ -1,16 +1,15 @@
-@mixin manual-colspans($vp, $vpprefix, $vpcolumns, $total){
+@mixin manual-colspans($vp, $vpprefix, $total){
     @media screen and (min-width: $vp) {
-        $ratio: $total / $vpcolumns;
-        @for $i from 1 through $vpcolumns {
+        @for $i from 1 through $total {
             .#{$vpprefix}-col-#{$i}-#{$total} {
-                width: percentage(($i*$ratio) / $total);
+                width: percentage($i / $total);
             }
         }
     }
 }
 
 @each $columnCount, $column-breakdown in $columns {
-	@for $i from 1 through length($column-breakdown) {
-	    @include manual-colspans(nth($vp-list, $i), nth($vp-prefix-list, $i), nth($column-breakdown, $i), $columnCount);
+	@for $i from 1 through length($vp-prefix-list) {
+	    @include manual-colspans(nth($vp-list, $i), nth($vp-prefix-list, $i), $columnCount);
 	}
 }
