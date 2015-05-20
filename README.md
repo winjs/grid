@@ -157,17 +157,16 @@ Column breakdown across each breakpoint:
 
 
 ### Manual column spanning
-Manual column span class overrides are supported for all column counts and all breakpoints. They are structured in a way to only support column spanning in relation to the total columns available for that column count by the breakdown chart specified above.
-
+Manual column span class overrides are supported for all column counts and all breakpoints.
 Here is the pattern for the classes:
 
 viewport - col - # of columns to span - total # of columns
 
 Examples:
 
-`s-col-3-34` - 25% of the viewport - Above the small(viewport 2) breakpoint, this column will span 3 columns of the 12 columns in the row. This is because the 24 column layout at this breakpoint is now broken down to 12 column rows.
+`s-col-3-34` - 12.5% of the viewport - At the small(viewport 2) breakpoint and above, this column will span 3 columns of the 24 columns in the row.
 
-`l-col-14-24` - At the large(viewport 4) breakpoint, this column will span 14 columns of the 24 columns in the row.
+`l-col-14-24` - 58.3333333333% of the viewport - At the large(viewport 4) breakpoint and above, this column will span 14 columns of the 24 columns in the row.
 
 ### Fluid vs. fixed gutter options
 The grid can support fluid, fixed, and zero/no gutter options, all of which is configurable. By default the grid uses fluid gutters. If you want to use fixed gutters, you will add one of three helper classes: `fixed`, `fixed-small`, or `fixed-large`. Zero or no gutter uses the helper class `zero-margin`.
@@ -219,7 +218,10 @@ If these classes were used in conjunction on two adjacent columns, it would swap
 Putting the `.centered` class on a single column will center it in that row.
 
 ### Vertically centering columns
-In [browsers that support Flexbox](http://caniuse.com/#search=flexbox), putting the `.vertically-centered` class on a single row will align all items center which will vertically center them. Great for vertically centering text next to images.
+In [browsers that support Flexbox](http://caniuse.com/#search=flexbox), putting the `.vertically-centered` or `.vc` class on a single row will align all items center which will vertically center them. Great for vertically centering text next to images.
+
+### Horizontally centering all columns
+In [browsers that support Flexbox](http://caniuse.com/#search=flexbox), putting the `.horizontally-centered` or `.hc` class on a single row will align all items center based on a flex direction of column which will horizontally center all of them. 
 
 ### No break
 Putting the `.nb` class on a column will make it hold it's original width across all breakpoints.
