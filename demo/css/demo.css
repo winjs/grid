@@ -173,8 +173,11 @@ body.offsetopened {
       margin-right: -2em;
       margin-left: -2vw;
       margin-right: -2vw; }
-    .ms-grid .ms-row.vertically-centered {
+    .ms-grid .ms-row.vertically-centered, .ms-grid .ms-row.vc {
       align-items: center; }
+    .ms-grid .ms-row.horizontally-centered, .ms-grid .ms-row.hc {
+      align-items: center;
+      flex-direction: column; }
     @media screen and (min-width: 540px) {
       .ms-grid .ms-row.fixed-small {
         margin-left: -6px;
@@ -6233,6 +6236,12 @@ body.offsetopened {
 
 .ms-row {
   margin-bottom: 1em; }
+
+.md-height {
+  height: 5em; }
+
+.lg-height {
+  height: 10em; }
 
 .spartan-layout .filler {
   height: 25em; }

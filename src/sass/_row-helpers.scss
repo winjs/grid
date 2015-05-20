@@ -40,8 +40,13 @@
             margin-right: -2vw;
         }
 
-        &.vertically-centered {
+        &.vertically-centered, &.vc {
             align-items: center;
+        }
+
+        &.horizontally-centered, &.hc {
+            align-items: center;
+            flex-direction: column;
         }
 
 
