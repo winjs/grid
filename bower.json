@@ -1,0 +1,34 @@
+{
+  "name": "winjs-grid",
+  "version": "0.1.0",
+  "homepage": "https://github.com/winjs/grid",
+  "authors": [
+    "Microsoft.com"
+  ],
+  "description": "A robust and modular CSS grid framework to provide a mobile first and automatic responsive grid with manual control available when needed, built of SASS",
+  "main": "src/sass/mscom-grid.scss",
+  "keywords": [
+    "grid",
+    "microsoft",
+    "microsoft.com",
+    "winjs",
+    "css",
+    "grid",
+    "framework",
+    "grid",
+    "framework",
+    "mobile",
+    "first",
+    "responsive",
+    "grid",
+    "flexbox"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
