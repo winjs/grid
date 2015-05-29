@@ -10,15 +10,15 @@ Supports column layouts of 1, 2, 3, 4, 5, 6, 8, 12, and 24 by default.
 
 ## Install
 
-### With [http://bower.io/](Bower)
+### With [Bower](http://bower.io/)
 
 ```bash
 bower install winjs-grid
 ```
 
-### With [http://gruntjs.com/](Grunt)
+### With [Grunt](http://gruntjs.com/)
 
-First you must have installed [http://nodejs.org/](Node.js). Then install Grunt CLI as an admin user:
+First you must have installed [Node.js](http://nodejs.org/). Then install Grunt CLI as an admin user:
 
 ```bash
 npm install -g grunt-cli
