@@ -8,15 +8,15 @@ Supports column layouts of 1, 2, 3, 4, 5, 6, 8, 12, and 24 by default.
 ## Demo
 [http://msdotcom.azurewebsites.net/Grid](http://msdotcom.azurewebsites.net/Grid)
 
-## Install/Compile SASS files
+## Install
 
-### With the SASS command line
+### With [http://bower.io/](Bower)
 
 ```bash
-sass --watch --sourcemap --style compressed css:css
+bower install winjs-grid
 ```
 
-### With Grunt
+### With [http://gruntjs.com/](Grunt)
 
 First you must have installed [http://nodejs.org/](Node.js). Then install Grunt CLI as an admin user:
 
@@ -45,7 +45,13 @@ You can launch a static server which watches for changed Sass files and automati
 grunt server
 ```
 
-With this server you can access the demo page at this URL: [localhost:9001](http://localhost:9001/)
+With this server you can access the demo page at this URL: [http://localhost:3000/](http://localhost:3000/)
+
+### With the SASS command line
+
+```bash
+sass --watch --sourcemap --style compressed css:css
+```
 
 ## Usage
 A grid is a container for rows and rows are containers for columns. A grid should never have another grid nested anywhere inside it, only one grid is needed for a section that is using the grid framework.
