@@ -170,7 +170,7 @@ viewport - col - # of columns to span - total # of columns
 
 Examples:
 
-`s-col-3-34` - 12.5% of the viewport - At the small(viewport 2) breakpoint and above, this column will span 3 columns of the 24 columns in the row.
+`s-col-3-24` - 12.5% of the viewport - At the small(viewport 2) breakpoint and above, this column will span 3 columns of the 24 columns in the row.
 
 `l-col-14-24` - 58.3333333333% of the viewport - At the large(viewport 4) breakpoint and above, this column will span 14 columns of the 24 columns in the row.
 
