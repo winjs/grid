@@ -30,6 +30,9 @@
     "bower_components",
     "test",
     "tests",
-    "demo"
+    "demo",
+    "Gruntfile.js",
+    "package.json",
+    "README.md"
   ]
 }
