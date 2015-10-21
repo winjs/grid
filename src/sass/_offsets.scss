@@ -9,11 +9,32 @@
         }
 }
 
-
-@each $columnCount, $column-breakdown in $columns {
-
-    @for $i from 1 through length($column-breakdown) {
-        @include offsets(nth($vp-list, $i), nth($vp-prefix-list, $i), $columnCount);
+@mixin offsetsAuto($vp, $vpprefix, $vpcolumns, $total){
+    @if $vpcolumns > 1 {
+        @media screen and (min-width: $vp) {
+            @for $i from 0 to $vpcolumns {
+                .#{$vpprefix}-col-#{$total}-offset-#{$i} {
+                    margin-#{$left}: percentage($i / $vpcolumns);
+                }
+                @include if-mixed(".#{$vpprefix}-col-#{$total}-offset-#{$i}", (margin-#{$left}, percentage($i / $vpcolumns)), (margin-#{$right}, 0));
+            }
+        }
     }
-    
+}
+
+
+
+
+@if $honorAutoColumnBreakdown {
+    @each $columnCount, $column-breakdown in $columns {
+        @for $i from 1 through length($column-breakdown) {
+            @include offsetsAuto(nth($vp-list, $i), nth($vp-prefix-list, $i), nth($column-breakdown, $i), $columnCount);
+        } 
+    }
+} @else {
+    @each $columnCount, $column-breakdown in $columns {
+        @for $i from 1 through length($column-breakdown) {
+            @include offsets(nth($vp-list, $i), nth($vp-prefix-list, $i), $columnCount);
+        }
+    }
 }
