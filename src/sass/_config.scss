@@ -6,6 +6,15 @@ $grid-prefix: "ms-" !default;
 $dirMixed: false !default; //Toggle for having mixed langauge support
 
 
+//Flags to include specific features of the grid, can be toggled to fine tune your final build size.
+$includePushPull: true !default;
+$includeOffsets: true !default;
+$includeVisibility: true !default;
+$includeGridHelpers: true !default;
+$includeRowHelpers: true !default;
+$includeManualColspans: true !default;
+
+
 //This value toggles if you want the manual column span, push/pull, and offset classes to honor the column breakdowns
 //specified in the $columns variable below. This would make these features classes alter their behavior to match the 
 //widths of columns as decided by their values below. ex) a s-col-1-4 would be 50% wide vs the normal 25% wide
@@ -13,6 +22,7 @@ $honorAutoColumnBreakdown: false !default;
 //Columns supported AND their associated "automatic" rwd column breakdown
 //Can be any amount - 1 column doesn't need to be specfied
 //Format for key/value pair - columnCount: (vp1col, vp2col, vp3col, vp4col, vp5col)
+//The objects in this map can be decresed if not being used to fine tune your final build size.
 $columns: (2: (1, 1, 2, 2, 2), 3: (1, 3, 3, 3, 3), 4: (1, 2, 4, 4, 4),
 5: (1, 1, 5, 5, 5), 6: (1, 2, 3, 6, 6), 8: (2, 2, 4, 8, 8), 
 12: (2, 4, 4, 12, 12), 24: (6, 12, 24, 24, 24));

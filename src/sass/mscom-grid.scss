@@ -33,10 +33,14 @@
     padding-right: 12px;
 
     //Import of grid helpers like fixed col and zero margin col options
-    @import "grid-helpers";
+    @if $includeGridHelpers {
+        @import "grid-helpers";
+    }
 
     //Import of row helpers like fixed col and zero margin col options to be put on an individual row
-    @import "row-helpers";
+    @if $includeRowHelpers {
+        @import "row-helpers";
+    }
 }
 
 
@@ -121,7 +125,21 @@
 
 
 
-@import "manual-colspans";
-@import "offsets";
-@import "column-ordering";
-@import "visibility";
+//----------------------------------------------------
+//          #GRID FEATURE IMPORTS
+//----------------------------------------------------
+@if $includeManualColspans {
+    @import "manual-colspans";
+}
+
+@if $includeOffsets {
+    @import "offsets";
+}
+
+@if $includePushPull {
+    @import "column-ordering";
+}
+
+@if $includeVisibility {
+    @import "visibility";
+}

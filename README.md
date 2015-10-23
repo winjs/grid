@@ -79,22 +79,38 @@ Through the use of the variables in the _config.scss file, you can control:
 * Mixed langauge support
 * Breakpoint values for the 5 built in breakpoints/viewports
 * Prefixing of the viewport specific classes (manual colspans and offsets)
+* Toggle including of specific grid features, if not being used, can shave down final build size
+* Toggle the ability for the grid features to be specifically tied to the way you configure your columns and column breakdowns, the default is false, which means all features are tied to their column number's direct percentages across all breakpoints. s-col-24-push-4 and l-col-24-push-4 will both push by the same percentage, 4/24.
 ```sass
-$max-grid-width: 1600px;
-$fixed-standard: 2px;
-$fixed-small-margin: 2px; //4px fixed margin for start of small fixed option which steps up, 4px, 12px, 24px
-$fixed-large-margin: 4px; //8px fixed margin for start of large fixed option which steps up, 8px, 24px, 48px
-$grid-prefix: "ms-";
+$max-grid-width: 1600px !default;
+$fixed-standard: 2px !default;
+$fixed-small-margin: 2px !default; //4px fixed margin for start of small fixed option which steps up, 4px, 12px, 24px
+$fixed-large-margin: 4px !default; //8px fixed margin for start of large fixed option which steps up, 8px, 24px, 48px
+$grid-prefix: "ms-" !default;
 $dirMixed: false !default; //Toggle for having mixed langauge support
 
 
+//Flags to include specific features of the grid, can be toggled to fine tune your final build size.
+$includePushPull: true !default;
+$includeOffsets: true !default;
+$includeVisibility: true !default;
+$includeGridHelpers: true !default;
+$includeRowHelpers: true !default;
+$includeManualColspans: true !default;
 
+
+//This value toggles if you want the manual column span, push/pull, and offset classes to honor the column breakdowns
+//specified in the $columns variable below. This would make these features classes alter their behavior to match the 
+//widths of columns as decided by their values below. ex) a s-col-1-4 would be 50% wide vs the normal 25% wide
+$honorAutoColumnBreakdown: false !default; 
 //Columns supported AND their associated "automatic" rwd column breakdown
 //Can be any amount - 1 column doesn't need to be specfied
 //Format for key/value pair - columnCount: (vp1col, vp2col, vp3col, vp4col, vp5col)
+//The objects in this map can be decresed if not being used to fine tune your final build size.
 $columns: (2: (1, 1, 2, 2, 2), 3: (1, 3, 3, 3, 3), 4: (1, 2, 4, 4, 4),
 5: (1, 1, 5, 5, 5), 6: (1, 2, 3, 6, 6), 8: (2, 2, 4, 8, 8), 
 12: (2, 4, 4, 12, 12), 24: (6, 12, 24, 24, 24));
+
 
 
 //Grid breakpoints, different viewport sizes and list for mixin use
