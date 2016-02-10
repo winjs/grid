@@ -104,7 +104,7 @@ $right: if-ltr(right, left);
     #{$prop}: #{$val};
 }
 
-@mixin if-mixed($selector, $property-value...) {
+@mixin if-mixed($selector, $property-value) {
   @if variable-exists(dirMixed) {
     @if $dirMixed == true {
       $default: ltr;
@@ -115,13 +115,13 @@ $right: if-ltr(right, left);
         $default: $dir;
       }
       [dir="#{$default}"] #{$selector} {
-        @each $pair in $property-value {
-          @include print(nth($pair, 1) ,nth($pair, 2));
+        @each $property, $value in $property-value {
+          @include print($property, $value);
         }
       }
       [dir="#{$secondary}"] #{$selector} {
-        @each $pair in $property-value {
-          @include outputSwap(nth($pair, 1) ,nth($pair, 2));
+        @each $property, $value in $property-value {
+          @include outputSwap($property, $value);
         }
       }
     }
