@@ -4,7 +4,7 @@
                 .#{$vpprefix}-col-#{$total}-offset-#{$i} {
                     margin-#{$left}: percentage($i / $total);
                 }
-                @include if-mixed(".#{$vpprefix}-col-#{$total}-offset-#{$i}", (margin-#{$left}, percentage($i / $total)), (margin-#{$right}, 0));
+                @include if-mixed(".#{$vpprefix}-col-#{$total}-offset-#{$i}", (margin-#{$left}: percentage($i / $total), margin-#{$right}: 0));
             }
         }
 }
@@ -16,7 +16,7 @@
                 .#{$vpprefix}-col-#{$total}-offset-#{$i} {
                     margin-#{$left}: percentage($i / $vpcolumns);
                 }
-                @include if-mixed(".#{$vpprefix}-col-#{$total}-offset-#{$i}", (margin-#{$left}, percentage($i / $vpcolumns)), (margin-#{$right}, 0));
+                @include if-mixed(".#{$vpprefix}-col-#{$total}-offset-#{$i}", (margin-#{$left}: percentage($i / $vpcolumns), margin-#{$right}: 0));
             }
         }
     }

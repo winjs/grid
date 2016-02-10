@@ -62,7 +62,7 @@
 }
 
 //Include for mixed LTR/RTL support
-@include if-mixed("[class*='col-']", (float, $left));
+@include if-mixed("[class*='col-']", (float: $left));
 
 
 

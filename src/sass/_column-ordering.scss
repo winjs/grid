@@ -6,7 +6,7 @@
                 #{$left}: auto;
             }
 
-            @include if-mixed(".#{$vpprefix}-col-#{$total}-pull-#{$i}", (#{$right}, percentage($i / $total)), (#{$left}, auto));
+            @include if-mixed(".#{$vpprefix}-col-#{$total}-pull-#{$i}", (#{$right}: percentage($i / $total), #{$left}: auto));
         }
     }
 }
@@ -19,7 +19,7 @@
                 #{$right}: auto;
             }
 
-            @include if-mixed(".#{$vpprefix}-col-#{$total}-push-#{$i}", (#{$left}, percentage($i / $total)), (#{$right}, auto));
+            @include if-mixed(".#{$vpprefix}-col-#{$total}-push-#{$i}", (#{$left}: percentage($i / $total), #{$right}: auto));
         }
     }
 }
@@ -33,7 +33,7 @@
                 #{$left}: auto;
             }
 
-            @include if-mixed(".#{$vpprefix}-col-#{$total}-pull-#{$i}", (#{$right}, percentage(($i*$ratio) / $total)), (#{$left}, auto));
+            @include if-mixed(".#{$vpprefix}-col-#{$total}-pull-#{$i}", (#{$right}: percentage(($i*$ratio) / $total), #{$left}: auto));
         }
     }
 }
@@ -47,7 +47,7 @@
                 #{$right}: auto;
             }
 
-            @include if-mixed(".#{$vpprefix}-col-#{$total}-push-#{$i}", (#{$left}, percentage(($i*$ratio) / $total)), (#{$right}, auto));
+            @include if-mixed(".#{$vpprefix}-col-#{$total}-push-#{$i}", (#{$left}: percentage(($i*$ratio) / $total), #{$right}: auto));
         }
     }
 }
